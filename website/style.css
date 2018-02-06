@@ -211,3 +211,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.dark-theme {
+    background-color: #282c34;
+    color: #cfd3db;
+}
