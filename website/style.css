@@ -216,3 +216,7 @@ body {
     background-color: #282c34;
     color: #cfd3db;
 }
+
+.dark-theme #fixed-menu-section .menu-container {
+    background-color: #282c34e7;
+}
