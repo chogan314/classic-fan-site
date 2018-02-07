@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="site-container dark-theme">
+    <div class="site-container">
         <div id="links-section">
             <div class="section-wrapper">
                 <div id="links-container">
@@ -56,11 +56,18 @@
                 <div id="grid-container">
                     <div id="grid">
                         <div class="grid-entry">
-                            <div class="entry-type-row entry-type-article">
-                                <img src="res/writing-blue.png" alt="article icon">
-                                <div class="entry-type-name heading">Article</div>
+                            <div class="entry-image-container">
+                                <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                <div class="entry-image-overlay"></div>
+                                <!-- <div class="entry-image-triangle-overlay"></div> -->
+                                <svg viewbox="0 0 100 100" class="entry-image-triangle-overlay">
+                                    <polygon points="100,0 100, 16 83, 0 83,0" style="fill:rgba(255, 255, 255, 0.9)" />
+                                </svg>
+                                <div class="entry-type-row-overlay entry-type-article">
+                                    <div class="entry-type-name heading">Article</div>
+                                    <img src="res/writing-blue.png" alt="article icon">
+                                </div>
                             </div>
-                            <img class="entry-image" src="res/classic.jpg" alt="article image">
                             <div class="entry-details-row">
                                 <div class="entry-details-author">Author Here</div>
                                 <div class="entry-details-date">February 1st, 2018</div>
