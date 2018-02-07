@@ -173,6 +173,10 @@ body {
     left: 0;
 }
 
+.entry-image-overlay-highlight {
+    background-color: rgba(211, 211, 211, 0.2);
+}
+
 .entry-type-row-overlay {
     display: flex;
     position: absolute;
@@ -191,6 +195,10 @@ body {
 	height: 0;
 	border-top: 60px solid rgba(255, 255, 255, 0.9);
     border-left: 60px solid transparent; */
+}
+
+.entry-image-triangle-overlay polygon {
+    fill: rgba(255, 255, 255, 0.9);
 }
 
 .entry-type-news {
@@ -265,4 +273,12 @@ body {
 
 .dark-theme #fixed-menu-section .menu-container {
     background-color: #282c34e7;
+}
+
+.dark-theme .entry-image-triangle-overlay polygon {
+    fill: #282c34b6;
+}
+
+.dark-theme .entry-image-overlay-highlight {
+    background-color: rgba(56, 50, 50, 0.2);
 }

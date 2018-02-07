@@ -45,7 +45,7 @@ $(".entry-image-container").mouseenter(function() {
         overlayPoints = guideTriangleOverlayPoints;
     }
 
-    imageOverlay.css("background-color", "rgba(211, 211, 211, 0.2)");
+    imageOverlay.addClass("entry-image-overlay-highlight");
     polygon.attr("points", overlayPoints);
     typeName.show();
 });
@@ -55,7 +55,7 @@ $(".entry-image-container").mouseleave(function() {
     var polygon = $(this).find(".entry-image-triangle-overlay").find("polygon");
     var typeName = $(this).find(".entry-type-name");
 
-    imageOverlay.css("background-color", "");
+    imageOverlay.removeClass("entry-image-overlay-highlight");
     polygon.attr("points", initialTriangleOverlayPoints);
     typeName.hide();
 });
