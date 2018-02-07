@@ -31,6 +31,93 @@ function getArticleType(typeName) {
     return type;
 }
 
+function animateOverlay(polygon, destPointsString, time) {
+    function parsePoints(pointsListString) {
+        var rawPoints = pointsListString.split(/[, ]+/);
+        var pointsList = [];
+        for (var i = 0; i < rawPoints.length; i += 2) {
+            pointsList.push({
+                x: parseInt(rawPoints[i]),
+                y: parseInt(rawPoints[i + 1])
+            });
+        }
+        return pointsList;
+    }
+
+    function pointsToString(pointsList) {
+        var pointsString = "";
+        for (var i = 0; i < pointsList.length; i++) {
+            pointsString += pointsList[i].x;
+            pointsString += ",";
+            pointsString += pointsList[i].y;
+            pointsString += " ";
+        }
+        return pointsString;
+    }
+
+    // takes an (x,y) coord for source and an (x,y) coord for destination, time in milliseconds
+    function calcStep(source, destination, time) {
+        xDiff = destination.x - source.x;
+        yDiff = destination.y - source.y;
+        var step = {
+            xStep: Math.min(xDiff, xDiff / time),
+            yStep: Math.min(yDiff, yDiff / time)
+        }
+        return step;
+    }
+
+    function areEqual(a, b) {
+        return a.x === b.x && a.y === b.y;
+    }
+
+    function listsAreEqual(a, b) {
+        for (var i = 0; i < a.length; i++) {
+            if (!areEqual(a[i], b[i])) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function dist(a, b) {
+        return Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2));
+    }
+
+    function normalize(vector) {
+        var len = Math.sqrt(vector.x * vector.x + vector.y * vector.y);
+        return {
+            x: vector.x / len,
+            y: vector.y / len
+        };
+    }
+
+    var polygonPoints = parsePoints(polygon.attr("points"));
+    var destPoints = parsePoints(destPointsString);
+
+    var steps = [];
+    for (var i = 0; i < polygonPoints.length; i++) {
+        steps.push(calcStep(polygonPoints[i], destPoints[i], time));
+    }
+
+    var currentTime = Date.now();
+    while (!listsAreEqual(polygonPoints, destPoints)) {
+        var newTime = Date.now();
+        var delta = newTime - currentTime;
+        currentTime = newTime;
+
+        for (var i = 0; i < polygonPoints.length; i++) {
+            if (dist(polygonPoints[i], destPoints[i]) <= steps[i]) {
+                polygonPoints[i] = destPoints[i];
+            } else {
+                polygonPoints[i].x += normalize(steps[i]).x * delta;
+                polygonPoints[i].y += normalize(steps[i]).y * delta;
+            }
+        }
+        polygon.attr("points", pointsToString(polygonPoints));
+    }
+}
+
 $(".entry-image-container").mouseenter(function() {
     var imageOverlay =  $(this).find(".entry-image-overlay");
     var polygon = $(this).find(".entry-image-triangle-overlay").find("polygon");
@@ -46,7 +133,8 @@ $(".entry-image-container").mouseenter(function() {
     }
 
     imageOverlay.addClass("entry-image-overlay-highlight");
-    polygon.attr("points", overlayPoints);
+    // polygon.attr("points", overlayPoints);
+    animateOverlay(polygon, overlayPoints, 500);
     typeName.show();
 });
 
