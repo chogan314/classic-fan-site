@@ -12,10 +12,10 @@ $(window).scroll(function() {
     }
 });
 
-var initialTriangleOverlayPoints = "100,0 100,16 83,0 83,0";
-var articleTriangleOverlayPoints = "100,0 100,9.5 76,9.5 76,0";
-var newsTriangleOverlayPoints = "100,0 100,9.5 78,9.5 78,0";
-var guideTriangleOverlayPoints = "100,0 100,9.5 77.5,9.5 77.5,0";
+var initialTriangleOverlayPoints = "100,0 100,38 62,0 62,0";
+var articleTriangleOverlayPoints = "100,0 100,21.5 45,21.5 45,0";
+var newsTriangleOverlayPoints = "100,0 100,21.5 49.5,21.5 49.5,0";
+var guideTriangleOverlayPoints = "100,0 100,21.5 48,21.5 48,0";
 
 function getArticleType(typeName) {
     var type = "unknown";
