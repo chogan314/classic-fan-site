@@ -31,91 +31,42 @@ function getArticleType(typeName) {
     return type;
 }
 
-function animateOverlay(polygon, destPointsString, time) {
-    function parsePoints(pointsListString) {
-        var rawPoints = pointsListString.split(/[, ]+/);
-        var pointsList = [];
-        for (var i = 0; i < rawPoints.length; i += 2) {
-            pointsList.push({
-                x: parseInt(rawPoints[i]),
-                y: parseInt(rawPoints[i + 1])
-            });
-        }
-        return pointsList;
-    }
+var currentPolygonAnimationListener = null;
 
-    function pointsToString(pointsList) {
-        var pointsString = "";
-        for (var i = 0; i < pointsList.length; i++) {
-            pointsString += pointsList[i].x;
-            pointsString += ",";
-            pointsString += pointsList[i].y;
-            pointsString += " ";
-        }
-        return pointsString;
-    }
+function animateOverlay(polygon, targetPointsString, time, onFinish) {
+    var polygonMesh = new Mesh2(polygon.attr("points"));
+    var targetMesh = new Mesh2(targetPointsString);
 
-    // takes an (x,y) coord for source and an (x,y) coord for destination, time in milliseconds
-    function calcStep(source, destination, time) {
-        xDiff = destination.x - source.x;
-        yDiff = destination.y - source.y;
-        var step = {
-            xStep: Math.min(xDiff, xDiff / time),
-            yStep: Math.min(yDiff, yDiff / time)
-        }
-        return step;
-    }
-
-    function areEqual(a, b) {
-        return a.x === b.x && a.y === b.y;
-    }
-
-    function listsAreEqual(a, b) {
-        for (var i = 0; i < a.length; i++) {
-            if (!areEqual(a[i], b[i])) {
-                return false;
+    var polygonAnimationListener = {
+        self: this,
+        polygon: polygon,
+        registerIntervalID: function(intervalID) {
+            this.intervalID = intervalID;
+            if (currentPolygonAnimationListener !== null) {
+                console.log ("LKJLKJ");
+                currentPolygonAnimationListener.interrupt();
+                currentPolygonAnimationListener = self;
             }
-        }
-
-        return true;
-    }
-
-    function dist(a, b) {
-        return Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2));
-    }
-
-    function normalize(vector) {
-        var len = Math.sqrt(vector.x * vector.x + vector.y * vector.y);
-        return {
-            x: vector.x / len,
-            y: vector.y / len
-        };
-    }
-
-    var polygonPoints = parsePoints(polygon.attr("points"));
-    var destPoints = parsePoints(destPointsString);
-
-    var steps = [];
-    for (var i = 0; i < polygonPoints.length; i++) {
-        steps.push(calcStep(polygonPoints[i], destPoints[i], time));
-    }
-
-    var currentTime = Date.now();
-    while (!listsAreEqual(polygonPoints, destPoints)) {
-        var newTime = Date.now();
-        var delta = newTime - currentTime;
-        currentTime = newTime;
-
-        for (var i = 0; i < polygonPoints.length; i++) {
-            if (dist(polygonPoints[i], destPoints[i]) <= steps[i]) {
-                polygonPoints[i] = destPoints[i];
-            } else {
-                polygonPoints[i].x += normalize(steps[i]).x * delta;
-                polygonPoints[i].y += normalize(steps[i]).y * delta;
+            if (this.onStart) {
+                this.onStart();
             }
+        },
+        update: function(polygonCoords) {
+            this.polygon.attr("points", polygonCoords);
+        },
+        finish: function () {
+            clearInterval(this.intervalID);
+            if (this.onFinish) {
+                this.onFinish();
+            }
+        },
+        onFinish: onFinish,
+        interrupt: function() {
+            clearInterval(this.intervalID);
         }
-        polygon.attr("points", pointsToString(polygonPoints));
-    }
+    };
+
+    polygonMesh.morphTo(targetMesh, time, polygonAnimationListener);
 }
 
 $(".entry-image-container").mouseenter(function() {
@@ -133,9 +84,7 @@ $(".entry-image-container").mouseenter(function() {
     }
 
     imageOverlay.addClass("entry-image-overlay-highlight");
-    // polygon.attr("points", overlayPoints);
-    animateOverlay(polygon, overlayPoints, 500);
-    typeName.show();
+    animateOverlay(polygon, overlayPoints, 500, () => typeName.show());
 });
 
 $(".entry-image-container").mouseleave(function() {
@@ -144,6 +93,6 @@ $(".entry-image-container").mouseleave(function() {
     var typeName = $(this).find(".entry-type-name");
 
     imageOverlay.removeClass("entry-image-overlay-highlight");
-    polygon.attr("points", initialTriangleOverlayPoints);
+    animateOverlay(polygon, initialTriangleOverlayPoints, 500);
     typeName.hide();
 });
