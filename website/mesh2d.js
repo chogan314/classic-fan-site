@@ -47,7 +47,7 @@ class Mesh2 {
     }
 
     set(other) {
-        if (this.degree() != other.degree()) {
+        if (this.degree() !== other.degree()) {
             throw "cannot set meshes of different degrees";
             return;
         }
@@ -57,7 +57,7 @@ class Mesh2 {
     }
 
     diff(other) {
-        if (this.degree() != other.degree()) {
+        if (this.degree() !== other.degree()) {
             throw "cannot diff meshes of different degrees";
             return;
         }
