@@ -96,6 +96,6 @@ class Mesh2 {
             listener.update(tempMesh.toString());
         }
 
-        listener.registerIntervalID(setInterval(animationFunction, 6, this, other, diffs, duration, Date.now(), listener));
+        listener.start(setInterval(animationFunction, 6, this, other, diffs, duration, Date.now(), listener));
     }
 }

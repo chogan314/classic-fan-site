@@ -31,42 +31,78 @@ function getArticleType(typeName) {
     return type;
 }
 
-var currentPolygonAnimationListener = null;
+function polygonAnimationListenerContainer() {
+    var slf = this;
+    this.incrementingID = 0;
+    this.idPrefix = "animID";
+    this.animationListeners = {};
 
-function animateOverlay(polygon, targetPointsString, time, onFinish) {
+    this.registerListener = function(pal) {
+        var id = pal.polygon.attr("id");
+        if (!id) {
+            slf.incrementingID++;
+            id = slf.idPrefix + slf.incrementingID;
+            pal.polygon.attr("id", id);
+        }
+        if (slf.animationListeners[id]) {
+            slf.animationListeners[id].interrupt();
+        }
+        slf.animationListeners[id] = pal;
+    }
+
+    this.removeListener = function(pal) {
+        var id = pal.polygon.attr("id");
+        slf.animationListeners[id] = null;
+    }
+}
+
+var palContainer = new polygonAnimationListenerContainer();
+
+function animateOverlay(polygon, targetPointsString, time, onStart, onFinish, onInterrupt) {
     var polygonMesh = new Mesh2(polygon.attr("points"));
     var targetMesh = new Mesh2(targetPointsString);
 
-    var polygonAnimationListener = {
-        self: this,
-        polygon: polygon,
-        registerIntervalID: function(intervalID) {
-            this.intervalID = intervalID;
-            if (currentPolygonAnimationListener !== null) {
-                console.log ("LKJLKJ");
-                currentPolygonAnimationListener.interrupt();
-                currentPolygonAnimationListener = self;
-            }
-            if (this.onStart) {
-                this.onStart();
-            }
-        },
-        update: function(polygonCoords) {
-            this.polygon.attr("points", polygonCoords);
-        },
-        finish: function () {
-            clearInterval(this.intervalID);
-            if (this.onFinish) {
-                this.onFinish();
-            }
-        },
-        onFinish: onFinish,
-        interrupt: function() {
-            clearInterval(this.intervalID);
-        }
-    };
+    var polygonAnimationListener = function() {
+        var slf = this;
+        this.polygon = polygon;
 
-    polygonMesh.morphTo(targetMesh, time, polygonAnimationListener);
+        this.start = function(intervalID) {
+            slf.intervalID = intervalID;
+            palContainer.registerListener(slf);
+            if (slf.onStart) {
+                slf.onStart();
+            }
+        }
+
+        this.update = function(polygonCoords) {
+            slf.polygon.attr("points", polygonCoords);
+        }
+
+        this.end = function() {
+            clearInterval(this.intervalID);
+            palContainer.removeListener(slf);
+        }
+
+        this.finish = function() {
+            slf.end();
+            if (slf.onFinish) {
+                slf.onFinish();
+            }
+        }
+
+        this.interrupt = function() {
+            slf.end();
+            if (slf.onInterrupt) {
+                slf.onInterrupt();
+            }
+        }
+
+        this.onStart = onStart;
+        this.onFinish = onFinish;
+        this.onInterrupt = onInterrupt;
+    }
+
+    polygonMesh.morphTo(targetMesh, time, new polygonAnimationListener);
 }
 
 $(".entry-image-container").mouseenter(function() {
@@ -84,7 +120,7 @@ $(".entry-image-container").mouseenter(function() {
     }
 
     imageOverlay.addClass("entry-image-overlay-highlight");
-    animateOverlay(polygon, overlayPoints, 500, () => typeName.show());
+    animateOverlay(polygon, overlayPoints, 500, null, () => typeName.show());
 });
 
 $(".entry-image-container").mouseleave(function() {
