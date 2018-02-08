@@ -32,7 +32,7 @@ function getArticleType(typeName) {
 }
 
 function polygonAnimationListenerContainer() {
-    var slf = this;
+    var self = this;
     this.incrementingID = 0;
     this.idPrefix = "animID";
     this.animationListeners = {};
@@ -40,60 +40,61 @@ function polygonAnimationListenerContainer() {
     this.registerListener = function(pal) {
         var id = pal.polygon.attr("id");
         if (!id) {
-            slf.incrementingID++;
-            id = slf.idPrefix + slf.incrementingID;
+            self.incrementingID++;
+            id = self.idPrefix + self.incrementingID;
             pal.polygon.attr("id", id);
         }
-        if (slf.animationListeners[id]) {
-            slf.animationListeners[id].interrupt();
+        if (self.animationListeners[id]) {
+            self.animationListeners[id].interrupt();
         }
-        slf.animationListeners[id] = pal;
+        self.animationListeners[id] = pal;
     }
 
     this.removeListener = function(pal) {
         var id = pal.polygon.attr("id");
-        slf.animationListeners[id] = null;
+        self.animationListeners[id] = null;
     }
 }
 
 var palContainer = new polygonAnimationListenerContainer();
 
-function animateOverlay(polygon, targetPointsString, time, onStart, onFinish, onInterrupt) {
+function animateOverlay(polygon, targetPointsString, initialPointsString, time, onStart, onFinish, onInterrupt) {
     var polygonMesh = new Mesh2(polygon.attr("points"));
     var targetMesh = new Mesh2(targetPointsString);
+    var initialMesh = new Mesh2(initialPointsString);
 
     var polygonAnimationListener = function() {
-        var slf = this;
+        var self = this;
         this.polygon = polygon;
 
         this.start = function(intervalID) {
-            slf.intervalID = intervalID;
-            palContainer.registerListener(slf);
-            if (slf.onStart) {
-                slf.onStart();
+            self.intervalID = intervalID;
+            palContainer.registerListener(self);
+            if (self.onStart) {
+                self.onStart();
             }
         }
 
         this.update = function(polygonCoords) {
-            slf.polygon.attr("points", polygonCoords);
+            self.polygon.attr("points", polygonCoords);
         }
 
         this.end = function() {
             clearInterval(this.intervalID);
-            palContainer.removeListener(slf);
+            palContainer.removeListener(self);
         }
 
         this.finish = function() {
-            slf.end();
-            if (slf.onFinish) {
-                slf.onFinish();
+            self.end();
+            if (self.onFinish) {
+                self.onFinish();
             }
         }
 
         this.interrupt = function() {
-            slf.end();
-            if (slf.onInterrupt) {
-                slf.onInterrupt();
+            self.end();
+            if (self.onInterrupt) {
+                self.onInterrupt();
             }
         }
 
@@ -102,7 +103,7 @@ function animateOverlay(polygon, targetPointsString, time, onStart, onFinish, on
         this.onInterrupt = onInterrupt;
     }
 
-    polygonMesh.morphTo(targetMesh, time, new polygonAnimationListener);
+    polygonMesh.morphTo(targetMesh, initialMesh, time, new polygonAnimationListener);
 }
 
 $(".entry-image-container").mouseenter(function() {
@@ -120,7 +121,7 @@ $(".entry-image-container").mouseenter(function() {
     }
 
     imageOverlay.addClass("entry-image-overlay-highlight");
-    animateOverlay(polygon, overlayPoints, 500, null, () => typeName.show());
+    animateOverlay(polygon, overlayPoints, initialTriangleOverlayPoints, 500, null, () => typeName.show());
 });
 
 $(".entry-image-container").mouseleave(function() {
@@ -128,7 +129,16 @@ $(".entry-image-container").mouseleave(function() {
     var polygon = $(this).find(".entry-image-triangle-overlay").find("polygon");
     var typeName = $(this).find(".entry-type-name");
 
+    var articleType = getArticleType(typeName);
+    var expandedOverlayPoints = articleTriangleOverlayPoints;
+
+    if (articleType === "news") {
+        expandedOverlayPoints = newsTriangleOverlayPoints;
+    } else if (articleType === "guide") {
+        expandedOverlayPoints = guideTriangleOverlayPoints;
+    }
+
     imageOverlay.removeClass("entry-image-overlay-highlight");
-    animateOverlay(polygon, initialTriangleOverlayPoints, 500);
+    animateOverlay(polygon, initialTriangleOverlayPoints, expandedOverlayPoints, 500);
     typeName.hide();
 });

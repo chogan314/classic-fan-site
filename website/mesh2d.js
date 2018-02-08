@@ -46,44 +46,59 @@ class Mesh2 {
         return true;
     }
 
-    set(other) {
+    add(other) {
         if (this.degree() !== other.degree()) {
-            throw "cannot set meshes of different degrees";
+            throw "cannot add meshes of different degrees";
             return;
         }
+        var vertices = []
         for (var i = 0; i < this.degree(); i++) {
-            this.vertices[i] = other.vertices[i].cpy();
+            vertices.push(this.vertices[i].add(other.vertices[i]));
         }
+        return new Mesh2(vertices);
     }
 
-    diff(other) {
+    sub(other) {
         if (this.degree() !== other.degree()) {
-            throw "cannot diff meshes of different degrees";
+            throw "cannot subtract meshes of different degrees";
             return;
         }
-        var diffs = [];
+        var vertices = []
         for (var i = 0; i < this.degree(); i++) {
-            diffs.push(other.vertices[i].sub(this.vertices[i]));
+            vertices.push(this.vertices[i].sub(other.vertices[i]));
         }
-        return diffs;
+        return new Mesh2(vertices);
     }
 
-    morphTo(other, duration, listener) {
+    morphTo(target, initialMesh, duration, listener) {
         if (this.degree() === 0) {
             throw "cannot morph mesh of degree 0";
             return;
-        } else if(this.degree() !== other.degree()) {
+        } else if(this.degree() !== target.degree()) {
             throw "cannot morph meshes of different degrees";
             return;
         }
 
-        var diffs = this.diff(other);
+        var diff = target.sub(this);
+        var maxDiff = target.sub(initialMesh);
+        
+        var timeScaleFactor = 1;
+        for (var i = 0; i < diff.degree(); i++) {
+            var diffLen = diff.vertices[i].len();
+            var maxDiffLen = maxDiff.vertices[i].len();
+            if (maxDiffLen !== 0 && diffLen !== maxDiffLen) {
+                timeScaleFactor = diffLen / maxDiffLen;
+                break;
+            }
+        }
 
-        var animationFunction = function(morphingMesh, targetMesh, diffs, duration, startTime, listener) {
+        duration = duration * Math.min(1, Math.max(0, timeScaleFactor));
+
+        var animationFunction = function(morphingMesh, targetMesh, diff, duration, startTime, listener) {
             var delta = Date.now() - startTime;
             var tempMesh = morphingMesh.cpy();
             if (delta >= duration) {
-                tempMesh.set(targetMesh);
+                tempMesh = targetMesh.cpy();
                 listener.update(tempMesh.toString());
                 listener.finish();
                 return;
@@ -91,11 +106,11 @@ class Mesh2 {
 
             var percent = delta / duration;
             for (var i = 0; i < morphingMesh.degree(); i++) {
-                tempMesh.vertices[i] = morphingMesh.vertices[i].add(diffs[i].scl(percent));
+                tempMesh.vertices[i] = morphingMesh.vertices[i].add(diff.vertices[i].scl(percent));
             }
             listener.update(tempMesh.toString());
         }
 
-        listener.start(setInterval(animationFunction, 6, this, other, diffs, duration, Date.now(), listener));
+        listener.start(setInterval(animationFunction, 6, this, target, diff, duration, Date.now(), listener));
     }
 }
