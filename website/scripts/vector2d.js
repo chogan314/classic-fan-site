@@ -1,9 +1,15 @@
+// 2d vector class
+// immutable
+// if used properly
+// javascript please
+
 class Vec2 {
-    // typescript save me
     constructor(x, y) {
+        // no arguments
         if (x === undefined) {
             this.x = 0;
             this.y = 0;
+        // string in format "x1,y1"
         } else if (typeof(x) === "string") {
             var coords = [];
             x.split(",").forEach(function(elem) {
@@ -11,6 +17,7 @@ class Vec2 {
             });
             this.x = coords[0];
             this.y = coords[1];
+        // two floats
         } else {
             this.x = x;
             this.y = y;

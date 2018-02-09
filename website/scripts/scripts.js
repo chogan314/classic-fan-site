@@ -31,6 +31,9 @@ function getArticleType(typeName) {
     return type;
 }
 
+// handles all active polygon animation listeners
+// generates id for each animating polygon 
+// and uses that to identify which polygon is being animated by which pal
 function polygonAnimationListenerContainer() {
     var self = this;
     this.incrementingID = 0;
@@ -121,7 +124,7 @@ $(".entry-image-container").mouseenter(function() {
     }
 
     imageOverlay.addClass("entry-image-overlay-highlight");
-    animateOverlay(polygon, overlayPoints, initialTriangleOverlayPoints, 500, null, () => typeName.show());
+    animateOverlay(polygon, overlayPoints, initialTriangleOverlayPoints, 60, null, () => typeName.show());
 });
 
 $(".entry-image-container").mouseleave(function() {
@@ -139,6 +142,6 @@ $(".entry-image-container").mouseleave(function() {
     }
 
     imageOverlay.removeClass("entry-image-overlay-highlight");
-    animateOverlay(polygon, initialTriangleOverlayPoints, expandedOverlayPoints, 500);
+    animateOverlay(polygon, initialTriangleOverlayPoints, expandedOverlayPoints, 40);
     typeName.hide();
 });

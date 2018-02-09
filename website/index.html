@@ -11,7 +11,10 @@
 </head>
 
 <body>
+    <!-- site container -->
     <div class="site-container">
+
+        <!-- links section -->
         <div id="links-section">
             <div class="section-wrapper">
                 <div id="links-container">
@@ -22,6 +25,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- title section -->
         <div id="title-section">
             <div class="section-wrapper">
                 <div id="title-container">
@@ -29,6 +34,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- menu section -->
         <div id="menu-section">
             <div class="section-wrapper">
                 <div class="menu-container">
@@ -40,6 +47,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- fixed menu section -->
         <div id="fixed-menu-section">
             <div class="section-wrapper">
                 <div class="menu-container">
@@ -51,32 +60,52 @@
                 </div>
             </div>
         </div>
+
+        <!-- grid section -->
+        <!-- minimize to reduce clutter -->
         <div id="grid-section">
             <div class="section-wrapper">
                 <div id="grid-container">
                     <div id="grid">
+
+                        <!-- grid entry example -->
                         <div class="grid-entry">
+
+                            <!-- thumbnail image container -->
                             <div class="entry-image-container">
+                                <!-- thumbnail image -->
                                 <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                <!-- overlay covering whole thumbnail. controls highlighting -->
                                 <div class="entry-image-overlay"></div>
+                                <!-- overlay for background of top right corner of thumbnail. given an exact size in pixels -->
                                 <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
                                     <polygon points="100,0 100,38 62,0 62,0" />
                                 </svg>
+                                <!-- overlay for icon and text of thumbnail. text hidden by default, shown on mouseover after animatino -->
                                 <div class="entry-type-row-overlay entry-type-article">
                                     <div class="entry-type-name heading">Article</div>
                                     <img src="res/writing-blue.png" alt="article icon">
                                 </div>
                             </div>
+
+                            <!-- entry details -->
                             <div class="entry-details-row">
                                 <div class="entry-details-author">Author Here</div>
                                 <div class="entry-details-date">February 1st, 2018</div>
                             </div>
+
+                            <!-- entry title -->
                             <div class="entry-title heading">This Is an Example Article</div>
+
+                            <!-- entry preview -->
                             <div class="entry-preview">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
                                 venenatis lectus quis lectus volutpat commodo.
                             </div>
+                            
+                            <!-- example end -->
                         </div>
+
                         <div class="grid-entry">
                             <div class="entry-image-container">
                                 <img class="entry-image" src="res/classic.jpg" alt="article image">
@@ -337,6 +366,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- footer section -->
         <div id="footer-section">
             <div class="section-wrapper">
                 <div id="footer-container">
@@ -344,11 +375,15 @@
                 </div>
             </div>
         </div>
+
+    <!-- end site container -->
     </div>
-    <script src="jquery-3.3.1.min.js"></script>
-    <script src="vector2d.js"></script>
-    <script src="mesh2d.js"></script>
-    <script src="scripts.js"></script>
+
+    <!-- scripts -->
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/vector2d.js"></script>
+    <script src="scripts/mesh2d.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,15 @@
+// simple 2d mesh class
+// immutable
+
 class Mesh2 {
     constructor(source) {
         this.vertices = [];
+        // array of Vec2
         if (Array.isArray(source)) {
             for (var i = 0; i < source.length; i++) {
                 this.vertices.push(source[i].cpy());
             }
+        // string in format "x1,y1 x2,y2 x3,y3..."
         } else {
             var rawVertices = source.split(/[, ]+/);
             for (var i = 0; i < rawVertices.length; i += 2) {
@@ -70,6 +75,10 @@ class Mesh2 {
         return new Mesh2(vertices);
     }
 
+    // move vertices towards location of target mesh vertices over some duration
+    // initialMesh: theoretical mesh with max diff from target mesh
+    // duration: time animation should take if starting from initial mesh
+    // listener: handler for animation events
     morphTo(target, initialMesh, duration, listener) {
         if (this.degree() === 0) {
             throw "cannot morph mesh of degree 0";
@@ -79,6 +88,7 @@ class Mesh2 {
             return;
         }
 
+        // scale duration based on diff from initial mesh
         var diff = target.sub(this);
         var maxDiff = target.sub(initialMesh);
         

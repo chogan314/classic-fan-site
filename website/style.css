@@ -38,6 +38,10 @@ body {
     padding-right: 15px;
 }
 
+/* 
+ *  links section styles
+ */
+
 @media only screen and (max-width: 640px) {
     #links-section {
         display: none;
@@ -66,6 +70,10 @@ body {
     text-decoration: underline;
 }
 
+/* 
+ *  title section styles
+ */
+
 #title-container {
     display: flex;
     justify-content: center;
@@ -76,6 +84,10 @@ body {
     padding-top: 20px;
     padding-bottom: 10px;
 }
+
+/* 
+ *  menu section styles
+ */
 
 .menu-container {
     display: flex;
@@ -112,6 +124,10 @@ body {
     margin-bottom: -2px;
 }
 
+/* 
+ *  fixed menu section styles
+ */
+
 #fixed-menu-section {
     z-index: 9999;
     display: none;
@@ -124,6 +140,10 @@ body {
 #fixed-menu-section .menu-container {
     background-color: rgba(255, 255, 255, 0.9);
 }
+
+/* 
+ *  grid section styles
+ */
 
 #grid {
     display: grid;
@@ -150,10 +170,18 @@ body {
     }
 }
 
+/* 
+ *  grid entry styles
+ */
+
 .grid-entry {
     display: flex;
     flex-direction: column;
 }
+
+/* 
+ *  entry image container
+ */
 
 .entry-image-container {
     position: relative;
@@ -191,10 +219,6 @@ body {
     right: 0;
     width: 160px;
     height: 80px;
-    /* width: 0;
-	height: 0;
-	border-top: 60px solid rgba(255, 255, 255, 0.9);
-    border-left: 60px solid transparent; */
 }
 
 .entry-image-triangle-overlay polygon {
@@ -242,6 +266,10 @@ body {
     height: auto;
 }
 
+/* 
+ *  entry detials styles
+ */
+
 .entry-details-row {
     display: flex;
     align-items: center;
@@ -249,11 +277,19 @@ body {
     margin-bottom: 6px;
 }
 
+/* 
+ *  entry title styles
+ */
+
 .entry-title {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 6px;
 }
+
+/* 
+ *  footer section styles
+ */
 
 #footer-section {
     border-top: 1px solid #cdcdcd;
@@ -265,6 +301,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* 
+ *  dark theme styles 
+ */
 
 .dark-theme {
     background-color: #282c34;
