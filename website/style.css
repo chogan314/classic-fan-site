@@ -26,8 +26,27 @@ body {
     user-select: none;
 }
 
+/* 
+ *  general styles
+ */
+
 .heading {
     font-family: 'Barlow Condensed', sans-serif;
+}
+
+.site-container {
+    position: relative;
+    min-width: 320px;
+}
+
+.site-container-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -100;
+    background-image: url("res/horde-bg.png");    
 }
 
 .section-wrapper {
@@ -36,6 +55,7 @@ body {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* 
@@ -291,11 +311,8 @@ body {
  *  footer section styles
  */
 
-#footer-section {
-    border-top: 1px solid #cdcdcd;
-}
-
 #footer-container {
+    border-top: 1px solid #cdcdcd;    
     height: 60px;
     display: flex;
     justify-content: center;
