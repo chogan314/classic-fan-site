@@ -11,7 +11,7 @@ $(window).scroll(function() {
         menu.css("visibility", "visible");
     }
 
-    $(".site-container-overlay").css("top", scrollPos / 3);
+    $(".site-container-overlay").css("top", scrollPos / 2);
 });
 
 var initialTriangleOverlayPoints = "100,0 100,38 62,0 62,0";

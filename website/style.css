@@ -46,7 +46,28 @@ body {
     right: 0;
     bottom: 0;
     z-index: -100;
-    background-image: url("res/horde-bg.png");    
+    background-color: #fafafa;
+}
+
+.background-column-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+}
+
+#background-column-alliance {
+    background-image: url("res/horde-bg-tall.png");
+    background-repeat: repeat-y;
+    flex: 1 1 auto;
+}
+
+#background-column-horde {
+    background-image: url("res/horde-bg-tall.png");
+    background-repeat: repeat-y;
+    flex: 1 1 auto;
+    background-position-x: right;
+    background-position-y: top; 
 }
 
 .section-wrapper {
