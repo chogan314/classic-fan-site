@@ -26,6 +26,10 @@ body {
     user-select: none;
 }
 
+.active-page {
+    background-color: #D7C2F7;
+}
+
 .heading {
     font-family: 'Barlow Condensed', sans-serif;
 }
