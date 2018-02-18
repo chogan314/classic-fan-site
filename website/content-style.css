@@ -3,7 +3,7 @@
     padding-bottom: 20px;
 }
 
-.content-container > * {
+.content-container>* {
     margin-bottom: 20px;
 }
 
@@ -24,11 +24,13 @@
     margin-left: 40px;
 }
 
+.content-container a {}
+
 .content-container ol li {
     list-style: decimal inside;
 }
 
-.content-container ol li > * {
+.content-container ol li>* {
     display: inline;
     padding-left: 6px;
 }
@@ -66,4 +68,64 @@
     font-style: italic;
     font-size: 20px;
     line-height: 40px;
+}
+
+.db-link {
+    text-decoration: none;
+}
+
+.rarity-junk {
+    color: #9d9d9d;
+}
+
+.rarity-junk:visited {
+    color: #9d9d9d;
+}
+
+.rarity-common {
+
+}
+
+.rarity-common:visited {
+    
+}
+
+.rarity-uncommon {
+    color: #35da00;
+}
+
+.rarity-uncommon:visited {
+    color: #35da00;
+}
+
+.rarity-rare {
+    color: #0070dd;
+}
+
+.rarity-rare:visited {
+    color: #0070dd;
+}
+
+.rarity-epic {
+    color: #a335ee;
+}
+
+.rarity-epic:visited {
+    color: #a335ee;
+}
+
+.rarity-legendary {
+    color: #ff8000;
+}
+
+.rarity-legendary:visited {
+    color: #ff8000;
+}
+
+.rarity-misc {
+    color: #ffd10f;
+}
+
+.rarity-misc:hover {
+    color: #ffd10f;
 }
