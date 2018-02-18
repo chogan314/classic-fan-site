@@ -70,6 +70,15 @@
     line-height: 40px;
 }
 
+.content-aside {
+    background-color: #cccccc;
+    padding: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+
 .db-link {
     text-decoration: none;
 }
@@ -80,14 +89,6 @@
 
 .rarity-junk:visited {
     color: #9d9d9d;
-}
-
-.rarity-common {
-
-}
-
-.rarity-common:visited {
-    
 }
 
 .rarity-uncommon {
