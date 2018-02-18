@@ -7,9 +7,30 @@
     margin-bottom: 20px;
 }
 
-.content-container p {
+.content-container {
     font-size: 16px;
     line-height: 28px;
+}
+
+.content-container ul {
+    margin-left: 40px;
+}
+
+.content-container ul li {
+    list-style: inside;
+}
+
+.content-container ol {
+    margin-left: 40px;
+}
+
+.content-container ol li {
+    list-style: decimal inside;
+}
+
+.content-container ol li > * {
+    display: inline;
+    padding-left: 6px;
 }
 
 .content-title {
@@ -36,4 +57,13 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 600;
     font-size: 28px;
+}
+
+.content-quote {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 40px;
 }
