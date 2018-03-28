@@ -137,6 +137,14 @@
     color: #ffd10f;
 }
 
+.content-insert-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .placeholder {
     width: 100%;
     text-align: center;
