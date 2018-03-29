@@ -165,7 +165,6 @@
 
 .quest {
     display: flex;
-    height: 30px;
     align-items: center;
 }
 
@@ -182,7 +181,7 @@
 }
 
 .quest-icon {
-    height: 80%;
+    height: 24px;
     width: auto;
     display: block;
 }

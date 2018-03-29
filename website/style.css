@@ -98,9 +98,15 @@ body {
     border-bottom: 1px solid #cdcdcd;
 }
 
-@media only screen and (max-width: 1007px) {
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
     .menu-container {
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .menu-container {
+        justify-content: right;
     }
 }
 
@@ -115,6 +121,12 @@ body {
 
 .menu-item:first-child {
     padding-left: 0px;
+}
+
+@media only screen and (max-width: 640px) {
+    .menu-item {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1007px) {
