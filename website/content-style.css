@@ -145,6 +145,96 @@
     display: block;
 }
 
+.quest-container {
+    display: flex;
+}
+
+.quest-chain {
+    background-color: #444a55;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.quest {
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+
+.quest>* {
+    margin-right: 6px;
+}
+
+.quest>*:last-child {
+    margin-right: 0;
+}
+
+.quest-dungeon {
+    font-weight: bold;
+}
+
+.quest-icon {
+    height: 80%;
+    width: auto;
+    display: block;
+}
+
+.quest-chain-label {
+    color: rgb(165, 165, 165);
+    margin-top: 10px;
+}
+
+.quest-chain-notes {
+    color: rgb(165, 165, 165);
+    margin-left: 20px;
+    max-width: 500px;
+}
+
+.quest-chain-rewards>* {
+    display: block;
+    margin-left: 20px;
+}
+
+.boss-container {
+    display: flex;
+}
+
+.boss {
+    background-color: #444a55;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 520px;
+}
+
+.boss-image {
+    max-width: calc(100% - 20px);
+    width: 500px;
+    height: auto;    
+    margin: 10px 10px 4px 10px;
+}
+
+.boss-name {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.boss-label {
+    margin-top: 10px;
+    color: rgb(165, 165, 165);
+}
+
+.boss-notes {
+    color: rgb(165, 165, 165);
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.boss-drops>* {
+    display: block;
+    margin-left: 20px;
+}
+
 .placeholder {
     width: 100%;
     text-align: center;
