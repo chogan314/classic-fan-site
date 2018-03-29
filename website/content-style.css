@@ -145,8 +145,18 @@
     display: block;
 }
 
+.quest-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-right: -20px;
+    margin-bottom: 0;
+}
+
 .quest-container {
     display: flex;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .quest-chain {
@@ -197,6 +207,29 @@
 
 .boss-container {
     display: flex;
+}
+
+.boss-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: start;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: row;
+}
+
+@media only screen and (max-width: 640px) {
+    .boss-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+    .boss-section {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .boss {
