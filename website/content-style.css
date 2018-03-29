@@ -149,14 +149,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    margin-right: -20px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .quest-container {
     display: flex;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 .quest-chain {
