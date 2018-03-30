@@ -98,9 +98,15 @@ body {
     border-bottom: 1px solid #cdcdcd;
 }
 
-@media only screen and (max-width: 1007px) {
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
     .menu-container {
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .menu-container {
+        justify-content: flex-end;
     }
 }
 
@@ -117,7 +123,7 @@ body {
     padding-left: 0px;
 }
 
-@media only screen and (max-width: 1007px) {
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
     .menu-item:first-child {
         padding-left: 20px;
     }
@@ -126,6 +132,23 @@ body {
 .menu-item:hover {
     border-bottom: 2px solid red;
     margin-bottom: -2px;
+}
+
+@media only screen and (max-width: 640px) {
+    .menu-item {
+        display: none;
+    }
+}
+
+.menu-hamburger-icon {
+    height: 50px;
+    width: auto;
+}
+
+@media only screen and (min-width: 641px) {
+    .menu-hamburger-icon {
+        display: none;
+    }
 }
 
 /* 
