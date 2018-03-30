@@ -1,0 +1,8 @@
+.grid-entry {
+    justify-content: space-between;
+    height: 100%;
+}
+
+.entry-title {
+    margin-top: 10px;
+}
