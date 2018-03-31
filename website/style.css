@@ -259,6 +259,7 @@ body {
 
 .entry-image-container {
     position: relative;
+    border: 1px solid #cdcdcd;
 }
 
 .entry-type-row {
