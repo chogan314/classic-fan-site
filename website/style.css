@@ -46,28 +46,31 @@ body {
     right: 0;
     bottom: 0;
     z-index: -100;
-    background-color: #fafafa;
 }
 
 .background-column-container {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
     height: 100%;
 }
 
+.background-column-container img {
+    width: 100%;
+    height: auto;
+}
+
 #background-column-alliance {
-    background-image: url("res/horde-bg-tall.png");
-    background-repeat: repeat-y;
-    flex: 1 1 auto;
+    flex: 0 1 33.33%;
+    background-color: red;
+}
+
+#background-column-middle {
+    flex: 0 0 auto;
+    background-color: green;
 }
 
 #background-column-horde {
-    background-image: url("res/horde-bg-tall.png");
-    background-repeat: repeat-y;
-    flex: 1 1 auto;
-    background-position-x: right;
-    background-position-y: top; 
+    flex: 0 1 33.33%;
+    background-color: blue;
 }
 
 .section-wrapper {
