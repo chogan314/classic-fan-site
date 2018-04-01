@@ -217,9 +217,9 @@ body {
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
+    /* grid-gap: 30px; */
     justify-items: center;
-    align-items: start;
+    align-items: stretch;
     justify-content: center;
     align-content: center;
     grid-auto-flow: row;
@@ -248,6 +248,20 @@ body {
 .grid-entry {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    color: rgb(223, 223, 223);
+}
+
+.grid-entry-news {
+    background-color: #409e20;
+}
+
+.grid-entry-article {
+    background-color: #215c96;
+}
+
+.grid-entry-guide {
+    background-color: #7c37aa;
 }
 
 /* 
@@ -256,7 +270,6 @@ body {
 
 .entry-image-container {
     position: relative;
-    border: 1px solid #cdcdcd;
 }
 
 .entry-type-row {
