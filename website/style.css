@@ -253,15 +253,16 @@ body {
 }
 
 .grid-entry-news {
-    background-color: #409e20;
+    background-color: #0cb62b;
 }
 
 .grid-entry-article {
-    background-color: #215c96;
+    /* background-color: #2CBBE3; */
+    background-color: #24A9CE;
 }
 
 .grid-entry-guide {
-    background-color: #7c37aa;
+    background-color: #c66cd0;
 }
 
 /* 
