@@ -6,6 +6,14 @@ var mobileMenuScrollPos = 0;
 
 function showFixedMenu() {
     var scrollPos = $(document).scrollTop();
+    
+    if ($(window).width() > 1560) {
+        if (scrollPos >= $("#wide-header-scrolling-section").offset().top) {
+            // $("#wide-header-scrolling-section").offset().top
+        }
+        return;
+    }
+
     if (scrollPos >= menu.offset().top) {
         fixedMenu.show();
         menu.css("visibility", "hidden");
