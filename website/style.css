@@ -52,7 +52,7 @@ body {
     margin-right: 50px;
 }
 
-@media only screen and (min-width: 1560px) {
+@media only screen and (min-width: 1500px) {
     #wide-header-section {
         display: block;
     }
@@ -304,7 +304,7 @@ body {
     padding-top: 29px;
 }
 
-@media only screen and (min-width: 1560px) {
+@media only screen and (min-width: 1500px) {
     #grid {
         padding-bottom: 0;
         padding-top: 0;

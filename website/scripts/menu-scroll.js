@@ -8,6 +8,7 @@ function showFixedMenu() {
     var scrollPos = $(document).scrollTop();
     
     if ($(window).width() > 1560) {
+        fixedMenu.hide();
         var margin = parseInt($("#wide-header-scrolling-section").css("margin-top"));
         margin += scrollPos - $("#wide-header-scrolling-section").offset().top;
         margin = Math.max(margin, 0);
