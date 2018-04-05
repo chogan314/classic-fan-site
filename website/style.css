@@ -334,18 +334,28 @@ body {
     flex-direction: column;
     padding: 20px;
     color: rgb(255, 255, 255);
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
 }
 
 .grid-entry-news {
-    background-color: #409e20;
+    /* background-color: #0cb62b; */
+    background-color: #1eff00;
+    color: black;
+    font-weight: bold;
+    
+
 }
 
 .grid-entry-article {
-    background-color: #215c96;
+    /* background-color: #2CBBE3; */
+    /* background-color: #24A9CE; */
+    background-color: #0070dd;
 }
 
 .grid-entry-guide {
-    background-color: #7c37aa;
+    /* background-color: #c66cd0; */
+    background-color: #a335ee
 }
 
 /* 
