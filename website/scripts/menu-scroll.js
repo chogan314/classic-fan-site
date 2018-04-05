@@ -8,9 +8,10 @@ function showFixedMenu() {
     var scrollPos = $(document).scrollTop();
     
     if ($(window).width() > 1560) {
-        if (scrollPos >= $("#wide-header-scrolling-section").offset().top) {
-            // $("#wide-header-scrolling-section").offset().top
-        }
+        var margin = parseInt($("#wide-header-scrolling-section").css("margin-top"));
+        margin += scrollPos - $("#wide-header-scrolling-section").offset().top;
+        margin = Math.max(margin, 0);
+        $("#wide-header-scrolling-section").css("margin-top", margin + "px");
         return;
     }
 
