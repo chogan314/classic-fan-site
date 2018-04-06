@@ -49,6 +49,8 @@ body {
 }
 
 .background-column-container {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     height: 100%;
 }
@@ -59,18 +61,30 @@ body {
 }
 
 #background-column-alliance {
-    flex: 0 1 33.33%;
-    background-color: red;
+    flex: 1 1 33.333%;
+    /* background-color: red; */
+    margin-top: 500px;
+}
+
+#alliance-background-holder {
+    background-image: url("res/horde-bg-transparent.png");
+    transform: scaleX(-1);
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #background-column-middle {
-    flex: 0 0 auto;
-    background-color: green;
+    flex: 0 1 33.333%;
+    /* background-color: green; */
+    max-width: 800px;
 }
 
 #background-column-horde {
-    flex: 0 1 33.33%;
-    background-color: blue;
+    flex: 1 1 33.333%;
+    /* background-color: blue; */
+    background-image: url("res/horde-bg-transparent.png");
 }
 
 .section-wrapper {
@@ -239,7 +253,7 @@ body {
 }
 
 #fixed-menu-section .menu-container {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*
