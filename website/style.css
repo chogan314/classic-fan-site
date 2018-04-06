@@ -294,7 +294,7 @@ body {
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 1px;
     justify-items: center;
     align-items: stretch;
     justify-content: center;
@@ -302,6 +302,8 @@ body {
     grid-auto-flow: row;
     padding-bottom: 60px;
     padding-top: 29px;
+    background-color: #cdcdcd;
+    border: 1px solid #cdcdcd;
 }
 
 @media only screen and (min-width: 1500px) {
@@ -338,22 +340,20 @@ body {
 
 .grid-entry-news {
     /* background-color: #0cb62b; */
-    background-color: #1eff00;
-    color: black;
-    font-weight: bold;
-    
-
+    /* background-color: #1eff00; */
+    background-color: #4fa055;    
 }
 
 .grid-entry-article {
     /* background-color: #2CBBE3; */
     /* background-color: #24A9CE; */
-    background-color: #0070dd;
+    /* background-color: #0070dd; */
+    background-color: #3d8cdb;    
 }
 
 .grid-entry-guide {
     /* background-color: #c66cd0; */
-    background-color: #a335ee
+    background-color: #9e57ce
 }
 
 /* 
