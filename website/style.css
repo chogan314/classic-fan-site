@@ -300,30 +300,31 @@ body {
     justify-content: center;
     align-content: center;
     grid-auto-flow: row;
-    padding-bottom: 60px;
-    padding-top: 29px;
+    margin-bottom: 60px;
+    margin-top: 29px;
+    /* padding-bottom: 60px;
+    padding-top: 29px; */
     background-color: #cdcdcd;
     border: 1px solid #cdcdcd;
 }
 
 @media only screen and (min-width: 1500px) {
     #grid {
-        padding-bottom: 0;
-        padding-top: 0;
+        margin: 0;
     }    
 }
 
 @media only screen and (max-width: 640px) {
     #grid {
         grid-template-columns: 1fr;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
 }
 
 @media only screen and (min-width: 641px) and (max-width: 1007px) {
     #grid {
         grid-template-columns: 1fr 1fr;
-        padding-bottom: 40px;
+        margin-bottom: 40px;
     }
 }
 
