@@ -67,7 +67,7 @@ body {
 }
 
 #alliance-background-holder {
-    background-image: url("res/horde-bg-transparent.png");
+    background-image: url("res/horde-bg-transparent-tall.png");
     transform: scaleX(-1);
     position: relative;
     right: 0;
@@ -84,7 +84,7 @@ body {
 #background-column-horde {
     flex: 1 1 33.333%;
     /* background-color: blue; */
-    background-image: url("res/horde-bg-transparent.png");
+    background-image: url("res/horde-bg-transparent-tall.png");
 }
 
 .section-wrapper {
@@ -277,8 +277,9 @@ body {
     justify-content: center;
     align-content: center;
     grid-auto-flow: row;
-    padding-bottom: 60px;
+    /* padding-bottom: 60px; */
     padding-top: 29px;
+    padding-bottom: 3060px;
 }
 
 @media only screen and (max-width: 640px) {
