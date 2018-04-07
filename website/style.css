@@ -67,7 +67,7 @@ body {
 }
 
 #alliance-background-holder {
-    background-image: url("res/horde-bg-transparent-tall.png");
+    background-image: url("res/alliance-bg-transparent-tall.png");
     transform: scaleX(-1);
     position: relative;
     right: 0;
