@@ -401,8 +401,9 @@ body {
 .grid-entry-news {
     /* background-color: #0cb62b; */
     /* background-color: #1eff00; */
-    border-top: 3px solid #19740d; 
-    border-right: 3px solid #19740d; 
+    border-top: 3px solid #248b17; 
+    border-right: 3px solid #248b17; 
+    border-style: groove;
 }
 
 .grid-entry-article {
@@ -411,6 +412,8 @@ body {
     /* background-color: #0070dd; */
     border-top: 3px solid #3d8cdb;    
     border-right: 3px solid #3d8cdb;  
+    border-style: groove;
+
 
 }
 
@@ -418,6 +421,7 @@ body {
     /* background-color: #c66cd0; */
     border-top: 3px solid #9e57ce;
     border-right: 3px solid #9e57ce;
+    border-style: groove;
 }
 
 /* 
