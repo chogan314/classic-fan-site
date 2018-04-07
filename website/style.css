@@ -93,7 +93,7 @@ body {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.9); */
 }
 
 .lhs-section-wrapper {
@@ -104,7 +104,7 @@ body {
 #wide-header-section {
     display: none;
     padding-right: 50px;
-    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.979); */
 }
 
 @media only screen and (min-width: 1500px) {
@@ -130,7 +130,7 @@ body {
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 30px;
-    /* background-color: rgba(255, 255, 255, 0.9); */
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 #wide-links-container {
