@@ -125,15 +125,12 @@ body {
     #wide-header-section {
         display: block;
     }
-
     #menu-section {
         display: none;
     }
-
     #title-section {
         display: none;
     }
-
     #links-section {
         display: none;
     }
@@ -237,7 +234,7 @@ body {
 
 .menu-container {
     display: flex;
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 2px solid #cdcdcd;
 }
 
 @media only screen and (min-width: 641px) and (max-width: 1007px) {
@@ -272,8 +269,8 @@ body {
 }
 
 .menu-item:hover {
-    border-bottom: 2px solid red;
-    margin-bottom: -2px;
+    border-bottom: 4px solid red;
+    margin-bottom: -4px;
 }
 
 @media only screen and (max-width: 640px) {
@@ -286,7 +283,9 @@ body {
     height: 50px;
     padding: 3px;
     width: 50px;
-    background: url(res/hamburger-icon.png);
+    background-image: url(res/hamburger-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .menu-close-icon {
@@ -294,7 +293,9 @@ body {
     padding: 6px;
     width: 50px;
     display: none;
-    background: url(res/x.png);
+    background-image: url(res/x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media only screen and (min-width: 641px) {
@@ -404,12 +405,12 @@ body {
 }
 
 .grid-entry-news {
-    border-top: 3px solid #399b2c; 
-    border-right: 3px solid #399b2c; 
+    border-top: 3px solid #399b2c;
+    border-right: 3px solid #399b2c;
 }
 
 .grid-entry-article {
-    border-top: 3px solid #3d8cdb;    
+    border-top: 3px solid #3d8cdb;
     border-right: 3px solid #3d8cdb;
 }
 
@@ -548,9 +549,8 @@ body {
     #footer-section {
         border: none;
     }
-
     #footer-container {
-        border-top: 1px solid #cdcdcd;
+        border-top: 2px solid #cdcdcd;
     }
 }
 
@@ -563,12 +563,12 @@ body {
 }
 
 .dark-theme .site-container-overlay {
-    background-color: #282c34ef;    
+    background-color: #282c34ef;
 }
 
 .dark-theme .background-overlay {
     /* background-color: #282c34ef; */
-    background-color: #282c34;    
+    background-color: #282c34;
 }
 
 .dark-theme #fixed-menu-section .menu-container {
