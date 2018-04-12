@@ -7,12 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Barlow+Condensed" rel="stylesheet">
-    <title>ClassicCraft</title>
+    <title>Sentinel Hill</title>
 </head>
 
 <body>
     <!-- site container -->
-    <div class="site-container">
+    <div class="site-container dark-theme">
+        <div class="site-container-overlay">
+            <div class="background-column-container">
+                <!-- <img id="background-column-alliance" src="res/horde-bg-transparent.png" alt=""> -->
+                <div id="background-column-alliance">
+                    <div id="alliance-background-holder"></div>
+                    <!-- <img src="res/horde-bg-transparent.png" alt=""> -->
+                </div>
+                <div id="background-column-middle"></div>
+                <div id="background-column-horde">
+                    <!-- <img src="res/horde-bg-transparent.png" alt=""> -->
+                </div>
+                <!-- <img id="background-column-horde" src="res/horde-bg-transparent.png" alt="">             -->
+            </div>
+        </div>
+        <div class="background-overlay"></div>
 
         <!-- links section -->
         <div id="links-section">
@@ -30,7 +45,7 @@
         <div id="title-section">
             <div class="section-wrapper">
                 <div id="title-container">
-                    <div>CLASSICCRAFT</div>
+                    <div>SENTINEL HILL</div>
                 </div>
             </div>
         </div>
@@ -44,8 +59,8 @@
                     <div class="menu-item noselect">Articles</div>
                     <div class="menu-item noselect">Guides</div>
                     <div class="menu-item noselect">Tools</div>
-                    <img class="menu-hamburger-icon" src="res/hamburger-icon.png" alt="open menu">
-                    <img class="menu-close-icon" src="res/x.png" alt="close menu">
+                    <div class="menu-hamburger-icon"></div>
+                    <div class="menu-close-icon"></div>
                 </div>
             </div>
         </div>
@@ -59,8 +74,8 @@
                     <div class="menu-item noselect">Articles</div>
                     <div class="menu-item noselect">Guides</div>
                     <div class="menu-item noselect">Tools</div>
-                    <img class="menu-hamburger-icon" src="res/hamburger-icon.png" alt="open menu">
-                    <img class="menu-close-icon" src="res/x.png" alt="close menu">
+                    <div class="menu-hamburger-icon"></div>
+                    <div class="menu-close-icon"></div>
                 </div>
             </div>
         </div>
@@ -85,310 +100,334 @@
             </div>
         </div>
 
-        <!-- grid section -->
-        <!-- minimize to reduce clutter -->
-        <div id="grid-section">
-            <div class="section-wrapper">
-                <div id="grid-container">
-                    <div id="grid">
+        <div id="wide-content-wrapper">
+            <div id="wide-header-section">
+                <div class="lhs-section-wrapper">
+                    <div id="wide-links-section">
+                        <div id="wide-links-container">
+                            <div class="wide-links-item noselect">Contact</div>
+                            <div class="wide-links-item noselect">Write for Us</div>
+                            <div class="wide-links-item noselect">Login</div>
+                            <div class="wide-links-item noselect">Register</div>
+                        </div>
+                    </div>
+                    <div id="wide-header-scrolling-section">
+                        <div id="wide-title-container">
+                            <div>SENTINEL</div>
+                            <div>HILL</div>
+                        </div>
+                        <div id="wide-menu-container">
+                            <div class="wide-menu-item noselect">Home</div>
+                            <div class="wide-menu-item noselect">News</div>
+                            <div class="wide-menu-item noselect">Articles</div>
+                            <div class="wide-menu-item noselect">Guides</div>
+                            <div class="wide-menu-item noselect">Tools</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                        <!-- grid entry example -->
-                        <div class="grid-entry">
+            <!-- grid section -->
+            <!-- minimize to reduce clutter -->
+            <div id="grid-section">
+                <div class="section-wrapper">
+                    <div id="grid-container">
+                        <div id="grid">
 
-                            <!-- thumbnail image container -->
-                            <div class="entry-image-container">
-                                <!-- thumbnail image -->
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <!-- overlay covering whole thumbnail. controls highlighting -->
-                                <div class="entry-image-overlay"></div>
-                                <!-- overlay for background of top right corner of thumbnail. given an exact size in pixels -->
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <!-- overlay for icon and text of thumbnail. text hidden by default, shown on mouseover after animatino -->
-                                <div class="entry-type-row-overlay entry-type-article">
-                                    <div class="entry-type-name heading">Article</div>
-                                    <img src="res/writing-blue.png" alt="article icon">
+                            <!-- grid entry example -->
+                            <div class="grid-entry grid-entry-article">
+
+                                <!-- thumbnail image container -->
+                                <div class="entry-image-container">
+                                    <!-- thumbnail image -->
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <!-- overlay covering whole thumbnail. controls highlighting -->
+                                    <div class="entry-image-overlay"></div>
+                                    <!-- overlay for background of top right corner of thumbnail. given an exact size in pixels -->
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <!-- overlay for icon and text of thumbnail. text hidden by default, shown on mouseover after animatino -->
+                                    <div class="entry-type-row-overlay entry-type-article">
+                                        <div class="entry-type-name heading">Article</div>
+                                        <img src="res/writing-blue.png" alt="article icon">
+                                    </div>
                                 </div>
+
+                                <!-- entry details -->
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+
+                                <!-- entry title -->
+                                <div class="entry-title heading">This Is an Example Article</div>
+
+                                <!-- entry preview -->
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
+                                </div>
+
+                                <!-- example end -->
                             </div>
 
-                            <!-- entry details -->
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-
-                            <!-- entry title -->
-                            <div class="entry-title heading">This Is an Example Article</div>
-
-                            <!-- entry preview -->
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
-                            </div>
-
-                            <!-- example end -->
-                        </div>
-
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-news">
-                                    <div class="entry-type-name heading">News</div>
-                                    <img src="res/folded-newspaper-green.png" alt="article icon">
+                            <div class="grid-entry grid-entry-news">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-news">
+                                        <div class="entry-type-name heading">News</div>
+                                        <img src="res/folded-newspaper-dark-green.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is Example News with a Really Really Long Name</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is Example News with a Really Really Long Name</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-guide">
-                                    <div class="entry-type-name heading">Guide</div>
-                                    <img src="res/tower-purple.png" alt="article icon">
+                            <div class="grid-entry grid-entry-guide">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-guide">
+                                        <div class="entry-type-name heading">Guide</div>
+                                        <img src="res/tower-purple.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is an Example Guide</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Maecenas libero orci, porttitor id lectus et, suscipit viverra tellus.
+                                    Suspendisse placerat lectus tellus, ac tincidunt magna sodales sed. Aenean risus libero,
+                                    mattis eget suscipit sed, pharetra a nunc. Sed vel faucibus justo. Phasellus efficitur
+                                    iaculis commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is an Example Guide</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Maecenas libero orci, porttitor id lectus et, suscipit viverra tellus. Suspendisse
-                                placerat lectus tellus, ac tincidunt magna sodales sed. Aenean risus libero, mattis eget
-                                suscipit sed, pharetra a nunc. Sed vel faucibus justo. Phasellus efficitur iaculis commodo.
-                                Morbi aliquet iaculis est quis convallis. Maecenas cursus leo odio, nec luctus tellus dictum
-                                vel. Sed ullamcorper massa sit amet neque efficitur maximus. Fusce euismod risus vehicula
-                                aliquet placerat. Suspendisse aliquet iaculis erat eget aliquet. Nullam vel tortor massa.
-                                Cras metus nisl, mattis a erat a, gravida consectetur tellus.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-guide">
-                                    <div class="entry-type-name heading">Guide</div>
-                                    <img src="res/tower-purple.png" alt="article icon">
+                            <div class="grid-entry grid-entry-guide">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-guide">
+                                        <div class="entry-type-name heading">Guide</div>
+                                        <img src="res/tower-purple.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is an Example Guide Again</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is an Example Guide Again</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-news">
-                                    <div class="entry-type-name heading">News</div>
-                                    <img src="res/folded-newspaper-green.png" alt="article icon">
+                            <div class="grid-entry grid-entry-news">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-news">
+                                        <div class="entry-type-name heading">News</div>
+                                        <img src="res/folded-newspaper-dark-green.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is Example News</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is Example News</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-article">
-                                    <div class="entry-type-name heading">Article</div>
-                                    <img src="res/writing-blue.png" alt="article icon">
+                            <div class="grid-entry grid-entry-article">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-article">
+                                        <div class="entry-type-name heading">Article</div>
+                                        <img src="res/writing-blue.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is an Example Article</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is an Example Article</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-article">
-                                    <div class="entry-type-name heading">Article</div>
-                                    <img src="res/writing-blue.png" alt="article icon">
+                            <div class="grid-entry grid-entry-article">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-article">
+                                        <div class="entry-type-name heading">Article</div>
+                                        <img src="res/writing-blue.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is an Example Article</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is an Example Article</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-news">
-                                    <div class="entry-type-name heading">News</div>
-                                    <img src="res/folded-newspaper-green.png" alt="article icon">
+                            <div class="grid-entry grid-entry-news">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-news">
+                                        <div class="entry-type-name heading">News</div>
+                                        <img src="res/folded-newspaper-dark-green.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is Example News with a Really Really Long Name</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is Example News with a Really Really Long Name</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-guide">
-                                    <div class="entry-type-name heading">Guide</div>
-                                    <img src="res/tower-purple.png" alt="article icon">
+                            <div class="grid-entry grid-entry-guide">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-guide">
+                                        <div class="entry-type-name heading">Guide</div>
+                                        <img src="res/tower-purple.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is an Example Guide</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Maecenas libero orci, porttitor id lectus et, suscipit viverra tellus.
+                                    Suspendisse placerat lectus tellus, ac tincidunt magna sodales sed. Aenean risus libero,
+                                    mattis eget suscipit sed, pharetra a nunc. Sed vel faucibus justo. Phasellus efficitur
+                                    iaculis commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is an Example Guide</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Maecenas libero orci, porttitor id lectus et, suscipit viverra tellus. Suspendisse
-                                placerat lectus tellus, ac tincidunt magna sodales sed. Aenean risus libero, mattis eget
-                                suscipit sed, pharetra a nunc. Sed vel faucibus justo. Phasellus efficitur iaculis commodo.
-                                Morbi aliquet iaculis est quis convallis. Maecenas cursus leo odio, nec luctus tellus dictum
-                                vel. Sed ullamcorper massa sit amet neque efficitur maximus. Fusce euismod risus vehicula
-                                aliquet placerat. Suspendisse aliquet iaculis erat eget aliquet. Nullam vel tortor massa.
-                                Cras metus nisl, mattis a erat a, gravida consectetur tellus.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-guide">
-                                    <div class="entry-type-name heading">Guide</div>
-                                    <img src="res/tower-purple.png" alt="article icon">
+                            <div class="grid-entry grid-entry-guide">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-guide">
+                                        <div class="entry-type-name heading">Guide</div>
+                                        <img src="res/tower-purple.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is an Example Guide Again</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is an Example Guide Again</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-news">
-                                    <div class="entry-type-name heading">News</div>
-                                    <img src="res/folded-newspaper-green.png" alt="article icon">
+                            <div class="grid-entry grid-entry-news">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-news">
+                                        <div class="entry-type-name heading">News</div>
+                                        <img src="res/folded-newspaper-dark-green.png" alt="article icon">
+                                    </div>
+                                </div>
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is Example News</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
                                 </div>
                             </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is Example News</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
-                            </div>
-                        </div>
-                        <div class="grid-entry">
-                            <div class="entry-image-container">
-                                <img class="entry-image" src="res/classic.jpg" alt="article image">
-                                <div class="entry-image-overlay"></div>
-                                <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
-                                    <polygon points="100,0 100,38 62,0 62,0" />
-                                </svg>
-                                <div class="entry-type-row-overlay entry-type-article">
-                                    <div class="entry-type-name heading">Article</div>
-                                    <img src="res/writing-blue.png" alt="article icon">
+                            <div class="grid-entry grid-entry-article">
+                                <div class="entry-image-container">
+                                    <img class="entry-image" src="res/classic.jpg" alt="article image">
+                                    <div class="entry-image-overlay"></div>
+                                    <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMin slice" class="entry-image-triangle-overlay">
+                                        <polygon points="100,0 100,38 62,0 62,0" />
+                                    </svg>
+                                    <div class="entry-type-row-overlay entry-type-article">
+                                        <div class="entry-type-name heading">Article</div>
+                                        <img src="res/writing-blue.png" alt="article icon">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="entry-details-row">
-                                <div class="entry-details-author">Author Here</div>
-                                <div class="entry-details-date">February 1st, 2018</div>
-                            </div>
-                            <div class="entry-title heading">This Is an Example Article</div>
-                            <div class="entry-preview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
-                                venenatis lectus quis lectus volutpat commodo.
+                                <div class="entry-details-row">
+                                    <div class="entry-details-author">Author Here</div>
+                                    <div class="entry-details-date">February 1st, 2018</div>
+                                </div>
+                                <div class="entry-title heading">This Is an Example Article</div>
+                                <div class="entry-preview">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum
+                                    venenatis lectus quis lectus volutpat commodo.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div id="wide-layout-filler"></div>
         </div>
 
         <!-- footer section -->
@@ -408,6 +447,8 @@
     <script src="scripts/vector2d.js"></script>
     <script src="scripts/mesh2d.js"></script>
     <script src="scripts/menu-scroll.js"></script>
+    <script src="scripts/color-grid.js"></script>
+    <script src="scripts/background-scroll.js"></script>
     <script src="scripts/polygon-animate.js"></script>
 </body>
 

@@ -12,9 +12,16 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
+    min-height: 100%;
+    display: flex;
+    align-items: stretch;
 }
 
 .noselect {
@@ -34,12 +41,154 @@ body {
     font-family: 'Barlow Condensed', sans-serif;
 }
 
+.site-container {
+    position: relative;
+    flex: 1 0 320px;
+}
+
+.site-container-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -100;
+}
+
+.background-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -99;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.background-column-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 100%;
+}
+
+.background-column-container img {
+    width: 100%;
+    height: auto;
+}
+
+#background-column-alliance {
+    flex: 1 1 33.333%;
+    margin-top: 500px;
+}
+
+#alliance-background-holder {
+    background-image: url("res/alliance-bg-transparent-tall.png");
+    transform: scaleX(-1);
+    background-repeat: repeat-y;
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#background-column-middle {
+    flex: 0 1 33.333%;
+    max-width: 800px;
+}
+
+#background-column-horde {
+    flex: 1 1 33.333%;
+    background-image: url("res/horde-bg-transparent-tall.png");
+    background-repeat: repeat-y;
+}
+
 .section-wrapper {
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.lhs-section-wrapper {
+    max-width: 400px;
+    padding-left: 15px;
+}
+
+#wide-header-section {
+    display: none;
+    padding-right: 50px;
+}
+
+@media only screen and (min-width: 1500px) {
+    #wide-header-section {
+        display: block;
+    }
+    #menu-section {
+        display: none;
+    }
+    #title-section {
+        display: none;
+    }
+    #links-section {
+        display: none;
+    }
+}
+
+#wide-content-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 1499px) {
+    #wide-content-wrapper {
+        margin: 0;
+    }
+}
+
+#wide-links-container {
+    display: flex;
+    max-width: 160px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.wide-links-item {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#wide-title-container {
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#wide-menu-container {
+    margin-top: 30px;
+}
+
+.wide-menu-item {
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#wide-layout-filler {
+    flex: 0 999 240px;
+}
+
+@media only screen and (max-width: 1499px) {
+    #wide-layout-filler {
+        display: none;
+    }
 }
 
 /* 
@@ -95,7 +244,7 @@ body {
 
 .menu-container {
     display: flex;
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 2px solid #cdcdcd;
 }
 
 @media only screen and (min-width: 641px) and (max-width: 1007px) {
@@ -130,8 +279,8 @@ body {
 }
 
 .menu-item:hover {
-    border-bottom: 2px solid red;
-    margin-bottom: -2px;
+    border-bottom: 4px solid red;
+    margin-bottom: -4px;
 }
 
 @media only screen and (max-width: 640px) {
@@ -144,6 +293,9 @@ body {
     height: 50px;
     padding: 3px;
     width: 50px;
+    background-image: url(res/hamburger-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .menu-close-icon {
@@ -151,6 +303,9 @@ body {
     padding: 6px;
     width: 50px;
     display: none;
+    background-image: url(res/x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media only screen and (min-width: 641px) {
@@ -217,27 +372,34 @@ body {
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
+    grid-gap: 20px;
     justify-items: center;
-    align-items: start;
+    align-items: stretch;
     justify-content: center;
     align-content: center;
     grid-auto-flow: row;
-    padding-bottom: 60px;
-    padding-top: 29px;
+    margin-bottom: 40px;
+    margin-top: 49px;
+}
+
+@media only screen and (min-width: 1500px) {
+    #grid {
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 640px) {
     #grid {
         grid-template-columns: 1fr;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
+        margin-top: 39px;
     }
 }
 
 @media only screen and (min-width: 641px) and (max-width: 1007px) {
     #grid {
         grid-template-columns: 1fr 1fr;
-        padding-bottom: 40px;
+        margin-bottom: 30px;
     }
 }
 
@@ -248,6 +410,23 @@ body {
 .grid-entry {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    /* color: rgb(255, 255, 255); */
+}
+
+.grid-entry-news {
+    border-top: 3px solid #399b2c;
+    border-right: 3px solid #399b2c;
+}
+
+.grid-entry-article {
+    border-top: 3px solid #3d8cdb;
+    border-right: 3px solid #3d8cdb;
+}
+
+.grid-entry-guide {
+    border-top: 3px solid #9e57ce;
+    border-right: 3px solid #9e57ce;
 }
 
 /* 
@@ -256,7 +435,6 @@ body {
 
 .entry-image-container {
     position: relative;
-    border: 1px solid #cdcdcd;
 }
 
 .entry-type-row {
@@ -299,7 +477,7 @@ body {
 }
 
 .entry-type-news {
-    color: #35da00;
+    color: #3e9b23;
 }
 
 .entry-type-article {
@@ -377,23 +555,48 @@ body {
     align-items: center;
 }
 
+@media only screen and (max-width: 1499px) {
+    #footer-section {
+        border: none;
+    }
+    #footer-container {
+        border-top: 2px solid #cdcdcd;
+    }
+}
+
 /* 
  *  dark theme styles 
  */
 
 .dark-theme {
-    background-color: #282c34;
     color: #cfd3db;
 }
 
+.dark-theme .site-container-overlay {
+    background-color: #282c34ef;
+}
+
+.dark-theme .background-overlay {
+    /* background-color: #282c34ef; */
+    background-color: #282c34;
+}
+
 .dark-theme #fixed-menu-section .menu-container {
-    background-color: #282c34e7;
+    background-color: #282c34;
 }
 
 .dark-theme .entry-image-triangle-overlay polygon {
-    fill: #282c34b6;
+    fill: #282c34;
 }
 
 .dark-theme .entry-image-overlay-highlight {
-    background-color: rgba(56, 50, 50, 0.2);
+    background-color: rgba(124, 119, 119, 0.2);
+}
+
+.dark-theme .menu-hamburger-icon {
+    background-image: url(res/hamburger-icon-gray.png);
+}
+
+.dark-theme .menu-close-icon {
+    background-image: url(res/x-gray.png);
 }
