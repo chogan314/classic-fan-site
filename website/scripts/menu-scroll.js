@@ -7,7 +7,7 @@ var mobileMenuScrollPos = 0;
 function showFixedMenu() {
     var scrollPos = $(document).scrollTop();
     
-    if ($(window).width() > 1560) {
+    if ($(window).width() >= 1500) {
         fixedMenu.hide();
         var margin = parseInt($("#wide-header-scrolling-section").css("margin-top"));
         margin += scrollPos - $("#wide-header-scrolling-section").offset().top;
