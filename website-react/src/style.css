@@ -600,3 +600,9 @@ body {
 .dark-theme .menu-close-icon {
     background-image: url(res/x-gray.png);
 }
+
+#root {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}

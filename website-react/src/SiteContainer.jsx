@@ -10,8 +10,8 @@ import Footer from './Footer';
 class SiteContainer extends Component {
     render() {
         return(
-            <div class="site-container dark-theme">
-                <div class="background-overlay"></div>
+            <div className="site-container dark-theme">
+                <div className="background-overlay"></div>
                 <Links />
                 <Title />
                 <Menu />

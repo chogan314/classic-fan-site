@@ -4,7 +4,7 @@ class Title extends Component {
     render() {
         return(
             <div id="title-section">
-                <div class="section-wrapper">
+                <div className="section-wrapper">
                     <div id="title-container">
                         <div>SENTINEL HILL</div>
                     </div>
