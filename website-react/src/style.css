@@ -118,6 +118,7 @@ body {
 
 #wide-header-section {
     display: none;
+    width: 240px;
     padding-right: 50px;
 }
 
