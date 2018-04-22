@@ -39,10 +39,7 @@ function onScroll(event) {
 }
 
 function onResize(event) {
-    if (window.innerWidth >= 1500) {
-        var fixedMenu = document.getElementById("fixed-menu-section");
-        fixedMenu.style.display = "none";
-    }
+    onScroll(event);
 }
 
 window.addEventListener("scroll", onScroll);

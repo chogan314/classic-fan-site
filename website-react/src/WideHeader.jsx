@@ -59,6 +59,11 @@ function onScroll(event) {
     }
 }
 
+function onResize(event) {
+    onScroll(event);
+}
+
 window.addEventListener("scroll", onScroll);
+window.addEventListener("resize", onResize);
 
 export default WideHeader;
