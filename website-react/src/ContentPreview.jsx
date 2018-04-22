@@ -68,7 +68,7 @@ function polygonAnimationListenerContainer() {
         if (!id) {
             self.incrementingID++;
             id = self.idPrefix + self.incrementingID;
-            pal.polygon.getAttribute("id", id);
+            pal.polygon.setAttribute("id", id);
         }
         if (self.animationListeners[id]) {
             self.animationListeners[id].interrupt();
