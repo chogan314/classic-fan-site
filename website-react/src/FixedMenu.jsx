@@ -20,4 +20,32 @@ class FixedMenu extends Component {
     }
 }
 
+function onScroll(event) {
+    var menu = document.getElementById("menu-section");
+    var fixedMenu = document.getElementById("fixed-menu-section");
+
+    if (window.innerWidth >= 1500) {
+        fixedMenu.style.display = "none";
+        return;
+    }
+
+    if (menu.getBoundingClientRect().top <= 0) {
+        fixedMenu.style.display = "block";
+        menu.style.visibility = "hidden";
+    } else {
+        fixedMenu.style.display = "none";
+        menu.style.visibility = "visible";
+    }
+}
+
+function onResize(event) {
+    if (window.innerWidth >= 1500) {
+        var fixedMenu = document.getElementById("fixed-menu-section");
+        fixedMenu.style.display = "none";
+    }
+}
+
+window.addEventListener("scroll", onScroll);
+window.addEventListener("resize", onResize);
+
 export default FixedMenu;
