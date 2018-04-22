@@ -13,12 +13,25 @@ class WideHeader extends Component {
                             <div className="wide-links-item noselect">Register</div>
                         </div>
                     </div>
-                    <div id="wide-header-scrolling-section">
-                        <div id="wide-title-container">
+                    <div id="wide-nonscrolling-container">
+                        <div className="wide-title-container">
                             <div>SENTINEL</div>
                             <div>HILL</div>
                         </div>
-                        <div id="wide-menu-container">
+                        <div className="wide-menu-container">
+                            <div className="wide-menu-item noselect">Home</div>
+                            <div className="wide-menu-item noselect">News</div>
+                            <div className="wide-menu-item noselect">Articles</div>
+                            <div className="wide-menu-item noselect">Guides</div>
+                            <div className="wide-menu-item noselect">Tools</div>
+                        </div>
+                    </div>
+                    <div id="wide-scrolling-container">
+                        <div className="wide-title-container">
+                            <div>SENTINEL</div>
+                            <div>HILL</div>
+                        </div>
+                        <div className="wide-menu-container">
                             <div className="wide-menu-item noselect">Home</div>
                             <div className="wide-menu-item noselect">News</div>
                             <div className="wide-menu-item noselect">Articles</div>
@@ -31,5 +44,21 @@ class WideHeader extends Component {
         );
     }
 }
+
+function onScroll(event) {
+    var wsc = document.getElementById("wide-scrolling-container");
+    var wnc = document.getElementById("wide-nonscrolling-container");
+
+    if (wnc.getBoundingClientRect().top <= 0) {
+        wsc.style.display = "block";
+        wsc.style.top = "" + (-wnc.offsetHeight - 40 - 56 + (window.pageYOffset || document.documentElement.scrollTop)) + "px"; // ???
+        wnc.style.visibility = "hidden";
+    } else {
+        wsc.style.display = "none";
+        wnc.style.visibility = "visible";
+    }
+}
+
+window.addEventListener("scroll", onScroll);
 
 export default WideHeader;
