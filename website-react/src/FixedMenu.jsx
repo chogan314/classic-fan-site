@@ -24,7 +24,7 @@ function onScroll(event) {
     var menu = document.getElementById("menu-section");
     var fixedMenu = document.getElementById("fixed-menu-section");
 
-    if (window.innerWidth >= 1500) {
+    if (window.innerWidth >= 1440) {
         fixedMenu.style.display = "none";
         return;
     }
