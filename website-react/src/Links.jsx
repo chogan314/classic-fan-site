@@ -6,10 +6,10 @@ class Links extends Component {
             <div id="links-section">
                 <div className="section-wrapper">
                     <div id="links-container">
-                        <div className="links-item noselect">Contact</div>
-                        <div className="links-item noselect">Write for Us</div>
-                        <div className="links-item noselect">Login</div>
-                        <div className="links-item noselect">Register</div>
+                        <div className="links-item noselect"><a href="index">Contact</a></div>
+                        <div className="links-item noselect"><a href="index">Write for Us</a></div>
+                        <div className="links-item noselect"><a href="index">Login</a></div>
+                        <div className="links-item noselect"><a href="index">Register</a></div>
                     </div>
                 </div>
             </div>

@@ -7,17 +7,17 @@ class MobileMenu extends Component {
                 <div className="section-wrapper">
                     <div className="mobile-menu">
                         <div className="mobile-menu-container">
-                            <div className="mobile-menu-item noselect">Home</div>
-                            <div className="mobile-menu-item noselect">News</div>
-                            <div className="mobile-menu-item noselect">Articles</div>
-                            <div className="mobile-menu-item noselect">Guides</div>
-                            <div className="mobile-menu-item noselect">Tools</div>
+                            <div className="mobile-menu-item noselect"><a href="index">Home</a></div>
+                            <div className="mobile-menu-item noselect"><a href="index">News</a></div>
+                            <div className="mobile-menu-item noselect"><a href="index">Articles</a></div>
+                            <div className="mobile-menu-item noselect"><a href="index">Guides</a></div>
+                            <div className="mobile-menu-item noselect"><a href="index">Tools</a></div>
                         </div>
                         <div className="mobile-links-container">
-                            <div className="mobile-links-item noselect">Contact</div>
-                            <div className="mobile-links-item noselect">Write for Us</div>
-                            <div className="mobile-links-item noselect">Login</div>
-                            <div className="mobile-links-item noselect">Register</div>
+                            <div className="mobile-links-item noselect"><a href="index">Contact</a></div>
+                            <div className="mobile-links-item noselect"><a href="index">Write for Us</a></div>
+                            <div className="mobile-links-item noselect"><a href="index">Login</a></div>
+                            <div className="mobile-links-item noselect"><a href="index">Register</a></div>
                         </div>
                     </div>
                 </div>
@@ -109,6 +109,8 @@ function onResize(event) {
         Array.from(document.getElementsByClassName("menu-hamburger-icon")).forEach(function (element) {
             element.style.display = "block";
         });
+    } else if (window.innerWidth >= 1440) {
+        document.getElementById("title-section").style.display = "none";
     }
 }
 

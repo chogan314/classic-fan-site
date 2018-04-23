@@ -7,10 +7,10 @@ class WideHeader extends Component {
                 <div className="lhs-section-wrapper">
                     <div id="wide-links-section">
                         <div id="wide-links-container">
-                            <div className="wide-links-item noselect">Contact</div>
-                            <div className="wide-links-item noselect">Write for Us</div>
-                            <div className="wide-links-item noselect">Login</div>
-                            <div className="wide-links-item noselect">Register</div>
+                            <div className="wide-links-item noselect"><a href="index">Contact</a></div>
+                            <div className="wide-links-item noselect"><a href="index">Write for Us</a></div>
+                            <div className="wide-links-item noselect"><a href="index">Login</a></div>
+                            <div className="wide-links-item noselect"><a href="index">Register</a></div>
                         </div>
                     </div>
                     <div id="wide-nonscrolling-container">
@@ -19,11 +19,11 @@ class WideHeader extends Component {
                             <div>HILL</div>
                         </div>
                         <div className="wide-menu-container">
-                            <div className="wide-menu-item noselect">Home</div>
-                            <div className="wide-menu-item noselect">News</div>
-                            <div className="wide-menu-item noselect">Articles</div>
-                            <div className="wide-menu-item noselect">Guides</div>
-                            <div className="wide-menu-item noselect">Tools</div>
+                            <div className="wide-menu-item noselect"><a href="index">Home</a></div>
+                            <div className="wide-menu-item noselect"><a href="index">News</a></div>
+                            <div className="wide-menu-item noselect"><a href="index">Articles</a></div>
+                            <div className="wide-menu-item noselect"><a href="index">Guides</a></div>
+                            <div className="wide-menu-item noselect"><a href="index">Tools</a></div>
                         </div>
                     </div>
                     <div id="wide-scrolling-container">
@@ -32,11 +32,11 @@ class WideHeader extends Component {
                             <div>HILL</div>
                         </div>
                         <div className="wide-menu-container">
-                            <div className="wide-menu-item noselect">Home</div>
-                            <div className="wide-menu-item noselect">News</div>
-                            <div className="wide-menu-item noselect">Articles</div>
-                            <div className="wide-menu-item noselect">Guides</div>
-                            <div className="wide-menu-item noselect">Tools</div>
+                            <div className="wide-menu-item noselect"><a href="index">Home</a></div>
+                            <div className="wide-menu-item noselect"><a href="index">News</a></div>
+                            <div className="wide-menu-item noselect"><a href="index">Articles</a></div>
+                            <div className="wide-menu-item noselect"><a href="index">Guides</a></div>
+                            <div className="wide-menu-item noselect"><a href="index">Tools</a></div>
                         </div>
                     </div>
                 </div>

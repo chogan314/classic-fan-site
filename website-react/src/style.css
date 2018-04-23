@@ -159,7 +159,6 @@ body {
 }
 
 .wide-links-item {
-    cursor: pointer;
     margin-right: 10px;
 }
 
@@ -180,7 +179,6 @@ body {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
-    cursor: pointer;
 }
 
 #wide-layout-filler {
@@ -214,7 +212,6 @@ body {
     line-height: 20px;
     padding-left: 5px;
     padding-right: 5px;
-    cursor: pointer;
 }
 
 .links-item:last-child {
@@ -267,7 +264,6 @@ body {
     padding-right: 20px;
     font-weight: 700;
     font-size: 14px;
-    cursor: pointer;
 }
 
 .menu-item:first-child {
@@ -327,7 +323,6 @@ body {
     padding-right: 20px;
     font-weight: 700;
     font-size: 14px;
-    cursor: pointer;
 }
 
 .mobile-links-container {
@@ -339,7 +334,6 @@ body {
     line-height: 20px;
     padding: 10px;
     margin-bottom: 5px;
-    cursor: pointer;
 }
 
 /* 
@@ -517,10 +511,6 @@ body {
     z-index: 999;
 }
 
-.entry-image-container {
-    cursor: pointer;
-}
-
 .entry-image {
     display: block;
     width: 100%;
@@ -620,4 +610,9 @@ body {
     position: relative;
     left: 0;
     right: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
