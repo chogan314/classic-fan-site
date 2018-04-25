@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SiteContainer from './SiteContainer';
+import Grid from './Grid';
 import './style.css';
 
-ReactDOM.render(<SiteContainer />, document.getElementById('root'));
+function Index(props) {
+    return(
+        <SiteContainer>
+            <Grid />
+        </SiteContainer>
+    );
+}
+
+ReactDOM.render(<Index />, document.getElementById('root'));
