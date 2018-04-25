@@ -172,23 +172,23 @@ function mouseLeave(event) {
 class ContentPreview extends Component {
     render() {
         return(
-            <div className={contentPreviewclassName(this.props.type)}>
+            <div className={contentPreviewclassName(this.props.data.type)}>
                 <a href="index">
                     <div className="entry-image-container" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                        <img className="entry-image" src={this.props.thumbnail_path} alt="thumbnail" />
+                        <img className="entry-image" src={this.props.data.thumbnail_path} alt="thumbnail" />
                         <div className="entry-image-overlay"></div>
                         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMin slice" className="entry-image-triangle-overlay">
                             <polygon points="100,0 100,38 62,0 62,0" />
                         </svg>
-                        <ContentTypeRowOverlay contentType={this.props.type} />
+                        <ContentTypeRowOverlay contentType={this.props.data.type} />
                     </div>
                 </a>
                 <div className="entry-details-row">
-                    <div className="entry-details-author">{this.props.author}</div>
-                    <div className="entry-details-date">{this.props.posted_at}</div>
+                    <div className="entry-details-author">{this.props.data.author}</div>
+                    <div className="entry-details-date">{this.props.data.posted_at}</div>
                 </div>
-                <div className="entry-title heading"><a href="index">{this.props.title}</a></div>
-                <div className="entry-preview">{this.props.description}</div>
+                <div className="entry-title heading"><a href="index">{this.props.data.title}</a></div>
+                <div className="entry-preview">{this.props.data.description}</div>
             </div>
         );
     }

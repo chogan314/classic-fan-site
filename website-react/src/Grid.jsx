@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ContentPreview from './ContentPreview';
 
 class Grid extends Component {
     render() {
@@ -8,7 +7,7 @@ class Grid extends Component {
                 <div className="section-wrapper">
                     <div id="grid-container">
                         <div id="grid">
-                            <ContentPreview type="ARTICLE"
+                            {/* <ContentPreview type="ARTICLE"
                                             title="This Is an Example Article"
                                             author="Author Here"
                                             thumbnail_path="res/classic.jpg"
@@ -122,7 +121,8 @@ class Grid extends Component {
                                             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est,
                                                 ultricies ut efficitur quis, tempor ut risus. Vestibulum venenatis lectus quis
                                                 lectus volutpat commodo."
-                                            posted_at="February 1st, 2018" />
+                                            posted_at="February 1st, 2018" /> */}
+                            { this.props.children }
                         </div>
                     </div>
                 </div>
