@@ -13,14 +13,14 @@ function initPreviews() {
 class Index extends Component {
     constructor(props) {
         super(props);
-        this.state = initPreviews();
+        this.state = { previewData: initPreviews() };
     }
 
     render() {
         return(
             <SiteContainer>
                 <Grid>
-                    { Object.keys(this.state).map(key => <ContentPreview key={key} data={this.state[key]} />) }
+                    { Object.keys(this.state.previewData).map(key => <ContentPreview key={key} data={this.state.previewData[key]} />) }
                 </Grid>
             </SiteContainer>
         );
