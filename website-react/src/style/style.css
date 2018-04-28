@@ -83,7 +83,7 @@ body {
 }
 
 #alliance-background-holder {
-    background-image: url("res/alliance-bg-transparent-tall.png");
+    background-image: url("/res/alliance-bg-transparent-tall.png");
     transform: scaleX(-1);
     background-repeat: repeat-y;
     position: relative;
@@ -99,7 +99,7 @@ body {
 
 #background-column-horde {
     flex: 1 1 33.333%;
-    background-image: url("res/horde-bg-transparent-tall.png");
+    background-image: url("/res/horde-bg-transparent-tall.png");
     background-repeat: repeat-y;
 }
 
@@ -291,7 +291,7 @@ body {
     height: 50px;
     padding: 3px;
     width: 50px;
-    background-image: url(res/hamburger-icon.png);
+    background-image: url(/res/hamburger-icon.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -301,7 +301,7 @@ body {
     padding: 6px;
     width: 50px;
     display: none;
-    background-image: url(res/x.png);
+    background-image: url(/res/x.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -592,11 +592,11 @@ body {
 }
 
 .dark-theme .menu-hamburger-icon {
-    background-image: url(res/hamburger-icon-gray.png);
+    background-image: url(/res/hamburger-icon-gray.png);
 }
 
 .dark-theme .menu-close-icon {
-    background-image: url(res/x-gray.png);
+    background-image: url(/res/x-gray.png);
 }
 
 #root {

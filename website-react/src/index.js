@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import SiteContainer from './SiteContainer';
-import Grid from './Grid';
-import ContentPreview from './ContentPreview';
-import './style.css';
-import previewData from './previewData.json';
+import SiteContainer from './components/SiteContainer';
+import Grid from './components/Grid';
+import ContentPreview from './components/ContentPreview';
+import './style/style.css';
+import previewData from './res/previewData.json';
 
 function initPreviews() {
     return previewData;

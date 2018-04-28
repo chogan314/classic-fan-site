@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Mesh2 from './mesh2d.js'
+import Mesh2 from '../scripts/mesh2d.js'
 
 function ContentTypeRowOverlay(props) {
     switch (props.contentType) {
