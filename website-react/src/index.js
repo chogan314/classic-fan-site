@@ -6,14 +6,14 @@ import ContentPreview from './components/ContentPreview';
 import './style/style.css';
 import previewData from './res/previewData.json';
 
-function initPreviews() {
+function init() {
     return previewData;
 }
 
 class Index extends Component {
     constructor(props) {
         super(props);
-        this.state = { previewData: initPreviews() };
+        this.state = { previewData: init() };
     }
 
     render() {
