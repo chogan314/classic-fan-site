@@ -4,27 +4,44 @@ import SiteContainer from './components/SiteContainer';
 import Grid from './components/Grid';
 import ContentPreview from './components/ContentPreview';
 import './style/style.css';
-import previewData from './res/previewData.json';
+// import previewDataJSON from './res/previewData.json';
 
-function init(index) {
-    var page = 0;
-    var pageSize = 12;
+var page = 0;
+var pageSize = 12;
+var requesting = false;
+
+function getPage(index) {
+    if (requesting) {
+        return;
+    }
 
     var request = new XMLHttpRequest();
-    request.onreadystatechange = action;    
-    request.open('GET', 'php/get_content_previews.php');
-    request.send("pageSize=" + encodeURIComponent(page) + "&page=" + encodeURIComponent(pageSize));
+    request.onreadystatechange = action;
+    request.open('GET', 'php/get_content_previews.php?pageSize=' + pageSize + '&page=' + page);
+    // request.send("pageSize=" + encodeURIComponent(pageSize) + "&page=" + encodeURIComponent(page));
+    request.send(null);
+    requesting = true;
 
-    index.state.previewData = previewData;
-    
     function action() {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                // index.state.previewData = JSON.parse(request.responseText);
-                index.setState({ previewData: JSON.parse(request.responseText) });
+                var previewData = index.state.previewData.slice();
+
+                try {
+                    var newPreviewData = JSON.parse(request.responseText);
+                } catch(e) {
+                    alert(e + "\n" + request.responseText);
+                }
+
+                var newValues = Object.values(newPreviewData);
+                newValues.map(value => previewData.push(value));
+                // Object.values(previewDataJSON).map(value => previewData.push(value));
+                index.setState({ previewData: previewData });
+                page++;
             } else {
                 alert('There was a problem with the request.');
             }
+            requesting = false;
         }
     }
 }
@@ -32,11 +49,11 @@ function init(index) {
 class Index extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = { previewData: [] };
     }
 
     componentDidMount() {
-        init(this);
+        getPage(this);
     }
 
     render() {
@@ -44,8 +61,9 @@ class Index extends Component {
             return(
                 <SiteContainer>
                     <Grid>
-                        { Object.values(this.state.previewData).map(value => <ContentPreview key={value.id} data={value} />) }
+                        { this.state.previewData.map(elem => <ContentPreview key={elem.id} data={elem} />) }
                     </Grid>
+                    <div id="get-more" class="button noselect" onClick={() => getPage(this)}>Get More</div>
                 </SiteContainer>
             );
         }
@@ -53,8 +71,7 @@ class Index extends Component {
         return(
             <SiteContainer>
                 <Grid>
-                    {/* { (this.state.previewData) ? Object.values(this.state.previewData).map(value => <ContentPreview key={value.id} data={value} />) : <div>???</div>} */}
-                    ??????
+                    ?????
                 </Grid>
             </SiteContainer>
         );

@@ -9,8 +9,8 @@ function sanitizeInput($input, $dbc) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $pageSize = sanitizeInput("10", $dbc);
-    $offset = $pageSize * sanitizeInput("0", $dbc);
+    $pageSize = sanitizeInput($_GET["pageSize"], $dbc);
+    $offset = $pageSize * sanitizeInput($_GET["page"], $dbc);
 
     $query = <<<EOT
         SELECT

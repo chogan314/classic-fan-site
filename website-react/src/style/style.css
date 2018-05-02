@@ -616,3 +616,30 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main-content>* {
+    margin-bottom: 20px;
+}
+
+#main-content>*:last-child {
+    margin-bottom: 0;
+}
+
+.button {
+    background-color: #3f4146;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #46484e;
+}
