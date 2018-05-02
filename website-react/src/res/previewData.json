@@ -1,5 +1,6 @@
 {
-    "0": { 
+    "0": {
+        "id": "1",
         "type": "ARTICLE",
         "title": "This Is an Example Article",
         "author": "Author Here",
@@ -8,6 +9,7 @@
         "posted_at": "February 1st, 2018"
     },
     "1": {
+        "id": "2",
         "type": "NEWS",
         "title": "This Is Example News with a Really Really Long Name",
         "author": "Author Here",
@@ -16,6 +18,7 @@
         "posted_at": "February 1st, 2018"
     },
     "2": {
+        "id": "3",
         "type": "GUIDE",
         "title": "This Is an Example Guide",
         "author": "Author Here",
@@ -24,6 +27,7 @@
         "posted_at": "February 1st, 2018"
     },
     "3": {
+        "id": "4",
         "type": "GUIDE",
         "title": "This Is an Example Guide Again",
         "author": "Author Here",
@@ -32,6 +36,7 @@
         "posted_at": "February 1st, 2018"
     },
     "4": {
+        "id": "5",
         "type": "NEWS",
         "title": "This Is Example News",
         "author": "Author Here",
@@ -40,6 +45,7 @@
         "posted_at": "February 1st, 2018"
     },
     "5": {
+        "id": "6",
         "type": "ARTICLE",
         "title": "This Is an Example Article",
         "author": "Author Here",
@@ -47,7 +53,8 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi est, ultricies ut efficitur quis, tempor ut risus. Vestibulum venenatis lectus quis lectus volutpat commodo.",
         "posted_at": "February 1st, 2018"
     },
-    "6": { 
+    "6": {
+        "id": "7",
         "type": "ARTICLE",
         "title": "This Is an Example Article",
         "author": "Author Here",
@@ -56,6 +63,7 @@
         "posted_at": "February 1st, 2018"
     },
     "7": {
+        "id": "8",
         "type": "NEWS",
         "title": "This Is Example News with a Really Really Long Name",
         "author": "Author Here",
@@ -64,6 +72,7 @@
         "posted_at": "February 1st, 2018"
     },
     "8": {
+        "id": "9",
         "type": "GUIDE",
         "title": "This Is an Example Guide",
         "author": "Author Here",
@@ -72,6 +81,7 @@
         "posted_at": "February 1st, 2018"
     },
     "9": {
+        "id": "10",
         "type": "GUIDE",
         "title": "This Is an Example Guide Again",
         "author": "Author Here",
@@ -80,6 +90,7 @@
         "posted_at": "February 1st, 2018"
     },
     "10": {
+        "id": "11",
         "type": "NEWS",
         "title": "This Is Example News",
         "author": "Author Here",
@@ -88,6 +99,7 @@
         "posted_at": "February 1st, 2018"
     },
     "11": {
+        "id": "12",
         "type": "ARTICLE",
         "title": "This Is an Example Article",
         "author": "Author Here",

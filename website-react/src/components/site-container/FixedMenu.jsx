@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class FixedMenu extends Component {
     render() {
@@ -6,11 +7,11 @@ class FixedMenu extends Component {
             <div id="fixed-menu-section">
                 <div className="section-wrapper">
                     <div className="menu-container">
-                        <div className="menu-item noselect"><a href="index">Home</a></div>
-                        <div className="menu-item noselect"><a href="index">News</a></div>
-                        <div className="menu-item noselect"><a href="index">Articles</a></div>
-                        <div className="menu-item noselect"><a href="index">Guides</a></div>
-                        <div className="menu-item noselect"><a href="index">Tools</a></div>
+                        <div className="menu-item noselect"><Link to='/'>Home</Link></div>
+                        <div className="menu-item noselect"><Link to='/'>News</Link></div>
+                        <div className="menu-item noselect"><Link to='/'>Articles</Link></div>
+                        <div className="menu-item noselect"><Link to='/guides'>Guides</Link></div>
+                        <div className="menu-item noselect"><Link to='/'>Tools</Link></div>
                         <div className="menu-hamburger-icon"></div>
                         <div className="menu-close-icon"></div>
                     </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class MobileMenu extends Component {
     render() {
@@ -7,17 +8,17 @@ class MobileMenu extends Component {
                 <div className="section-wrapper">
                     <div className="mobile-menu">
                         <div className="mobile-menu-container">
-                            <div className="mobile-menu-item noselect"><a href="index">Home</a></div>
-                            <div className="mobile-menu-item noselect"><a href="index">News</a></div>
-                            <div className="mobile-menu-item noselect"><a href="index">Articles</a></div>
-                            <div className="mobile-menu-item noselect"><a href="index">Guides</a></div>
-                            <div className="mobile-menu-item noselect"><a href="index">Tools</a></div>
+                            <div className="mobile-menu-item noselect"><Link to='/'>Home</Link></div>
+                            <div className="mobile-menu-item noselect"><Link to='/'>News</Link></div>
+                            <div className="mobile-menu-item noselect"><Link to='/'>Articles</Link></div>
+                            <div className="mobile-menu-item noselect"><Link to='/guides'>Guides</Link></div>
+                            <div className="mobile-menu-item noselect"><Link to='/'>Tools</Link></div>
                         </div>
                         <div className="mobile-links-container">
-                            <div className="mobile-links-item noselect"><a href="index">Contact</a></div>
-                            <div className="mobile-links-item noselect"><a href="index">Write for Us</a></div>
-                            <div className="mobile-links-item noselect"><a href="index">Login</a></div>
-                            <div className="mobile-links-item noselect"><a href="index">Register</a></div>
+                            <div className="mobile-links-item noselect"><Link to='/'>Contact</Link></div>
+                            <div className="mobile-links-item noselect"><Link to='/'>Write for Us</Link></div>
+                            <div className="mobile-links-item noselect"><Link to='/'>Login</Link></div>
+                            <div className="mobile-links-item noselect"><Link to='/'>Register</Link></div>
                         </div>
                     </div>
                 </div>

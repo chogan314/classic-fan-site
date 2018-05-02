@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import SiteContainer from './components/SiteContainer';
-import Grid from './components/Grid';
-import GuideType from './components/GuideType';
-import './style/style.css';
+import Grid from '../utils/Grid';
+import GuideType from './GuideType';
+import previewDataJSON from '../../res/previewData.json';
 
-var page = 0;
-var pageSize = 12;
 var requesting = false;
+
+function getPageTest(index) {
+    var guideTypes = index.state.guideTypes.slice();
+    Object.values(previewDataJSON).map(value => guideTypes.push(value));
+    index.setState({ guideTypes: guideTypes });
+}
 
 function getPage(guides) {
     if (requesting) {
@@ -23,7 +25,7 @@ function getPage(guides) {
     function action() {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                var previewData = guides.state.previewData.slice();
+                var guideTypes = guides.state.guideTypes.slice();
 
                 try {
                     var newPreviewData = JSON.parse(request.responseText);
@@ -32,9 +34,8 @@ function getPage(guides) {
                 }
 
                 var newValues = Object.values(newPreviewData);
-                newValues.map(value => previewData.push(value));
-                guides.setState({ previewData: previewData });
-                page++;
+                newValues.map(value => guideTypes.push(value));
+                guides.setState({ guideTypes: guideTypes });
             } else {
                 alert('There was a problem with the request.');
             }
@@ -50,28 +51,24 @@ class Guides extends Component {
     }
 
     componentDidMount() {
-        getPage(this);
+        getPageTest(this);
     }
 
     render() {
-        if (this.state.previewData) {
+        if (this.state.guideTypes) {
             return(
-                <SiteContainer>
-                    <Grid>
-                        { this.state.previewData.map(elem => <GuideType key={elem.id} data={elem} />) }
-                    </Grid>
-                </SiteContainer>
+                <Grid>
+                    { this.state.guideTypes.map(elem => <GuideType key={elem.id} data={elem} />) }
+                </Grid>
             );
         }
 
         return(
-            <SiteContainer>
-                <Grid>
-                    ?????
-                </Grid>
-            </SiteContainer>
+            <Grid>
+                ?????
+            </Grid>
         );
     }
 }
 
-ReactDOM.render(<Guides />, document.getElementById('root'));
+export default Guides;

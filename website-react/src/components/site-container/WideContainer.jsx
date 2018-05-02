@@ -6,9 +6,7 @@ class WideContainer extends Component {
         return(
             <div id="wide-content-wrapper">
                 <WideHeader />
-                <div id="main-content">
-                    { this.props.children }
-                </div>
+                { this.props.children }
                 <div id="wide-layout-filler"></div>
             </div>
         );

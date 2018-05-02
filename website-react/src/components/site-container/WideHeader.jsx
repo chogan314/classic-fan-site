@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class WideHeader extends Component {
     render() {
@@ -7,10 +8,10 @@ class WideHeader extends Component {
                 <div className="lhs-section-wrapper">
                     <div id="wide-links-section">
                         <div id="wide-links-container">
-                            <div className="wide-links-item noselect"><a href="index">Contact</a></div>
-                            <div className="wide-links-item noselect"><a href="index">Write for Us</a></div>
-                            <div className="wide-links-item noselect"><a href="index">Login</a></div>
-                            <div className="wide-links-item noselect"><a href="index">Register</a></div>
+                            <div className="wide-links-item noselect"><Link to='/'>Contact</Link></div>
+                            <div className="wide-links-item noselect"><Link to='/'>Write for Us</Link></div>
+                            <div className="wide-links-item noselect"><Link to='/'>Login</Link></div>
+                            <div className="wide-links-item noselect"><Link to='/'>Register</Link></div>
                         </div>
                     </div>
                     <div id="wide-nonscrolling-container">
@@ -19,11 +20,11 @@ class WideHeader extends Component {
                             <div>HILL</div>
                         </div>
                         <div className="wide-menu-container">
-                            <div className="wide-menu-item noselect"><a href="index">Home</a></div>
-                            <div className="wide-menu-item noselect"><a href="index">News</a></div>
-                            <div className="wide-menu-item noselect"><a href="index">Articles</a></div>
-                            <div className="wide-menu-item noselect"><a href="index">Guides</a></div>
-                            <div className="wide-menu-item noselect"><a href="index">Tools</a></div>
+                            <div className="wide-menu-item noselect"><Link to='/'>Home</Link></div>
+                            <div className="wide-menu-item noselect"><Link to='/'>News</Link></div>
+                            <div className="wide-menu-item noselect"><Link to='/'>Articles</Link></div>
+                            <div className="wide-menu-item noselect"><Link to='/guides'>Guides</Link></div>
+                            <div className="wide-menu-item noselect"><Link to='/'>Tools</Link></div>
                         </div>
                     </div>
                     <div id="wide-scrolling-container">
@@ -32,11 +33,11 @@ class WideHeader extends Component {
                             <div>HILL</div>
                         </div>
                         <div className="wide-menu-container">
-                            <div className="wide-menu-item noselect"><a href="index">Home</a></div>
-                            <div className="wide-menu-item noselect"><a href="index">News</a></div>
-                            <div className="wide-menu-item noselect"><a href="index">Articles</a></div>
-                            <div className="wide-menu-item noselect"><a href="index">Guides</a></div>
-                            <div className="wide-menu-item noselect"><a href="index">Tools</a></div>
+                            <div className="wide-menu-item noselect"><Link to='/'>Home</Link></div>
+                            <div className="wide-menu-item noselect"><Link to='/'>News</Link></div>
+                            <div className="wide-menu-item noselect"><Link to='/'>Articles</Link></div>
+                            <div className="wide-menu-item noselect"><Link to='/guides'>Guides</Link></div>
+                            <div className="wide-menu-item noselect"><Link to='/'>Tools</Link></div>
                         </div>
                     </div>
                 </div>
