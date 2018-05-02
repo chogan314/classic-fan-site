@@ -9,22 +9,14 @@ function sanitizeInput($input, $dbc) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $pageSize = sanitizeInput($_GET["pageSize"], $dbc);
-    $offset = $pageSize * sanitizeInput($_GET["page"], $dbc);
-
     $query = <<<EOT
         SELECT
             id,
             type,
-            title,
-            author,
-            thumbnail_path,
             description,
-            posted_at 
-        FROM content 
-        ORDER BY posted_at
-        LIMIT {$pageSize}
-        OFFSET {$offset};
+            thumbnail_path
+        FROM guide_types 
+        ORDER BY type;
 EOT;
 
     $result = mysqli_query($dbc, $query);
@@ -32,7 +24,7 @@ EOT;
     $response = [];
 
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        $response[] = ['id' => $row['id'], 'type' => $row['type'], 'title' => $row['title'], 'author' => $row['author'], 'thumbnail_path' => $row['thumbnail_path'], 'description' => $row['description'], 'posted_at' => $row['posted_at']];
+        $response[] = ['id' => $row['id'], 'type' => $row['type'], 'thumbnail_path' => $row['thumbnail_path'], 'description' => $row['description']];
     }
 
     echo json_encode($response);
