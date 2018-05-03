@@ -154,18 +154,7 @@
 .menu-container {
     display: flex;
     border-bottom: 2px solid #cdcdcd;
-}
-
-@media only screen and (min-width: 641px) and (max-width: 1007px) {
-    .menu-container {
-        justify-content: center;
-    }
-}
-
-@media only screen and (max-width: 640px) {
-    .menu-container {
-        justify-content: flex-end;
-    }
+    justify-content: center;
 }
 
 .menu-item {
@@ -176,14 +165,13 @@
     font-size: 14px;
 }
 
-.menu-item:first-child {
-    padding-left: 0px;
+.active-menu-item {
+    color: red;
 }
 
-@media only screen and (min-width: 641px) and (max-width: 1007px) {
-    .menu-item:first-child {
-        padding-left: 20px;
-    }
+.menu-container .active-menu-item {
+    border-bottom: 4px solid red;
+    margin-bottom: -4px;
 }
 
 .menu-item:hover {

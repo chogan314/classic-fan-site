@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SiteContainer from '../site-container/SiteContainer';
 import Grid from '../utils/Grid';
 import ContentPreview from './ContentPreview';
 import previewDataJSON from '../../res/previewData.json';
@@ -60,24 +61,15 @@ class Home extends Component {
     }
 
     render() {
-        if (this.state.previewData) {
-            return(
+        return(
+            <SiteContainer active="home">
                 <div id="main-content">
                     <Grid>
                         { this.state.previewData.map(elem => <ContentPreview key={elem.id} data={elem} />) }
                     </Grid>
                     <div id="get-more" className="button noselect" onClick={() => getPage(this)}>Get More</div>
                 </div>
-            );
-        }
-
-        return(
-            <div id="main-content">
-                <Grid>
-                    ?????
-                </Grid>
-                <div id="get-more" className="button noselect" onClick={() => getPage(this)}>Get More</div>
-            </div>
+            </SiteContainer>
         );
     }
 }

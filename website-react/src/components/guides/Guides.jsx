@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Grid from '../utils/Grid';
 import GuideType from './GuideType';
 import previewDataJSON from '../../res/previewData.json';
+import SiteContainer from '../site-container/SiteContainer';
 
 var requesting = false;
 
@@ -51,22 +52,16 @@ class Guides extends Component {
     }
 
     componentDidMount() {
-        getPage(this);
+        getPageTest(this);
     }
 
     render() {
-        if (this.state.guideTypes) {
-            return(
+        return(
+            <SiteContainer active="guides">
                 <Grid>
                     { this.state.guideTypes.map(elem => <GuideType key={elem.id} data={elem} />) }
                 </Grid>
-            );
-        }
-
-        return(
-            <Grid>
-                ?????
-            </Grid>
+            </SiteContainer>
         );
     }
 }

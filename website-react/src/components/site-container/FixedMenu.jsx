@@ -7,11 +7,11 @@ class FixedMenu extends Component {
             <div id="fixed-menu-section">
                 <div className="section-wrapper">
                     <div className="menu-container">
-                        <div className="menu-item noselect"><Link to='/'>Home</Link></div>
-                        <div className="menu-item noselect"><Link to='/'>News</Link></div>
-                        <div className="menu-item noselect"><Link to='/'>Articles</Link></div>
-                        <div className="menu-item noselect"><Link to='/guides'>Guides</Link></div>
-                        <div className="menu-item noselect"><Link to='/'>Tools</Link></div>
+                        <Link to='/'><div className={"menu-item noselect" + (this.props.active === "home" ? " active-menu-item" : "")}>Home</div></Link>
+                        <Link to='/'><div className={"menu-item noselect" + (this.props.active === "news" ? " active-menu-item" : "")}>News</div></Link>
+                        <Link to='/'><div className={"menu-item noselect" + (this.props.active === "articles" ? " active-menu-item" : "")}>Articles</div></Link>
+                        <Link to='/guides'><div className={"menu-item noselect" + (this.props.active === "guides" ? " active-menu-item" : "")}>Guides</div></Link>
+                        <Link to='/'><div className={"menu-item noselect" + (this.props.active === "tools" ? " active-menu-item" : "")}>Tools</div></Link>
                         <div className="menu-hamburger-icon"></div>
                         <div className="menu-close-icon"></div>
                     </div>

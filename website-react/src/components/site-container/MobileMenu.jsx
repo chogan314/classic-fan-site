@@ -8,11 +8,11 @@ class MobileMenu extends Component {
                 <div className="section-wrapper">
                     <div className="mobile-menu">
                         <div className="mobile-menu-container">
-                            <div className="mobile-menu-item noselect"><Link to='/'>Home</Link></div>
-                            <div className="mobile-menu-item noselect"><Link to='/'>News</Link></div>
-                            <div className="mobile-menu-item noselect"><Link to='/'>Articles</Link></div>
-                            <div className="mobile-menu-item noselect"><Link to='/guides'>Guides</Link></div>
-                            <div className="mobile-menu-item noselect"><Link to='/'>Tools</Link></div>
+                            <div className={"mobile-menu-item noselect" + (this.props.active === "home" ? " active-menu-item" : "")}><Link to='/'>Home</Link></div>
+                            <div className={"mobile-menu-item noselect" + (this.props.active === "news" ? " active-menu-item" : "")}><Link to='/'>News</Link></div>
+                            <div className={"mobile-menu-item noselect" + (this.props.active === "articles" ? " active-menu-item" : "")}><Link to='/'>Articles</Link></div>
+                            <div className={"mobile-menu-item noselect" + (this.props.active === "guides" ? " active-menu-item" : "")}><Link to='/guides'>Guides</Link></div>
+                            <div className={"mobile-menu-item noselect" + (this.props.active === "tools" ? " active-menu-item" : "")}><Link to='/'>Tools</Link></div>
                         </div>
                         <div className="mobile-links-container">
                             <div className="mobile-links-item noselect"><Link to='/'>Contact</Link></div>

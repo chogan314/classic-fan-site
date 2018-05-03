@@ -15,10 +15,10 @@ class SiteContainer extends Component {
                 <div className="background-overlay"></div>
                 <Links />
                 <Title />
-                <Menu />
-                <FixedMenu />
-                <MobileMenu />
-                <WideContainer>
+                <Menu active={this.props.active} />
+                <FixedMenu active={this.props.active} />
+                <MobileMenu active={this.props.active} />
+                <WideContainer active={this.props.active} >
                     { this.props.children }
                 </WideContainer>
                 <Footer />
