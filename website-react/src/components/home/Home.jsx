@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Grid from '../utils/Grid';
 import ContentPreview from './ContentPreview';
 import previewDataJSON from '../../res/previewData.json';
+import '../../style/home.css';
 
 var page = 0;
 var pageSize = 12;
@@ -50,6 +51,7 @@ function getPage(index) {
 class Home extends Component {
     constructor(props) {
         super(props);
+        page = 0;
         this.state = { previewData: [] };
     }
 

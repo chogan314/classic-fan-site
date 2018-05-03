@@ -6,6 +6,7 @@ import FixedMenu from './FixedMenu';
 import MobileMenu from './MobileMenu';
 import WideContainer from './WideContainer';
 import Footer from './Footer';
+import '../../style/site-container.css';
 
 class SiteContainer extends Component {
     render() {

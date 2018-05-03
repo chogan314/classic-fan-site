@@ -51,7 +51,7 @@ class Guides extends Component {
     }
 
     componentDidMount() {
-        getPageTest(this);
+        getPage(this);
     }
 
     render() {
