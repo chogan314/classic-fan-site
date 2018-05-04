@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import SiteContainer from '../site-container/SiteContainer';
 import Grid from '../utils/Grid';
 import ContentPreview from './ContentPreview';
+import Getter from '../../scripts/getter.js';
 import previewDataJSON from '../../res/previewData.json';
 import '../../style/home.css';
-
-var page = 0;
-var pageSize = 12;
-var requesting = false;
 
 function getPageTest(index) {
     var previewData = index.state.previewData.slice();
@@ -15,49 +12,30 @@ function getPageTest(index) {
     index.setState({ previewData: previewData });
 }
 
-function getPage(index) {
-    if (requesting) {
-        return;
-    }
-
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = action;
-    request.open('GET', 'php/get_content_previews.php?pageSize=' + pageSize + '&page=' + page);
-    request.send(null);
-    requesting = true;
-
-    function action() {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            if (request.status === 200) {
-                var previewData = index.state.previewData.slice();
-
-                try {
-                    var newPreviewData = JSON.parse(request.responseText);
-                } catch(e) {
-                    alert(e + "\n" + request.responseText);
-                }
-
-                var newValues = Object.values(newPreviewData);
-                newValues.map(value => previewData.push(value));
-                index.setState({ previewData: previewData });
-                page++;
-            } else {
-                alert('There was a problem with the request.');
-            }
-            requesting = false;
-        }
-    }
-}
-
 class Home extends Component {
     constructor(props) {
         super(props);
-        page = 0;
+        this.getter = new Getter("php/get_content_previews.php");
+        this.page = 0;
+        this.pageSize = 12;
         this.state = { previewData: [] };
     }
 
+    getPage() {
+        this.getter.get({ page: this.page, pageSize: this.pageSize }, onComplete);
+        var parent = this;
+
+        function onComplete(data) {
+            var previewData = parent.state.previewData.slice();
+            var newValues = Object.values(data);
+            newValues.map(value => previewData.push(value));
+            parent.setState({ previewData: previewData });
+            parent.page++;
+        }
+    }
+
     componentDidMount() {
-        getPageTest(this);
+        this.getPage();
     }
 
     render() {
@@ -67,7 +45,7 @@ class Home extends Component {
                     <Grid>
                         { this.state.previewData.map(elem => <ContentPreview key={elem.id} data={elem} />) }
                     </Grid>
-                    <div id="get-more" className="button noselect" onClick={() => getPage(this)}>Get More</div>
+                    <div id="get-more" className="button noselect" onClick={() => this.getPage()}>Get More</div>
                 </div>
             </SiteContainer>
         );

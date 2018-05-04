@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Grid from '../utils/Grid';
 import GuideType from './GuideType';
+import Getter from '../../scripts/getter.js';
 import previewDataJSON from '../../res/previewData.json';
 import SiteContainer from '../site-container/SiteContainer';
-
-var requesting = false;
 
 function getPageTest(index) {
     var guideTypes = index.state.guideTypes.slice();
@@ -12,55 +11,37 @@ function getPageTest(index) {
     index.setState({ guideTypes: guideTypes });
 }
 
-function getPage(guides) {
-    if (requesting) {
-        return;
-    }
-
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = action;
-    request.open('GET', 'php/get_guide_types.php');
-    request.send(null);
-    requesting = true;
-
-    function action() {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            if (request.status === 200) {
-                var guideTypes = guides.state.guideTypes.slice();
-
-                try {
-                    var newPreviewData = JSON.parse(request.responseText);
-                } catch(e) {
-                    alert(e + "\n" + request.responseText);
-                }
-
-                var newValues = Object.values(newPreviewData);
-                newValues.map(value => guideTypes.push(value));
-                guides.setState({ guideTypes: guideTypes });
-            } else {
-                alert('There was a problem with the request.');
-            }
-            requesting = false;
-        }
-    }
-}
-
 class Guides extends Component {
     constructor(props) {
         super(props);
+        this.getter = new Getter("php/get_guide_types.php");
         this.state = { guideTypes: [] };
     }
 
+    getPage() {
+        this.getter.get({}, onComplete);
+        var parent = this;
+
+        function onComplete(data) {
+            var guideTypes = parent.state.guideTypes.slice();
+            var newValues = Object.values(data);
+            newValues.map(value => guideTypes.push(value));
+            parent.setState({ guideTypes: guideTypes });
+        }
+    }
+
     componentDidMount() {
-        getPageTest(this);
+        this.getPage();
     }
 
     render() {
         return(
             <SiteContainer active="guides">
-                <Grid>
-                    { this.state.guideTypes.map(elem => <GuideType key={elem.id} data={elem} />) }
-                </Grid>
+                <div id="main-content">
+                    <Grid>
+                        { this.state.guideTypes.map(elem => <GuideType key={elem.id} data={elem} />) }
+                    </Grid>
+                </div>
             </SiteContainer>
         );
     }

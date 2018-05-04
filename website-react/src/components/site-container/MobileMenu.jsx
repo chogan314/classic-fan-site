@@ -10,7 +10,7 @@ class MobileMenu extends Component {
                         <div className="mobile-menu-container">
                             <div className={"mobile-menu-item noselect" + (this.props.active === "home" ? " active-menu-item" : "")}><Link to='/'>Home</Link></div>
                             <div className={"mobile-menu-item noselect" + (this.props.active === "news" ? " active-menu-item" : "")}><Link to='/'>News</Link></div>
-                            <div className={"mobile-menu-item noselect" + (this.props.active === "articles" ? " active-menu-item" : "")}><Link to='/'>Articles</Link></div>
+                            <div className={"mobile-menu-item noselect" + (this.props.active === "articles" ? " active-menu-item" : "")}><Link to='/articles'>Articles</Link></div>
                             <div className={"mobile-menu-item noselect" + (this.props.active === "guides" ? " active-menu-item" : "")}><Link to='/guides'>Guides</Link></div>
                             <div className={"mobile-menu-item noselect" + (this.props.active === "tools" ? " active-menu-item" : "")}><Link to='/'>Tools</Link></div>
                         </div>
