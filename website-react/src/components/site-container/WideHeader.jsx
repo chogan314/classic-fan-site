@@ -21,7 +21,7 @@ class WideHeader extends Component {
                         </div>
                         <div className="wide-menu-container">
                             <div className={"wide-menu-item noselect" + (this.props.active === "home" ? " active-menu-item" : "")}><Link to='/'>Home</Link></div>
-                            <div className={"wide-menu-item noselect" + (this.props.active === "news" ? " active-menu-item" : "")}><Link to='/'>News</Link></div>
+                            <div className={"wide-menu-item noselect" + (this.props.active === "news" ? " active-menu-item" : "")}><Link to='/news'>News</Link></div>
                             <div className={"wide-menu-item noselect" + (this.props.active === "articles" ? " active-menu-item" : "")}><Link to='/articles'>Articles</Link></div>
                             <div className={"wide-menu-item noselect" + (this.props.active === "guides" ? " active-menu-item" : "")}><Link to='/guides'>Guides</Link></div>
                             <div className={"wide-menu-item noselect" + (this.props.active === "tools" ? " active-menu-item" : "")}><Link to='/'>Tools</Link></div>
@@ -34,7 +34,7 @@ class WideHeader extends Component {
                         </div>
                         <div className="wide-menu-container">
                             <div className={"wide-menu-item noselect" + (this.props.active === "home" ? " active-menu-item" : "")}><Link to='/'>Home</Link></div>
-                            <div className={"wide-menu-item noselect" + (this.props.active === "news" ? " active-menu-item" : "")}><Link to='/'>News</Link></div>
+                            <div className={"wide-menu-item noselect" + (this.props.active === "news" ? " active-menu-item" : "")}><Link to='/news'>News</Link></div>
                             <div className={"wide-menu-item noselect" + (this.props.active === "articles" ? " active-menu-item" : "")}><Link to='/articles'>Articles</Link></div>
                             <div className={"wide-menu-item noselect" + (this.props.active === "guides" ? " active-menu-item" : "")}><Link to='/guides'>Guides</Link></div>
                             <div className={"wide-menu-item noselect" + (this.props.active === "tools" ? " active-menu-item" : "")}><Link to='/'>Tools</Link></div>
