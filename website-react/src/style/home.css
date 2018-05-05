@@ -87,7 +87,3 @@
 .dark-theme .entry-image-triangle-overlay polygon {
     fill: #282c34;
 }
-
-.dark-theme .entry-image-overlay-highlight {
-    background-color: rgba(124, 119, 119, 0.2);
-}

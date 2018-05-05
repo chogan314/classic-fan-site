@@ -151,7 +151,7 @@ function mouseEnter(event) {
 }
 
 function mouseLeave(event) {
-    var imageOverlay =  event.currentTarget.getElementsByClassName("entry-image-overlay")[0];
+    var imageOverlay = event.currentTarget.getElementsByClassName("entry-image-overlay")[0];
     var polygon = event.currentTarget.getElementsByClassName("entry-image-triangle-overlay")[0].getElementsByTagName("polygon")[0];
     var typeName = event.currentTarget.getElementsByClassName("entry-type-name")[0];
 

@@ -88,3 +88,7 @@
     font-weight: 600;
     margin-bottom: 6px;
 }
+
+.dark-theme .entry-image-overlay-highlight {
+    background-color: rgba(124, 119, 119, 0.2);
+}
