@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
-class GuideType extends Component {
+class ClassGuide extends Component {
     render() {
         return(
             <div>
-                <Link to='/test'>
+                <a href="guides">
                     <div className="entry-image-container" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
                         <img className="entry-image" src={this.props.data.thumbnail_path} alt="thumbnail" />
                         <div className="entry-image-overlay"></div>
                     </div>
-                </Link>
-                <div className="entry-title heading"><a href="guides">{this.props.data.type + " Guides"}</a></div>
+                </a>
+                <div className="entry-details-row">
+                    <div className="entry-details-author">{this.props.data.author}</div>
+                    <div className="entry-details-date">{this.props.data.posted_at}</div>
+                </div>
+                <div className="entry-title heading"><a href="index">{this.props.data.title}</a></div>
                 <div className="entry-preview">{this.props.data.description}</div>
             </div>
         );
@@ -28,4 +31,4 @@ function mouseLeave(event) {
     imageOverlay.classList.remove("entry-image-overlay-highlight");
 }
 
-export default GuideType;
+export default ClassGuide;

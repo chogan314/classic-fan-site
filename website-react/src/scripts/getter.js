@@ -5,10 +5,6 @@ class Getter {
     }
 
     get(args, onComplete) {
-        if (this.requesting) {
-            return;
-        }
-
         var request = new XMLHttpRequest();
         request.onreadystatechange = action;
         request.open('GET', this.source + this.argsToString(args));
@@ -31,6 +27,14 @@ class Getter {
                 parent.requesting = false;
             }
         }
+    }
+
+    getLimited(args, onComplete) {
+        if (this.requesting) {
+            return;
+        }
+
+        this.get(args, onComplete);
     }
 
     argsToString(args) {

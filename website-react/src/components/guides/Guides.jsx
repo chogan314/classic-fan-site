@@ -2,14 +2,7 @@ import React, { Component } from 'react';
 import Grid from '../utils/Grid';
 import GuideType from './GuideType';
 import Getter from '../../scripts/getter.js';
-import previewDataJSON from '../../res/previewData.json';
 import SiteContainer from '../site-container/SiteContainer';
-
-function getPageTest(index) {
-    var guideTypes = index.state.guideTypes.slice();
-    Object.values(previewDataJSON).map(value => guideTypes.push(value));
-    index.setState({ guideTypes: guideTypes });
-}
 
 class Guides extends Component {
     constructor(props) {
