@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import SiteContainer from '../site-container/SiteContainer';
 import Grid from '../utils/Grid';
-import ContentPreview from './ContentPreview';
+import GridEntry from '../utils/GridEntry';
 import Getter from '../../scripts/getter.js';
 import previewDataJSON from '../../res/previewData.json';
 import '../../style/home.css';
 
 function getPageTest(index) {
-    var previewData = index.state.previewData.slice();
-    Object.values(previewDataJSON).map(value => previewData.push(value));
+    var previewData = [];
+    Object.values(previewDataJSON).forEach(value => previewData.push(value));
     index.setState({ previewData: previewData });
 }
 
@@ -35,7 +35,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        this.getPage();
+        getPageTest(this);
     }
 
     render() {
@@ -43,9 +43,20 @@ class Home extends Component {
             <SiteContainer active="home">
                 <div id="main-content">
                     <Grid>
-                        { this.state.previewData.map(elem => <ContentPreview key={elem.id} data={elem} />) }
+                        {this.state.previewData.map(data =>
+                        <GridEntry 
+                            key={data.id} 
+                            entry_type_class="entry-type-article"
+                            entry_type_name="Article"
+                            entry_type_icon_path="res/writing-blue.png"
+                            link_to="/"
+                            thumbnail_path={data.thumbnail_path}
+                            author={data.author}
+                            posted_at={data.posted_at}
+                            title={data.title}
+                            description={data.description} />)}
                     </Grid>
-                    <div id="get-more" className="button noselect" onClick={() => this.getPage()}>Get More</div>
+                    {/* <div id="get-more" className="button noselect" onClick={() => this.getPage()}>Get More</div> */}
                 </div>
             </SiteContainer>
         );

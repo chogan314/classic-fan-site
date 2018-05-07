@@ -5,7 +5,7 @@ import Home from '../home/Home';
 import Guides from '../guides/Guides';
 import Articles from '../articles/Articles';
 import News from '../news/News';
-import ClassGuides from '../guides/ClassGuides';
+import ProfessionGuides from '../guides/ProfessionGuides';
 
 class Main extends Component {
     componentDidUpdate() {
@@ -19,7 +19,7 @@ class Main extends Component {
                 <Route path='/guides' component={Guides} />;
                 <Route path='/articles' component={Articles} />;
                 <Route path='/news' component={News} />;
-                <Route path='/test' component={ClassGuides} />;
+                <Route path='/test' component={ProfessionGuides} />;
             </Switch>
         );
     }
