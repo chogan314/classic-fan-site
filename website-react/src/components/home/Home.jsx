@@ -38,6 +38,45 @@ class Home extends Component {
         getPageTest(this);
     }
 
+    getEntryTypeClass(type) {
+        switch (type) {
+            case "NEWS":
+            return "entry-type-news";
+            case "ARTICLE":
+            return "entry-type-article";
+            case "GUIDE":
+            return "entry-type-guide";
+            default:
+            return null;
+        }
+    }
+
+    getEntryTypeName(type) {
+        switch (type) {
+            case "NEWS":
+            return "News";
+            case "ARTICLE":
+            return "Article";
+            case "GUIDE":
+            return "Guide";
+            default:
+            return null;
+        }
+    }
+
+    getEntryTypeIconPath(type) {
+        switch (type) {
+            case "NEWS":
+            return "res/folded-newspaper-dark-green.png";
+            case "ARTICLE":
+            return "res/writing-blue.png";
+            case "GUIDE":
+            return "res/tower-purple.png";
+            default:
+            return null;
+        }
+    }
+
     render() {
         return(
             <SiteContainer active="home">
@@ -46,9 +85,9 @@ class Home extends Component {
                         {this.state.previewData.map(data =>
                         <GridEntry 
                             key={data.id} 
-                            entry_type_class="entry-type-article"
-                            entry_type_name="Article"
-                            entry_type_icon_path="res/writing-blue.png"
+                            entry_type_class={this.getEntryTypeClass(data.type)}
+                            entry_type_name={this.getEntryTypeName(data.type)}
+                            entry_type_icon_path={this.getEntryTypeIconPath(data.type)}
                             link_to="/"
                             thumbnail_path={data.thumbnail_path}
                             author={data.author}
