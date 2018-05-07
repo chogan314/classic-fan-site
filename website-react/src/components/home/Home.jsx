@@ -4,7 +4,6 @@ import Grid from '../utils/Grid';
 import GridEntry from '../utils/GridEntry';
 import Getter from '../../scripts/getter.js';
 import previewDataJSON from '../../res/previewData.json';
-import '../../style/home.css';
 
 function getPageTest(index) {
     var previewData = [];
@@ -95,7 +94,7 @@ class Home extends Component {
                             title={data.title}
                             description={data.description} />)}
                     </Grid>
-                    {/* <div id="get-more" className="button noselect" onClick={() => this.getPage()}>Get More</div> */}
+                    <div id="get-more" className="button noselect" onClick={() => this.getPage()}>Get More</div>
                 </div>
             </SiteContainer>
         );

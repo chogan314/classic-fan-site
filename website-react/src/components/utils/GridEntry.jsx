@@ -28,7 +28,7 @@ class GridEntry extends Component {
     }
 
     w(typeOverlayWidth) {
-        return 0.0002 * Math.pow(typeOverlayWidth, 2) - 0.677 * typeOverlayWidth + 100; // seriously
+        return 0.0002 * Math.pow(typeOverlayWidth, 2) - 0.677 * typeOverlayWidth + 100.5; // seriously
     }
 
     mouseEnter(event) {
@@ -59,7 +59,7 @@ class GridEntry extends Component {
 
         var polygon = event.currentTarget.getElementsByClassName("entry-image-polygon-overlay")[0].getElementsByTagName("polygon")[0];
         var typeName = event.currentTarget.getElementsByClassName("entry-type-name")[0];
-        
+
         var typeOverlayWidth = event.currentTarget.getElementsByClassName("entry-type-overlay")[0].clientWidth;
         var expandedWidth = this.w(typeOverlayWidth);
         var expandedPoints = "100,0 100,21.5, " + expandedWidth + ",21.5 " + expandedWidth + ",0";
@@ -69,25 +69,25 @@ class GridEntry extends Component {
 
     render() {
         return(
-            <div className={this.props.entry_type_class ? "grid-entry " + this.props.entry_type_class : "grid-entry"}>
-                <Link to={this.props.link_to ? this.props.link_to : "/"}>
+            <div className={this.props.entry_type_class !== null ? "grid-entry " + this.props.entry_type_class : "grid-entry"}>
+                <Link to={this.props.link_to !== null ? this.props.link_to : "/"}>
                     <div className="entry-image-container" onMouseEnter={event => this.mouseEnter(event)} onMouseLeave={event => this.mouseLeave(event)}>
                         <img className="entry-image" src={this.props.thumbnail_path} alt="thumbnail" />
                         <div className="entry-image-overlay"></div>
 
-                        {this.props.entry_type_name ?
+                        {this.props.entry_type_name !== null ?
                         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMin slice" className="entry-image-polygon-overlay">
                             <polygon points="100,0 100,38 62,0 62,0" />
                         </svg> : null}
 
-                        {this.props.entry_type_name ?
+                        {this.props.entry_type_name !== null ?
                         <EntryTypeOverlay entry_type_name = {this.props.entry_type_name} entry_type_icon_path = {this.props.entry_type_icon_path} /> : null}
                     </div>
                 </Link>
 
                 <div className="entry-details-row">
-                    {this.props.author ? <div className="entry-details-author">{this.props.author}</div> : null}
-                    {this.props.posted_at ? <div className="entry-details-date">{this.props.posted_at}</div> : null}
+                    {this.props.author !== null ? <div className="entry-details-author">{this.props.author}</div> : null}
+                    {this.props.posted_at !== null ? <div className="entry-details-date">{this.props.posted_at}</div> : null}
                 </div>
 
                 <div className="entry-title heading">{this.props.title}</div>
