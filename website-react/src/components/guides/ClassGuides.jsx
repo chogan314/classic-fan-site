@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
-import Grid from '../utils/Grid';
+import Grid from '../grid/Grid';
+import GridEntry from '../grid/GridEntry';
 import Getter from '../../scripts/getter.js';
 import SiteContainer from '../site-container/SiteContainer';
-import ClassGuide from './ClassGuide';
 
 class ClassGuides extends Component {
     constructor(props) {
         super(props);
         this.getter = new Getter("php/get_class_guides.php");
-        this.state = { classGuides: {} };
+        this.state = { data: {} };
     }
 
     getPage() {
         this.getter.get({}, onComplete);
-        var parent = this;
+        var self = this;
 
-        function onComplete(data) {
+        function onComplete(dbData) {
             var classGuidesDict = {};
-            Object.values(data).forEach(function(classGuide) {
+            Object.values(dbData).forEach(function(classGuide) {
                 var className = classGuide.className;
                 if (!classGuidesDict[className]) {
                     classGuidesDict[className] = [];
                 }
                 classGuidesDict[className].push(classGuide);
             });
-            parent.setState({ classGuides: classGuidesDict });
+            self.setState({ data: classGuidesDict });
         }
     }
 
@@ -33,21 +33,31 @@ class ClassGuides extends Component {
     }
 
     render() {
-        const parent = this;
+        const self = this;
         return(
             <SiteContainer active="guides">
                 <div id="main-content">
-                    { Object.keys(this.state.classGuides).map(clsName =>
+                    {Object.keys(this.state.data).map(clsName =>
                         <div>
-                            <div>{ clsName }</div>
+                            <div className="section-wrapper">
+                                <div className="grid-section-heading heading">{clsName}</div>
+                            </div>
                             <Grid>
-                                { parent.state.classGuides[clsName].map(clsGuide => <ClassGuide key={clsGuide.id} data={clsGuide} />) }
+                                {self.state.data[clsName].map(data =>
+                                <GridEntry
+                                    key={data.id}
+                                    // entry_type_class="entry-type-article"
+                                    // entry_type_name="Article"
+                                    // entry_type_icon_path="res/writing-blue.png"
+                                    link_to="/"
+                                    thumbnail_path={data.thumbnail_path}
+                                    author={data.author}
+                                    posted_at={data.posted_at}
+                                    title={data.title}
+                                    description={data.description} />)}
                             </Grid>
                         </div>
-                    ) }
-                    {/* <Grid>
-                        { this.state.guideTypes.map(elem => <GuideType key={elem.id} data={elem} />) }
-                    </Grid> */}
+                    )}
                 </div>
             </SiteContainer>
         );

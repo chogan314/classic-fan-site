@@ -11,28 +11,17 @@
     justify-content: center;
     align-content: center;
     grid-auto-flow: row;
-    margin-bottom: 40px;
-    margin-top: 49px;
-}
-
-@media only screen and (min-width: 1440px) {
-    #grid {
-        margin: 0;
-    }
 }
 
 @media only screen and (max-width: 640px) {
     #grid {
         grid-template-columns: 1fr;
-        margin-bottom: 30px;
-        margin-top: 39px;
     }
 }
 
 @media only screen and (min-width: 641px) and (max-width: 1007px) {
     #grid {
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 30px;
     }
 }
 

@@ -59,3 +59,9 @@ a {
 .button:hover {
     background-color: #46484e;
 }
+
+.grid-section-heading {
+    font-size: 32px;
+    margin-bottom: 10px;
+    line-height: 24px;
+}

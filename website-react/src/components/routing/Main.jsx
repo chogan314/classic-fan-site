@@ -5,6 +5,7 @@ import Home from '../Home';
 import Guides from '../Guides';
 import Articles from '../Articles';
 import News from '../News';
+import ClassGuides from '../guides/ClassGuides';
 
 class Main extends Component {
     componentDidUpdate() {
@@ -14,10 +15,11 @@ class Main extends Component {
     render() {
         return(
             <Switch>
-                <Route exact path='/' component={Home} />;
-                <Route path='/guides' component={Guides} />;
-                <Route path='/articles' component={Articles} />;
-                <Route path='/news' component={News} />;
+                <Route exact path='/' component={Home} />
+                <Route path='/guides' component={Guides} />
+                <Route path='/articles' component={Articles} />
+                <Route path='/news' component={News} />
+                <Route path='/test' component={ClassGuides} />
             </Switch>
         );
     }

@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
-            document.getElementById("grid-section").style.display = "none";
+            document.getElementById("main-content").style.display = "none";
             document.getElementById("mobile-menu-section").style.display = "block";
             Array.from(document.getElementsByClassName("menu-hamburger-icon")).forEach(function(element) {
                 element.style.display = "none";
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             document.getElementById("title-section").style.display = "block";
-            document.getElementById("grid-section").style.display = "block";
+            document.getElementById("main-content").style.display = "block";
             document.getElementById("mobile-menu-section").style.display = "none";
             Array.from(document.getElementsByClassName("menu-hamburger-icon")).forEach(function(element) {
                 element.style.display = "block";
@@ -98,7 +98,7 @@ function onResize(event) {
     if (window.innerWidth > 640 && window.innerWidth < 1440) {
         menuOpen = false;
         document.getElementById("title-section").style.display = "block";
-        document.getElementById("grid-section").style.display = "block";
+        document.getElementById("main-content").style.display = "block";
         document.getElementById("mobile-menu-section").style.display = "none";
         Array.from(document.getElementsByClassName("menu-hamburger-icon")).forEach(function (element) {
             element.style.display = "none";

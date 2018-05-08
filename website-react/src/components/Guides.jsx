@@ -44,7 +44,7 @@ class Guides extends Component {
                         <GridEntry
                             key={data.id}
                             // entry_type_class={this.typeDataMap[data.type]}
-                            link_to="/"
+                            link_to="/test"
                             thumbnail_path={data.thumbnail_path}
                             title={data.type + " Guides"}
                             description={data.description} />)}
