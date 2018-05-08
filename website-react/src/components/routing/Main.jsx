@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Switch, Route } from 'react-router-dom';
-import Home from '../home/Home';
-import Guides from '../guides/Guides';
-import Articles from '../articles/Articles';
-import News from '../news/News';
-import ProfessionGuides from '../guides/ProfessionGuides';
+import Home from '../Home';
+import Guides from '../Guides';
+import Articles from '../Articles';
+import News from '../News';
 
 class Main extends Component {
     componentDidUpdate() {
@@ -19,7 +18,6 @@ class Main extends Component {
                 <Route path='/guides' component={Guides} />;
                 <Route path='/articles' component={Articles} />;
                 <Route path='/news' component={News} />;
-                <Route path='/test' component={ProfessionGuides} />;
             </Switch>
         );
     }

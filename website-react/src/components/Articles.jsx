@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Grid from '../utils/Grid';
-import Getter from '../../scripts/getter.js';
-import SiteContainer from '../site-container/SiteContainer';
-import Article from './Article';
+import Grid from './grid/Grid';
+import Getter from '../scripts/getter.js';
+import SiteContainer from './site-container/SiteContainer';
 
 class Articles extends Component {
     constructor(props) {
@@ -35,7 +34,6 @@ class Articles extends Component {
             <SiteContainer active="articles">
                 <div id="main-content">
                     <Grid>
-                        { this.state.articles.map(elem => <Article key={elem.id} data={elem} />) }
                     </Grid>
                     <div id="get-more" className="button noselect" onClick={() => this.getPage()}>Get More</div>
                 </div>

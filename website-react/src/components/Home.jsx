@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import SiteContainer from '../site-container/SiteContainer';
-import Grid from '../utils/Grid';
-import GridEntry from '../utils/GridEntry';
-import Getter from '../../scripts/getter.js';
-import TypeData from '../../scripts/typeData.js';
-import previewDataJSON from '../../res/previewData.json';
+import SiteContainer from './site-container/SiteContainer';
+import Grid from './grid/Grid';
+import GridEntry from './grid/GridEntry';
+import Getter from '../scripts/getter.js';
+import TypeData from '../scripts/typeData.js';
+import previewDataJSON from '../res/previewData.json';
 
 class Home extends Component {
     constructor(props) {

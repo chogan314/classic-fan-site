@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Grid from '../utils/Grid';
-import GridEntry from '../utils/GridEntry';
-import Getter from '../../scripts/getter.js';
-import SiteContainer from '../site-container/SiteContainer';
+import Grid from './grid/Grid';
+import GridEntry from './grid/GridEntry';
+import Getter from '../scripts/getter.js';
+import SiteContainer from './site-container/SiteContainer';
 
 class Guides extends Component {
     constructor(props) {
