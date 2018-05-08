@@ -166,16 +166,16 @@
 }
 
 .active-menu-item {
-    color: red;
+    color: #ff8000;
 }
 
 .menu-container .active-menu-item {
-    border-bottom: 4px solid red;
+    border-bottom: 4px solid #ff8000;
     margin-bottom: -4px;
 }
 
 .menu-item:hover {
-    border-bottom: 4px solid red;
+    border-bottom: 4px solid #ff8000;
     margin-bottom: -4px;
 }
 
