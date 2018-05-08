@@ -29,7 +29,7 @@ class Getter {
         }
     }
 
-    getLimited(args, onComplete) {
+    limitedGet(args, onComplete) {
         if (this.requesting) {
             return;
         }

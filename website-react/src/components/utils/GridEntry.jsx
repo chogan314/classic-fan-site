@@ -67,27 +67,31 @@ class GridEntry extends Component {
         this.animateOverlay(polygon, this.initialOverlayPoints, expandedPoints, 40, () => typeName.style.visibility = "hidden");
     }
 
+    hasProp(prop) {
+        return prop !== null && prop !== undefined;
+    }
+
     render() {
         return(
-            <div className={this.props.entry_type_class !== null ? "grid-entry " + this.props.entry_type_class : "grid-entry"}>
-                <Link to={this.props.link_to !== null ? this.props.link_to : "/"}>
+            <div className={this.hasProp(this.props.entry_type_class) ? "grid-entry " + this.props.entry_type_class : "grid-entry"}>
+                <Link to={this.hasProp(this.props.link_to) ? this.props.link_to : "/"}>
                     <div className="entry-image-container" onMouseEnter={event => this.mouseEnter(event)} onMouseLeave={event => this.mouseLeave(event)}>
                         <img className="entry-image" src={this.props.thumbnail_path} alt="thumbnail" />
                         <div className="entry-image-overlay"></div>
 
-                        {this.props.entry_type_name !== null ?
+                        {this.hasProp(this.props.entry_type_name) ?
                         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMin slice" className="entry-image-polygon-overlay">
                             <polygon points="100,0 100,38 62,0 62,0" />
                         </svg> : null}
 
-                        {this.props.entry_type_name !== null ?
+                        {this.hasProp(this.props.entry_type_name) ?
                         <EntryTypeOverlay entry_type_name = {this.props.entry_type_name} entry_type_icon_path = {this.props.entry_type_icon_path} /> : null}
                     </div>
                 </Link>
 
                 <div className="entry-details-row">
-                    {this.props.author !== null ? <div className="entry-details-author">{this.props.author}</div> : null}
-                    {this.props.posted_at !== null ? <div className="entry-details-date">{this.props.posted_at}</div> : null}
+                    {this.hasProp(this.props.author) ? <div className="entry-details-author">{this.props.author}</div> : null}
+                    {this.hasProp(this.props.posted_at) ? <div className="entry-details-date">{this.props.posted_at}</div> : null}
                 </div>
 
                 <div className="entry-title heading">{this.props.title}</div>

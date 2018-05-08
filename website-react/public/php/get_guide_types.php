@@ -24,7 +24,13 @@ EOT;
     $response = [];
 
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        $response[] = ['id' => $row['id'], 'type' => $row['type'], 'thumbnail_path' => $row['thumbnail_path'], 'description' => $row['description']];
+        $response[] = [
+            'id' => $row['id'],
+            'type' => $row['type'],
+            'title' => $row['type'],
+            'thumbnail_path' => $row['thumbnail_path'],
+            'description' => $row['description']
+        ];
     }
 
     echo json_encode($response);
