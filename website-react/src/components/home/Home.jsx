@@ -3,13 +3,8 @@ import SiteContainer from '../site-container/SiteContainer';
 import Grid from '../utils/Grid';
 import GridEntry from '../utils/GridEntry';
 import Getter from '../../scripts/getter.js';
+import TypeData from '../../scripts/typeData.js';
 import previewDataJSON from '../../res/previewData.json';
-
-function getPageTest(index) {
-    var previewData = [];
-    Object.values(previewDataJSON).forEach(value => previewData.push(value));
-    index.setState({ previewData: previewData });
-}
 
 class Home extends Component {
     constructor(props) {
@@ -17,63 +12,37 @@ class Home extends Component {
         this.getter = new Getter("php/get_content_previews.php");
         this.page = 0;
         this.pageSize = 12;
-        this.state = { previewData: [] };
+
+        this.typeDataMap = {
+            "NEWS": new TypeData("entry-type-news", "News", "res/folded-newspaper-dark-green.png"),
+            "ARTICLE": new TypeData("entry-type-article", "Article", "res/writing-blue.png"),
+            "GUIDE": new TypeData("entry-type-guide", "Guide", "res/tower-purple.png")
+        };
+
+        this.state = { data: [] };
+    }
+
+    test() {
+        var data = [];
+        Object.values(previewDataJSON).forEach(value => data.push(value));
+        this.setState({ data: data });
     }
 
     getPage() {
         this.getter.get({ page: this.page, pageSize: this.pageSize }, onComplete);
         var parent = this;
 
-        function onComplete(data) {
-            var previewData = parent.state.previewData.slice();
-            var newValues = Object.values(data);
-            newValues.map(value => previewData.push(value));
-            parent.setState({ previewData: previewData });
+        function onComplete(dbData) {
+            var data = parent.state.data.slice();
+            var newData = Object.values(dbData);
+            newData.forEach(value => data.push(value));
+            parent.setState({ data: data });
             parent.page++;
         }
     }
 
     componentDidMount() {
-        getPageTest(this);
-    }
-
-    getEntryTypeClass(type) {
-        switch (type) {
-            case "NEWS":
-            return "entry-type-news";
-            case "ARTICLE":
-            return "entry-type-article";
-            case "GUIDE":
-            return "entry-type-guide";
-            default:
-            return null;
-        }
-    }
-
-    getEntryTypeName(type) {
-        switch (type) {
-            case "NEWS":
-            return "News";
-            case "ARTICLE":
-            return "Article";
-            case "GUIDE":
-            return "Guide";
-            default:
-            return null;
-        }
-    }
-
-    getEntryTypeIconPath(type) {
-        switch (type) {
-            case "NEWS":
-            return "res/folded-newspaper-dark-green.png";
-            case "ARTICLE":
-            return "res/writing-blue.png";
-            case "GUIDE":
-            return "res/tower-purple.png";
-            default:
-            return null;
-        }
+        this.test();
     }
 
     render() {
@@ -81,12 +50,12 @@ class Home extends Component {
             <SiteContainer active="home">
                 <div id="main-content">
                     <Grid>
-                        {this.state.previewData.map(data =>
-                        <GridEntry 
-                            key={data.id} 
-                            entry_type_class={this.getEntryTypeClass(data.type)}
-                            entry_type_name={this.getEntryTypeName(data.type)}
-                            entry_type_icon_path={this.getEntryTypeIconPath(data.type)}
+                        {this.state.data.map(data =>
+                        <GridEntry
+                            key={data.id}
+                            entry_type_class={this.typeDataMap[data.type].typeClass}
+                            entry_type_name={this.typeDataMap[data.type].typeName}
+                            entry_type_icon_path={this.typeDataMap[data.type].typeIconPath}
                             link_to="/"
                             thumbnail_path={data.thumbnail_path}
                             author={data.author}
