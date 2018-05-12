@@ -23,7 +23,7 @@ class Home extends Component {
     }
 
     test() {
-        var data = [];
+        var data = this.state.data.slice();
         Object.values(previewDataJSON).forEach(value => data.push(value));
         this.setState({ data: data });
     }
@@ -63,7 +63,7 @@ class Home extends Component {
                             title={data.title}
                             description={data.description} />)}
                     </Grid>
-                    <div id="get-more" className="button noselect" onClick={() => this.getPage()}>Get More</div>
+                    <div id="get-more" className="button noselect" onClick={() => this.test()}>Get More</div>
                 </div>
             </SiteContainer>
         );

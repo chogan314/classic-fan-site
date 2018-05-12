@@ -3,6 +3,7 @@ import Grid from './grid/Grid';
 import GridEntry from './grid/GridEntry';
 import Getter from '../scripts/getter.js';
 import SiteContainer from './site-container/SiteContainer';
+import newsData from '../res/newsData.json';
 
 class News extends Component {
     constructor(props) {
@@ -11,6 +12,12 @@ class News extends Component {
         this.pageSize = 12;
         this.getter = new Getter("php/get_news.php");
         this.state = { data: [] };
+    }
+
+    test() {
+        var data = this.state.data.slice();
+        Object.values(newsData).forEach(value => data.push(value));
+        this.setState({ data: data });
     }
 
     getPage() {
@@ -27,7 +34,7 @@ class News extends Component {
     }
 
     componentDidMount() {
-        this.getPage();
+        this.test();
     }
 
     render() {
@@ -48,7 +55,7 @@ class News extends Component {
                             title={data.title}
                             description={data.description} />)}
                     </Grid>
-                    <div id="get-more" className="button noselect" onClick={() => this.getPage()}>Get More</div>
+                    <div id="get-more" className="button noselect" onClick={() => this.test()}>Get More</div>
                 </div>
             </SiteContainer>
         );

@@ -3,6 +3,7 @@ import Grid from './grid/Grid';
 import GridEntry from './grid/GridEntry';
 import Getter from '../scripts/getter.js';
 import SiteContainer from './site-container/SiteContainer';
+import guideTypesData from '../res/guideTypesData.json';
 
 class Guides extends Component {
     constructor(props) {
@@ -19,6 +20,12 @@ class Guides extends Component {
         this.state = { data: [] };
     }
 
+    test() {
+        var data = this.state.data.slice();
+        Object.values(guideTypesData).forEach(value => data.push(value));
+        this.setState({ data: data });
+    }
+
     getPage() {
         this.getter.get({}, onComplete);
         var parent = this;
@@ -32,7 +39,7 @@ class Guides extends Component {
     }
 
     componentDidMount() {
-        this.getPage();
+        this.test();
     }
 
     render() {

@@ -3,12 +3,25 @@ import Grid from '../grid/Grid';
 import GridEntry from '../grid/GridEntry';
 import Getter from '../../scripts/getter.js';
 import SiteContainer from '../site-container/SiteContainer';
+import classGuidesData from '../../res/classGuidesData.json';
 
 class ClassGuides extends Component {
     constructor(props) {
         super(props);
         this.getter = new Getter("php/get_class_guides.php");
         this.state = { data: {} };
+    }
+
+    test() {
+        var classGuidesDict = {};
+        Object.values(classGuidesData).forEach(function(classGuide) {
+            var type = classGuide.type;
+            if (!classGuidesDict[type]) {
+                classGuidesDict[type] = [];
+            }
+            classGuidesDict[type].push(classGuide);
+        });
+        this.setState({ data: classGuidesDict });
     }
 
     getPage() {
@@ -29,7 +42,7 @@ class ClassGuides extends Component {
     }
 
     componentDidMount() {
-        this.getPage();
+        this.test();
     }
 
     render() {
@@ -42,7 +55,7 @@ class ClassGuides extends Component {
                             <div className="section-wrapper">
                                 <div className="grid-section-heading heading">{clsName}</div>
                             </div>
-                            <Grid>
+                            <Grid key={clsName}>
                                 {self.state.data[clsName].map(data =>
                                 <GridEntry
                                     key={data.id}

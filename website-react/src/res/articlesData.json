@@ -1,0 +1,50 @@
+{
+    "0": {
+        "id": 100,
+        "title": "Test Article",
+        "author": "Author HereAuthor Here",
+        "thumbnail_path": "res/classic.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
+        "posted_at": "May 10, 2018"
+    },
+    "1": {
+        "id": 101,
+        "title": "This is an Article",
+        "author": "Author Here",
+        "thumbnail_path": "res/classic.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
+        "posted_at": "May 10, 2018"
+    },
+    "2": {
+        "id": 102,
+        "title": "This is Another Article",
+        "author": "Author Here",
+        "thumbnail_path": "res/classic.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
+        "posted_at": "May 10, 2018"
+    },
+    "3": {
+        "id": 103,
+        "title": "Article Again",
+        "author": "Author Here",
+        "thumbnail_path": "res/classic.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
+        "posted_at": "May 10, 2018"
+    },
+    "4": {
+        "id": 104,
+        "title": "Article 2: The Articlening",
+        "author": "Author Here",
+        "thumbnail_path": "res/classic.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
+        "posted_at": "May 10, 2018"
+    },
+    "5": {
+        "id": 105,
+        "title": "Actually Not an Article. Wait, No",
+        "author": "Author Here",
+        "thumbnail_path": "res/classic.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
+        "posted_at": "May 10, 2018"
+    }
+}
