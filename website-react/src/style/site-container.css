@@ -335,6 +335,7 @@
 
 #footer-section {
     border-top: 1px solid #cdcdcd;
+    margin-top: 40px;
 }
 
 #footer-container {
@@ -342,7 +343,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
 }
 
 @media only screen and (max-width: 1007px) {

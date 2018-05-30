@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             content.description,
             content.posted_at,
             professions.name
+            professions.type
         FROM content
             INNER JOIN content_professions ON content.id = content_professions.content_id
             INNER JOIN professions on content_professions.profession_id = professions.id
@@ -32,13 +33,14 @@ EOT;
 
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $response[] = [
-            'id' => $row['id'],
-            'title' => $row['title'],
-            'author' => $row['author'],
-            'thumbnail_path' => $row['thumbnail_path'],
-            'description' => $row['description'],
-            'posted_at' => $row['posted_at'],
-            'professionName' => $row['name']
+            'id'                => $row['id'],
+            'title'             => $row['title'],
+            'thumbnail_path'    => $row['thumbnail_path'],
+            'description'       => $row['description'],
+            'type'              => $row['name'],
+            'author'            => $row['author'],
+            'posted_at'         => $row['posted_at'],
+            'profession_type'   => $row['type']            
         ];
     }
 

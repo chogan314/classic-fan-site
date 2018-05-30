@@ -28,13 +28,13 @@ class Guides extends Component {
 
     getPage() {
         this.getter.get({}, onComplete);
-        var parent = this;
+        var self = this;
 
         function onComplete(dbData) {
-            var data = parent.state.data.slice();
+            var data = self.state.data.slice();
             var newData = Object.values(dbData);
             newData.forEach(value => data.push(value));
-            parent.setState({ data: data });
+            self.setState({ data: data });
         }
     }
 
@@ -43,15 +43,15 @@ class Guides extends Component {
     }
 
     render() {
+        var self = this;
         return(
             <SiteContainer active="guides">
                 <div id="main-content">
                     <Grid>
-                        {this.state.data.map(data =>
+                        {self.state.data.map(data =>
                         <GridEntry
                             key={data.id}
-                            // entry_type_class={this.typeDataMap[data.type]}
-                            link_to="/test"
+                            link_to="/guides/professions"
                             thumbnail_path={data.thumbnail_path}
                             title={data.type + " Guides"}
                             description={data.description} />)}

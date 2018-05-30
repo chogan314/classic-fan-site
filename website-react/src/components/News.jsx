@@ -22,14 +22,14 @@ class News extends Component {
 
     getPage() {
         this.getter.get({ page: this.page, pageSize: this.pageSize }, onComplete);
-        var parent = this;
+        var self = this;
 
         function onComplete(dbData) {
-            var data = parent.state.data.slice();
+            var data = self.state.data.slice();
             var newData = Object.values(dbData);
             newData.forEach(value => data.push(value));
-            parent.setState({ data: data });
-            parent.page++;
+            self.setState({ data: data });
+            self.page++;
         }
     }
 

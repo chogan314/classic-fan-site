@@ -33,11 +33,11 @@ EOT;
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $response[] = [
             'id'                => $row['id'],
-            'type'              => $row['name'],            
             'title'             => $row['title'],
-            'author'            => $row['author'],
             'thumbnail_path'    => $row['thumbnail_path'],
             'description'       => $row['description'],
+            'type'              => $row['name'],
+            'author'            => $row['author'],
             'posted_at'         => $row['posted_at']
         ];
     }

@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             type,
             description,
             thumbnail_path
-        FROM guide_types 
+        FROM guide_types
         ORDER BY type;
 EOT;
 
@@ -25,11 +25,11 @@ EOT;
 
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $response[] = [
-            'id' => $row['id'],
-            'type' => $row['type'],
-            'title' => $row['type'],
-            'thumbnail_path' => $row['thumbnail_path'],
-            'description' => $row['description']
+            'id'                => $row['id'],
+            'title'             => $row['type'],
+            'thumbnail_path'    => $row['thumbnail_path'],
+            'description'       => $row['description'],
+            'type'              => $row['type']
         ];
     }
 

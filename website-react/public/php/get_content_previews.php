@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             author,
             thumbnail_path,
             description,
-            posted_at 
-        FROM content 
+            posted_at
+        FROM content
         ORDER BY posted_at
         LIMIT {$pageSize}
         OFFSET {$offset};
@@ -32,7 +32,15 @@ EOT;
     $response = [];
 
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        $response[] = ['id' => $row['id'], 'type' => $row['type'], 'title' => $row['title'], 'author' => $row['author'], 'thumbnail_path' => $row['thumbnail_path'], 'description' => $row['description'], 'posted_at' => $row['posted_at']];
+        $response[] = [
+            'id'                => $row['id'],
+            'title'             => $row['title'],
+            'thumbnail_path'    => $row['thumbnail_path'],
+            'description'       => $row['description'],
+            'type'              => $row['type'],
+            'author'            => $row['author'],
+            'posted_at'         => $row['posted_at']
+        ];
     }
 
     echo json_encode($response);

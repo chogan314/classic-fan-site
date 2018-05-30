@@ -6,6 +6,7 @@ import Guides from '../Guides';
 import Articles from '../Articles';
 import News from '../News';
 import ClassGuides from '../guides/ClassGuides';
+import ProfessionGuides from '../guides/ProfessionGuides';
 
 class Main extends Component {
     componentDidUpdate() {
@@ -16,10 +17,11 @@ class Main extends Component {
         return(
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/guides' component={Guides} />
-                <Route path='/articles' component={Articles} />
                 <Route path='/news' component={News} />
-                <Route path='/test' component={ClassGuides} />
+                <Route path='/articles' component={Articles} />                
+                <Route exact path='/guides' component={Guides} />
+                <Route path='/guides/classes' component={ClassGuides} />
+                <Route path='/guides/professions' component={ProfessionGuides} />
             </Switch>
         );
     }

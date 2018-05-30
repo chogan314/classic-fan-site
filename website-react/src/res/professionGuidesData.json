@@ -1,83 +1,122 @@
 {
     "0": {
         "id": 100,
-        "type": "Druid",
-        "title": "Test Druid Guide",
+        "type": "Herbalism",
+        "title": "Test Herbalism Guide",
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "profession_type": "GATHERING"
     },
     "11": {
         "id": 107,
-        "type": "Druid",
-        "title": "Test Druid Guide",
+        "type": "Mining",
+        "title": "Test Mining Guide",
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "profession_type": "GATHERING"
     },
     "111": {
         "id": 108,
-        "type": "Druid",
-        "title": "Test Druid Guide",
+        "type": "Skinning",
+        "title": "Test Skinning Guide",
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "profession_type": "GATHERING"
     },
     "1111": {
         "id": 109,
-        "type": "Druid",
-        "title": "Test Druid Guide",
+        "type": "Alchemy",
+        "title": "Test Alchemy Guide",
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "profession_type": "CRAFTING"
     },
     "1": {
         "id": 101,
-        "type": "Hunter",
-        "title": "This is a Hunter Guide",
+        "type": "Blacksmithing",
+        "title": "This is a Blacksmithing Guide",
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "profession_type": "CRAFTING"
     },
     "2": {
         "id": 102,
-        "type": "Mage",
-        "title": "Mage Guide",
+        "type": "Enchanting",
+        "title": "Enchanting Guide",
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "profession_type": "CRAFTING"
     },
     "3": {
         "id": 103,
-        "type": "Priest",
-        "title": "Priest Guide Priest Guide Priest Guide Priest Guide",
+        "type": "Engineering",
+        "title": "Engineering Guide Engineering Guide Engineering Guide Engineering Guide",
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "profession_type": "CRAFTING"
     },
     "4": {
         "id": 104,
-        "type": "Paladin",
-        "title": "Paladin Guide",
+        "type": "Leatherworking",
+        "title": "Leatherworking Guide",
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "profession_type": "CRAFTING"
     },
     "5": {
         "id": 105,
-        "type": "Shaman",
-        "title": "Shaman GuiFROSTSHAWWWK",
+        "type": "Tailoring",
+        "title": "Tailoring GuiFROSTSHAWWWK",
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "profession_type": "CRAFTING"
+    },
+    "6": {
+        "id": 105,
+        "type": "Cooking",
+        "title": "Tailoring GuiFROSTSHAWWWK",
+        "author": "Author Here",
+        "thumbnail_path": "/res/classic.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
+        "posted_at": "May 10, 2018",
+        "profession_type": "SECONDARY"
+    },
+    "7": {
+        "id": 105,
+        "type": "First Aid",
+        "title": "Tailoring GuiFROSTSHAWWWK",
+        "author": "Author Here",
+        "thumbnail_path": "/res/classic.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
+        "posted_at": "May 10, 2018",
+        "profession_type": "SECONDARY"
+    },
+    "8": {
+        "id": 105,
+        "type": "Fishing",
+        "title": "Tailoring GuiFROSTSHAWWWK",
+        "author": "Author Here",
+        "thumbnail_path": "/res/classic.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
+        "posted_at": "May 10, 2018",
+        "profession_type": "SECONDARY"
     }
 }
