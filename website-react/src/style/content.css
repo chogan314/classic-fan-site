@@ -1,0 +1,266 @@
+.content-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    margin-bottom: 40px;
+    line-height: 30px;
+}
+
+.content-thumbnail-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content-details-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+.content-body {
+    margin-top: 26px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.content-body>* {
+    margin-bottom: 28px;
+}
+
+.content-body>*:last-child {
+    margin-bottom: 0;
+}
+
+.content-body ul {
+    margin-left: 40px;
+}
+
+.content-body ul li {
+    list-style: inside;
+}
+
+.content-body ol {
+    margin-left: 40px;
+}
+
+.content-body ol li {
+    list-style: decimal inside;
+}
+
+.content-body ol li>* {
+    display: inline;
+    padding-left: 6px;
+}
+
+.content-body li {
+    margin-bottom: 6px;
+}
+
+.content-body li:last-child {
+    margin-bottom: 0;
+}
+
+.wide-spaced-list>li {
+    margin-bottom: 24px;
+}
+
+.content-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.content-quote {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.content-insert-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.db-link {
+    text-decoration: none;
+}
+
+.rarity-junk {
+    color: #9d9d9d;
+}
+
+.rarity-junk:visited {
+    color: #9d9d9d;
+}
+
+.rarity-uncommon {
+    color: #35da00;
+}
+
+.rarity-uncommon:visited {
+    color: #35da00;
+}
+
+.rarity-rare {
+    color: #0070dd;
+}
+
+.rarity-rare:visited {
+    color: #0070dd;
+}
+
+.rarity-epic {
+    color: #a335ee;
+}
+
+.rarity-epic:visited {
+    color: #a335ee;
+}
+
+.rarity-legendary {
+    color: #ff8000;
+}
+
+.rarity-legendary:visited {
+    color: #ff8000;
+}
+
+.rarity-misc {
+    color: #ffd10f;
+}
+
+.rarity-misc:hover {
+    color: #ffd10f;
+}
+
+.quest-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 18px;
+    margin-top: -10px;
+}
+
+.quest-container {
+    display: flex;
+    margin: 10px;
+}
+
+.quest-chain {
+    background-color: #444a55;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.quest {
+    display: flex;
+    align-items: center;
+}
+
+.quest>* {
+    margin-right: 6px;
+}
+
+.quest>*:last-child {
+    margin-right: 0;
+}
+
+.quest-dungeon {
+    font-weight: bold;
+}
+
+.quest-icon {
+    height: 24px;
+    width: auto;
+    display: block;
+}
+
+.quest-chain-label {
+    margin-top: 10px;
+}
+
+.quest-chain-notes {
+    margin-left: 20px;
+    max-width: 500px;
+}
+
+.quest-chain-rewards>* {
+    display: block;
+    margin-left: 20px;
+}
+
+.boss-container {
+    display: flex;
+}
+
+.boss-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: start;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: row;
+}
+
+@media only screen and (max-width: 640px) {
+    .boss-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+    .boss-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.boss {
+    background-color: #444a55;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 520px;
+}
+
+.boss-image {
+    max-width: calc(100% - 20px);
+    width: 500px;
+    height: auto;    
+    margin: 10px 10px 4px 10px;
+}
+
+.boss-name {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.boss-label {
+    margin-top: 10px;
+}
+
+.boss-notes {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.boss-drops>* {
+    display: block;
+    margin-left: 20px;
+}
