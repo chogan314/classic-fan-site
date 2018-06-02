@@ -19,7 +19,7 @@ class SiteContainer extends Component {
                 <FixedMenu active={this.props.active} />
                 <MobileMenu active={this.props.active} />
                 <WideContainer active={this.props.active} >
-                    { this.props.children }
+                    {this.props.children}
                 </WideContainer>
                 <Footer />
             </div>

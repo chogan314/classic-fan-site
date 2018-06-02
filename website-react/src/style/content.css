@@ -156,7 +156,7 @@
     margin-top: -10px;
 }
 
-.quest-container {
+.quest-chain-container {
     display: flex;
     margin: 10px;
 }
@@ -199,8 +199,14 @@
     max-width: 500px;
 }
 
+.quest-chain-rewards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .quest-chain-rewards>* {
-    display: block;
+    display: flex;
     margin-left: 20px;
 }
 
@@ -258,6 +264,13 @@
 .boss-notes {
     margin-left: 20px;
     margin-right: 10px;
+}
+
+.boss-drops {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .boss-drops>* {

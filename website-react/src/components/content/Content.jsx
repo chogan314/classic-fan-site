@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import SiteContainer from '../site-container/SiteContainer';
+import ClassicDBLink from './ClassicDBLink';
+import QuestSection from './QuestSection';
+import BossSection from './BossSection';
 import '../../style/content.css';
 
 class Content extends Component {
@@ -100,27 +103,17 @@ class Content extends Component {
                                         </li>
                                     </ol>
                                     <p>
-                                        <a href="https://classicdb.ch/?item=17065" target="_blank" rel="item=17065 noopener noreferrer" className="db-link rarity-epic">Medallion of Steadfast Might</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?item=4251" target="_blank" rel="item=4251 noopener noreferrer" className="db-link rarity-uncommon">Hillman's Shoulders</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?item=16706" target="_blank" rel="item=16706 noopener noreferrer" className="db-link rarity-rare">Wildheart Vest</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?item=1212" target="_blank" rel="item=1212 noopener noreferrer" className="db-link rarity-junk">Gnoll Spittle</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?item=19019" target="_blank" rel="item=19019 noopener noreferrer" className="db-link rarity-legendary">Thunderfury, Blessed Blade of the Windseeker</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?npc=10990" target="_blank" rel="npc=10990 noopener noreferrer" className="db-link rarity-misc">Alterac Ram</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?quest=762" target="_blank" rel="quest=762 noopener noreferrer" className="db-link rarity-misc">An Ambassador of Evil</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?spell=8925" target="_blank" rel="spell=8925 noopener noreferrer" className="db-link rarity-misc">Moonfire (Rank 3)</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?object=179548" target="_blank" rel="object=179548 noopener noreferrer" className="db-link rarity-misc">A Dusty Tome</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?zone=10" target="_blank" rel="zone=10 noopener noreferrer" className="db-link rarity-misc">Duskwood</a>
-                                        <br />
-                                        <a href="https://classicdb.ch/?faction=369" target="_blank" rel="faction=369 noopener noreferrer" className="db-link rarity-misc">Gadgetzan</a>
+                                        <ClassicDBLink type="item" id={17065} rarity="epic">Medallion of Steadfast Might</ClassicDBLink><br />
+                                        <ClassicDBLink type="item" id={4251} rarity="uncommon">Hillman's Shoulders</ClassicDBLink><br />
+                                        <ClassicDBLink type="item" id={16706} rarity="rare">Wildheart Vest</ClassicDBLink><br />
+                                        <ClassicDBLink type="item" id={1212} rarity="junk">Gnoll Spittle</ClassicDBLink><br />
+                                        <ClassicDBLink type="item" id={19019} rarity="legendary">Thunderfury, Blessed Blade of the Windseeker</ClassicDBLink><br />
+                                        <ClassicDBLink type="npc" id={10990} rarity="misc" isNPC={true}>Alterac Ram</ClassicDBLink><br />
+                                        <ClassicDBLink type="quest" id={762} rarity="misc">An Ambassador of Evil</ClassicDBLink><br />
+                                        <ClassicDBLink type="spell" id={8925} rarity="misc">Moonfire (Rank 3)</ClassicDBLink><br />
+                                        <ClassicDBLink type="object" id={179548} rarity="misc">A Dusty Tome</ClassicDBLink><br />
+                                        <ClassicDBLink type="zone" id={10} rarity="misc">Duskwood</ClassicDBLink><br />
+                                        <ClassicDBLink type="faction" id={369} rarity="misc">Gadgetzan</ClassicDBLink>
                                     </p>
                                     <p>
                                         Ragefire Chasm is a level 13 to 18 instance located in the Cleft of Shadow within Orgrimmar city. This dungeon requires around 30 to 50 minutes to complete.
@@ -158,161 +151,191 @@ class Content extends Component {
                                         </li>
                                     </ul>
                                     <div className="content-heading">Quests</div>
-                                    <div className="quest-section">
-                                        <div className="quest-container">
-                                            <div className="quest-chain">
-                                                <div className="quest quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5726" target="_blank" rel="quest=5726 noopener noreferrer" className="db-link rarity-misc">Hidden Enemies (part 1)</a>
-                                                </div>
-                                                <div className="quest quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5727" target="_blank" rel="quest=5727 noopener noreferrer" className="db-link rarity-misc">Hidden Enemies (part 2)</a>
-                                                </div>
-                                                <div className="quest quest-dungeon quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5728" target="_blank" rel="quest=5728 noopener noreferrer" className="db-link rarity-misc">Hidden Enemies (part 3)</a>
-                                                </div>
-                                                <div className="quest quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5729" target="_blank" rel="quest=5729 noopener noreferrer" className="db-link rarity-misc">Hidden Enemies (part 4)</a>
-                                                </div>
-                                                <div className="quest quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5730" target="_blank" rel="quest=5730 noopener noreferrer" className="db-link rarity-misc">Hidden Enemies (part 5)</a>
-                                                </div>
-                                                <div className="quest-chain-label">
-                                                    Rewards:
-                                                </div>
-                                                <div className="quest-chain-rewards">
-                                                    <a href="https://classicdb.ch/?item=15443" target="_blank" rel="item=15443 noopener noreferrer" className="db-link rarity-uncommon">Kris of Orgrimmar</a>
-                                                    <a href="https://classicdb.ch/?item=15445" target="_blank" rel="item=15445 noopener noreferrer" className="db-link rarity-uncommon">Hammer of Orgrimmar</a>
-                                                    <a href="https://classicdb.ch/?item=15424" target="_blank" rel="item=15424 noopener noreferrer" className="db-link rarity-uncommon">Axe of Orgrimmar</a>
-                                                    <a href="https://classicdb.ch/?item=15444" target="_blank" rel="item=15444 noopener noreferrer" className="db-link rarity-uncommon">Staff of Orgrimmar</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="quest-container">
-                                            <div className="quest-chain">
-                                                <div className="quest quest-dungeon quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5722" target="_blank" rel="quest=5722 noopener noreferrer" className="db-link rarity-misc">Searching for the Lost Satchel</a>
-                                                </div>
-                                                <div className="quest quest-dungeon quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5724" target="_blank" rel="quest=5724 noopener noreferrer" className="db-link rarity-misc">Returning the Lost Satchel</a>
-                                                </div>
-                                                <div className="quest-chain-label">
-                                                    Rewards:
-                                                </div>
-                                                <div className="quest-chain-rewards">
-                                                    <a href="https://classicdb.ch/?item=15452" target="_blank" rel="item=15452 noopener noreferrer" className="db-link rarity-uncommon">Featherbead Bracers</a>
-                                                    <a href="https://classicdb.ch/?item=15453" target="_blank" rel="item=15453 noopener noreferrer" className="db-link rarity-uncommon">Savannah Bracers</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="quest-container">
-                                            <div className="quest-chain">
-                                                <div className="quest quest-dungeon quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5761" target="_blank" rel="quest=5761 noopener noreferrer" className="db-link rarity-misc">Slaying the Beast</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="quest-container">
-                                            <div className="quest-chain">
-                                                <div className="quest quest-dungeon quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5723" target="_blank" rel="quest=5723 noopener noreferrer" className="db-link rarity-misc">Testing an Enemy's Strength</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="quest-container">
-                                            <div className="quest-chain">
-                                                <div className="quest quest-dungeon quest-horde">
-                                                    <a href="https://classicdb.ch/?quest=5725" target="_blank" rel="quest=5725 noopener noreferrer" className="db-link rarity-misc">The Power to Destroy...</a>
-                                                </div>
-                                                <div className="quest-chain-label">
-                                                    Rewards:
-                                                </div>
-                                                <div className="quest-chain-rewards">
-                                                    <a href="https://classicdb.ch/?item=15449" target="_blank" rel="item=15449 noopener noreferrer" className="db-link rarity-uncommon">Ghastly Trousers</a>
-                                                    <a href="https://classicdb.ch/?item=15450" target="_blank" rel="item=15450 noopener noreferrer" className="db-link rarity-uncommon">Dredgemire Leggings</a>
-                                                    <a href="https://classicdb.ch/?item=15451" target="_blank" rel="item=15451 noopener noreferrer" className="db-link rarity-uncommon">Gargoyle Leggings</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <QuestSection
+                                        questChains={[
+                                            {
+                                                quests: [
+                                                    {
+                                                        id: "5762",
+                                                        name: "Hidden Enemies (Part 1)",
+                                                        faction: "horde"
+                                                    },
+                                                    {
+                                                        id: "5727",
+                                                        name: "Hidden Enemies (Part 2)",
+                                                        faction: "horde"
+                                                    },
+                                                    {
+                                                        id: "5728",
+                                                        name: "Hidden Enemies (Part 3)",
+                                                        faction: "horde"
+                                                    },
+                                                    {
+                                                        id: "5729",
+                                                        name: "Hidden Enemies (Part 4)",
+                                                        faction: "horde"
+                                                    },
+                                                    {
+                                                        id: "5730",
+                                                        name: "Hidden Enemies (Part 5)",
+                                                        faction: "horde"
+                                                    }
+                                                ],
+                                                rewards: [
+                                                    {
+                                                        id: "15443",
+                                                        name: "Kris of Orgrimmar",
+                                                        rarity: "uncommon"
+                                                    },
+                                                    {
+                                                        id: "15445",
+                                                        name: "Hammer of Orgrimmar",
+                                                        rarity: "uncommon"
+                                                    },
+                                                    {
+                                                        id: "15424",
+                                                        name: "Axe of Orgrimmar",
+                                                        rarity: "uncommon"
+                                                    },
+                                                    {
+                                                        id: "15444",
+                                                        name: "Staff of Orgrimmar",
+                                                        rarity: "uncommon"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                quests: [
+                                                    {
+                                                        id: "5722",
+                                                        name: "Searching for the Lost Satchel",
+                                                        faction: "horde"
+                                                    },
+                                                    {
+                                                        id: "5724",
+                                                        name: "Returning the Lost Satchel",
+                                                        faction: "horde"
+                                                    }
+                                                ],
+                                                rewards: [
+                                                    {
+                                                        id: "15452",
+                                                        name: "Featherbead Bracers",
+                                                        rarity: "uncommon"
+                                                    },
+                                                    {
+                                                        id: "15453",
+                                                        name: "Savannah Bracers",
+                                                        rarity: "uncommon"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                quests: [
+                                                    {
+                                                        id: "5761",
+                                                        name: "Slaying the Beast",
+                                                        faction: "horde"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                quests: [
+                                                    {
+                                                        id: "5723",
+                                                        name: "Testing an Enemy's Strength",
+                                                        faction: "horde"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                quests: [
+                                                    {
+                                                        id: "5725",
+                                                        name: "The Power to Destroy...",
+                                                        faction: "horde"
+                                                    }
+                                                ],
+                                                rewards: [
+                                                    {
+                                                        id: "15449",
+                                                        name: "Ghastly Trousers",
+                                                        rarity: "uncommon"
+                                                    },
+                                                    {
+                                                        id: "15450",
+                                                        name: "Dredgemire Leggings",
+                                                        rarity: "uncommon"
+                                                    },
+                                                    {
+                                                        id: "15451",
+                                                        name: "Gargoyle Leggings",
+                                                        rarity: "uncommon"
+                                                    }
+                                                ]
+                                            }
+                                        ]} />
                                     <div className="content-heading">Bosses</div>
-                                    <div className="boss-section">
-                                        <div className="boss-container">
-                                            <div className="boss">
-                                                <a href="https://classicdb.ch/?npc=11517" target="_blank" rel="npc=11517 noopener noreferrer">
-                                                    <img className="boss-image" src="/res/oggleflint.png" alt="Oggleflint" />
-                                                </a>
-                                                <div className="boss-name">
-                                                    <a href="https://classicdb.ch/?npc=11517" target="_blank" rel="npc=11517 noopener noreferrer" className="db-link rarity-misc">Oggleflint</a>
-                                                </div>
-                                                <div className="boss-label">Notes:</div>
-                                                <div className="boss-notes">
-                                                    Can be dangerous when pulled with the trash in his room. Has a cleave.
-                                                </div>
-                                                <div className="boss-label">Drops:</div>
-                                                <div className="boss-notes">
-                                                    None
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="boss-container">
-                                            <div className="boss">
-                                                <a href="https://classicdb.ch/?npc=11520" target="_blank" rel="npc=11520 noopener noreferrer">
-                                                    <img className="boss-image" src="/res/taragaman.png" alt="Taragaman the Hungerer" />
-                                                </a>
-                                                <div className="boss-name">
-                                                    <a href="https://classicdb.ch/?npc=11520" target="_blank" rel="npc=11520 noopener noreferrer" className="db-link rarity-misc">Taragaman the Hungerer</a>
-                                                </div>
-                                                <div className="boss-label">Notes:</div>
-                                                <div className="boss-notes">
-                                                    Has a knockback, so be careful of the lava around him.
-                                                </div>
-                                                <div className="boss-label">Drops:</div>
-                                                <div className="boss-drops">
-                                                    <a href="https://classicdb.ch/?item=14148" target="_blank" rel="item=14148 noopener noreferrer" className="db-link rarity-uncommon">Crystalline Cuffs</a>
-                                                    <a href="https://classicdb.ch/?item=14149" target="_blank" rel="item=14149 noopener noreferrer" className="db-link rarity-uncommon">Subterranean Cape</a>
-                                                    <a href="https://classicdb.ch/?item=14145" target="_blank" rel="item=14145 noopener noreferrer" className="db-link rarity-uncommon">Cursed Felblade</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="boss-container">
-                                            <div className="boss">
-                                                <a href="https://classicdb.ch/?npc=11518" target="_blank" rel="npc=11518 noopener noreferrer">
-                                                    <img className="boss-image" src="/res/jergosh.png" alt="Jergosh the Invoker" />
-                                                </a>
-                                                <div className="boss-name">
-                                                    <a href="https://classicdb.ch/?npc=11518" target="_blank" rel="npc=11518 noopener noreferrer" className="db-link rarity-misc">Jergosh the Invoker</a>
-                                                </div>
-                                                <div className="boss-label">Notes:</div>
-                                                <div className="boss-notes">
-                                                    Basically a trash mob with a name.
-                                                </div>
-                                                <div className="boss-label">Drops:</div>
-                                                <div className="boss-drops">
-                                                    <a href="https://classicdb.ch/?item=14147" target="_blank" rel="item=14147 noopener noreferrer" className="db-link rarity-uncommon">Cavedweller Bracers</a>
-                                                    <a href="https://classicdb.ch/?item=14150" target="_blank" rel="item=14150 noopener noreferrer" className="db-link rarity-uncommon">Robe of Evocation</a>
-                                                    <a href="https://classicdb.ch/?item=14151" target="_blank" rel="item=14151 noopener noreferrer" className="db-link rarity-uncommon">Chanting Blade</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="boss-container">
-                                            <div className="boss">
-                                                <a href="https://classicdb.ch/?npc=11519" target="_blank" rel="npc=11519 noopener noreferrer">
-                                                    <img className="boss-image" src="/res/bazzalan.png" alt="Bazzalan" />
-                                                </a>
-                                                <div className="boss-name">
-                                                    <a href="https://classicdb.ch/?npc=11519" target="_blank" rel="npc=11519 noopener noreferrer" className="db-link rarity-misc">Bazzalan</a>
-                                                </div>
-                                                <div className="boss-label">Notes:</div>
-                                                <div className="boss-notes">
-                                                    Can deal a surprising amount of damage but is ultimately a pushover.
-                                                </div>
-                                                <div className="boss-label">Drops:</div>
-                                                <div className="boss-notes">
-                                                    None
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <BossSection
+                                        bosses={[
+                                            {
+                                                id: "11517",
+                                                thumbnailPath: "/res/oggleflint.png",
+                                                name: "Oggleflint",
+                                                notes: "Can be dangerous when pulled with the trash in his room. Has a cleave."
+                                            },
+                                            {
+                                                id: "11520",
+                                                thumbnailPath: "/res/taragaman.png",
+                                                name: "Taragaman the Hungerer",
+                                                notes: "Has a knockback, so be careful of the lava around him.",
+                                                drops: [
+                                                    {
+                                                        id: "14148",
+                                                        rarity: "uncommon",
+                                                        name: "Crystalline Cuffs"
+                                                    },
+                                                    {
+                                                        id: "14149",
+                                                        rarity: "uncommon",
+                                                        name: "Subterranean Cape"
+                                                    },
+                                                    {
+                                                        id: "14145",
+                                                        rarity: "uncommon",
+                                                        name: "Cursed Felblade"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                id: "11518",
+                                                thumbnailPath: "/res/jergosh.png",
+                                                name: "Jergosh the Invoker",
+                                                drops: [
+                                                    {
+                                                        id: "14147",
+                                                        rarity: "uncommon",
+                                                        name: "Cavedweller Bracers"
+                                                    },
+                                                    {
+                                                        id: "14150",
+                                                        rarity: "uncommon",
+                                                        name: "Robe of Evocation"
+                                                    },
+                                                    {
+                                                        id: "14151",
+                                                        rarity: "uncommon",
+                                                        name: "Chanting Blade"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                id: "11519",
+                                                thumbnailPath: "/res/bazzalan.png",
+                                                name: "Bazzalan",
+                                                notes: "Can deal a surprising amount of damage but is ultimately a pushover."
+                                            }
+                                        ]} />
                                     <div class="content-heading">Walkthrough</div>
                                     <img src="res/map-rfc.png" alt="instance map" class="content-insert-image" />
                                     <p>
