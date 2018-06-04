@@ -43,17 +43,20 @@ function Boss(props) {
 class BossSection extends Component {
     render() {
         return(
-            <div className="boss-section">
-                    {this.props.bosses.map(boss =>
-                        <div className="boss-container">
-                            <Boss
-                                id={boss.id}
-                                thumbnailPath={boss.thumbnailPath}
-                                name={boss.name}
-                                notes={boss.notes}
-                                drops={boss.drops} />
-                        </div>
-                    )}
+            <div className="content-body-internal">
+                <div className="content-heading">Bosses</div>
+                <div className="boss-section">
+                        {this.props.bosses.map(boss =>
+                            <div className="boss-container">
+                                <Boss
+                                    id={boss.id}
+                                    thumbnailPath={boss.thumbnailPath}
+                                    name={boss.name}
+                                    notes={boss.notes}
+                                    drops={boss.drops} />
+                            </div>
+                        )}
+                </div>
             </div>
         );
     }

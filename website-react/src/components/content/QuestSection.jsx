@@ -19,7 +19,7 @@ function QuestChainRewards(props) {
                 )}
             </div>
         </div>
-    );    
+    );
 }
 
 function QuestChainNotes(props) {
@@ -51,15 +51,18 @@ function QuestChain(props) {
 class QuestSection extends Component {
     render() {
         return(
-            <div className="quest-section">
-                {this.props.questChains.map(questChain =>
-                    <div className="quest-chain-container">
-                        <QuestChain
-                            quests={questChain.quests}
-                            rewards={questChain.rewards}
-                            notes={questChain.notes} />                        
-                    </div>
-                )}
+            <div className="content-body-internal">
+                <div className="content-heading">Quests</div>
+                <div className="quest-section">
+                    {this.props.questChains.map(questChain =>
+                        <div className="quest-chain-container">
+                            <QuestChain
+                                quests={questChain.quests}
+                                rewards={questChain.rewards}
+                                notes={questChain.notes} />
+                        </div>
+                    )}
+                </div>
             </div>
         );
     }

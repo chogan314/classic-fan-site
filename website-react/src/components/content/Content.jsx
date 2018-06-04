@@ -1,9 +1,39 @@
 import React, { Component } from 'react';
 import SiteContainer from '../site-container/SiteContainer';
+import HeaderSection from './HeaderSection';
+import ListSection from './ListSection';
 import ClassicDBLink from './ClassicDBLink';
 import QuestSection from './QuestSection';
 import BossSection from './BossSection';
 import '../../style/content.css';
+
+function ContentHeading(props) {
+    return(
+        <div className="content-heading">
+            {props.heading}
+        </div>
+    );
+}
+
+function ContentParagraph(props) {
+    return (
+        <p>{props.text}</p>
+    );
+}
+
+function ContentQuote(props) {
+    return(
+        <div className="content-quote">
+            {props.quote}
+        </div>
+    );
+}
+
+function ContentImage(props) {
+    return (
+        <img src={props.src} alt={props.alt} class="content-insert-image" />
+    );
+}
 
 class Content extends Component {
     componentDidMount() {
@@ -40,68 +70,38 @@ class Content extends Component {
                     <div id="content-section">
                         <div className="section-wrapper">
                             <div className="content-container">
-                                <div className="content-title">Example Content Title</div>
-                                <div className="content-thumbnail-container">
-                                    <img src="/res/classic.jpg" alt="content thumbnail" className="content-thumbnail" />
-                                </div>
-                                <div className="content-details-container">
-                                    <div className="content-author">Example Author</div>
-                                    <div className="content-date">January 1st, 1970</div>
-                                </div>
+                                <HeaderSection
+                                    title="Example Content Title"
+                                    thumbnailPath="/res/classic.jpg"
+                                    author="Example Author"
+                                    date="January 1st, 1970" />
                                 <div className="content-body">
-                                    <div className="content-heading">
-                                        Example Heading
-                                    </div>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet purus interdum ligula elementum, non aliquet libero
-                                        porta. Maecenas tempor turpis eu purus cursus, nec semper nisl suscipit. Quisque lacinia turpis
-                                        dolor, in consequat eros vestibulum eget. Fusce a ex eu neque facilisis scelerisque. In lobortis
-                                        est ac consequat egestas. Donec tempor mollis dictum. Sed diam urna, vestibulum ac purus at,
-                                        fringilla bibendum augue. Sed condimentum sem sapien, euismod blandit est sodales nec. Etiam
-                                        consectetur est non orci vulputate placerat. Nam molestie elit nec ante pulvinar, non blandit
-                                        nunc iaculis.
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet purus interdum ligula elementum, non aliquet libero
-                                        porta. Maecenas tempor turpis eu purus cursus, nec semper nisl suscipit. Quisque lacinia turpis
-                                        dolor, in consequat eros vestibulum eget. Fusce a ex eu neque facilisis scelerisque. In lobortis
-                                        est ac consequat egestas. Donec tempor mollis dictum. Sed diam urna, vestibulum ac purus at,
-                                        fringilla bibendum augue. Sed condimentum sem sapien, euismod blandit est sodales nec. Etiam
-                                        consectetur est non orci vulputate placerat. Nam molestie elit nec ante pulvinar, non blandit
-                                        nunc iaculis.
-                                    </p>
-                                    <div className="content-quote">
-                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet purus interdum ligula elementum, non aliquet libero
-                                        porta. Maecenas tempor turpis eu purus cursus, nec semper nisl suscipit. Quisque lacinia turpis
-                                        dolor, in consequat eros vestibulum eget."
-                                    </div>
-                                    <div className="content-heading">
-                                        Another Example Heading
-                                    </div>
-                                    <ul>
-                                        <li>First element</li>
-                                        <li>Second element</li>
-                                        <li>Third element</li>
-                                        <li>Fourth element</li>
-                                        <li>Fifth element</li>
-                                    </ul>
-                                    <ol>
-                                        <li>
-                                            <div>First element</div>
-                                        </li>
-                                        <li>
-                                            <div>Second element</div>
-                                        </li>
-                                        <li>
-                                            <div>Third element</div>
-                                        </li>
-                                        <li>
-                                            <div>Fourth element</div>
-                                        </li>
-                                        <li>
-                                            <div>Fifth element</div>
-                                        </li>
-                                    </ol>
+                                    <ContentHeading heading="Example Heading" />
+                                    <ContentParagraph
+                                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet purus interdum ligula elementum, non aliquet libero porta. Maecenas tempor turpis eu purus cursus, nec semper nisl suscipit. Quisque lacinia turpis dolor, in consequat eros vestibulum eget. Fusce a ex eu neque facilisis scelerisque. In lobortis est ac consequat egestas. Donec tempor mollis dictum. Sed diam urna, vestibulum ac purus at, fringilla bibendum augue. Sed condimentum sem sapien, euismod blandit est sodales nec. Etiam consectetur est non orci vulputate placerat. Nam molestie elit nec ante pulvinar, non blandit nunc iaculis." />
+                                    <ContentParagraph
+                                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet purus interdum ligula elementum, non aliquet libero porta. Maecenas tempor turpis eu purus cursus, nec semper nisl suscipit. Quisque lacinia turpis dolor, in consequat eros eget. Fusce a ex eu neque facilisis scelerisque. In lobortis est ac consequat egestas. Donec tempor mollis dictum. Sed diam urna, vestibulum ac purus at, fringilla bibendum augue. Sed condimentum sem sapien, euismod blandit est sodales nec. Etiam consectetur est non orci vulputate placerat. Nam molestie elit nec ante pulvinar, non blandit nunc iaculis." />
+                                    <ContentQuote
+                                        quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet purus interdum ligula elementum, non aliquet libero porta. Maecenas tempor turpis eu purus cursus, nec semper nisl suscipit. Quisque lacinia turpis dolor, in consequat eros vestibulum eget." />
+                                    <ContentHeading heading="Another Example Heading" />
+                                    <ListSection
+                                        type="unordered"
+                                        items={[
+                                            "First element",
+                                            "Second element",
+                                            "Third element",
+                                            "Fourth element",
+                                            "Fifth element"
+                                        ]} />
+                                    <ListSection
+                                        type="ordered"
+                                        items={[
+                                            "First element",
+                                            "Second element",
+                                            "Third element",
+                                            "Fourth element",
+                                            "Fifth element"
+                                        ]} />
                                     <p>
                                         <ClassicDBLink type="item" id={17065} rarity="epic">Medallion of Steadfast Might</ClassicDBLink><br />
                                         <ClassicDBLink type="item" id={4251} rarity="uncommon">Hillman's Shoulders</ClassicDBLink><br />
@@ -115,42 +115,18 @@ class Content extends Component {
                                         <ClassicDBLink type="zone" id={10} rarity="misc">Duskwood</ClassicDBLink><br />
                                         <ClassicDBLink type="faction" id={369} rarity="misc">Gadgetzan</ClassicDBLink>
                                     </p>
-                                    <p>
-                                        Ragefire Chasm is a level 13 to 18 instance located in the Cleft of Shadow within Orgrimmar city. This dungeon requires around 30 to 50 minutes to complete.
-                                    </p>
-                                    <div className="content-heading">Tips and Recommendations</div>
-                                    <ul className="wide-spaced-list">
-                                        <li>
-                                            Your tank and healer should be around level 15 for this dungeon. Your DPS can scrape by at level 13, but higher levels are preferred.
-                                        </li>
-                                        <li>
-                                            Mages are incredibly helpful. Polymorph is the most reliable CC at this level and can really help reduce the pressure on weaker groups.
-                                        </li>
-                                        <li>
-                                            Be careful around the lava. Seriously.
-                                        </li>
-                                        <li>
-                                            <b>Healers</b>: Your mana pool is tiny at this point in the game, especially if you're in white gear. Consider trying to gather a strong group or getting a few more levels if you can cast a few heals from a full mana bar.
-                                        </li>
-                                        <li>
-                                            <b>Healers</b>: You can begin casting a heal before your tank needs it. If completing the cast will result in overhealing, move to cancel it and try again. Certain addons that provide visualization for outgoing heals can be helpful with this strategy.
-                                        </li>
-                                        <li>
-                                            <b>Healers</b>: Make sure you have water before entering the dungeon. You'll need a lot.</li>
-                                        <li>
-                                            <b>Tanks</b>: Pulling more than one pack will probably result in a wipe. Be very careful whilepulling. Warriors, try to get your hands on a ranged weapon and use that for difficult pulls.
-                                        </li>
-                                        <li>
-                                            <b>Tanks</b>: Make sure your healer has mana before pulling the next pack.
-                                        </li>
-                                        <li>
-                                            <b>Tanks</b>: Consider marking targets with raid markers. Focusing down at least the first mob in a pull will substantially reduce incoming damage.
-                                        </li>
-                                        <li>
-                                            <b>DPS</b>: Whatever you do, don't pull aggro. Your healer probably has enough mana problems without having to heal you.
-                                        </li>
-                                    </ul>
-                                    <div className="content-heading">Quests</div>
+                                    <ContentHeading heading="Introduction" />
+                                    <ContentParagraph 
+                                        text="Ragefire Chasm is a level 13 to 18 instance located in the Cleft of Shadow within Orgrimmar city. This dungeon requires around 30 to 50 minutes to complete." />                                        
+                                    <ContentHeading heading="Tips and Recommendations" />
+                                    <ListSection
+                                        type="unordered"
+                                        items={[
+                                            "Your tank and healer should be at least level 15 for this dungeon. DPS can scrape by at level 13, but higher levels are preferred.",
+                                            "Mages are incredibly helpful. Polymorph is the most reliable CC at this level and can really help reduce the pressure on weaker groups.",
+                                            "Be careful around the lava. Seriously."
+                                        ]}
+                                        spacing="wide" />
                                     <QuestSection
                                         questChains={[
                                             {
@@ -275,7 +251,6 @@ class Content extends Component {
                                                 ]
                                             }
                                         ]} />
-                                    <div className="content-heading">Bosses</div>
                                     <BossSection
                                         bosses={[
                                             {
@@ -336,8 +311,8 @@ class Content extends Component {
                                                 notes: "Can deal a surprising amount of damage but is ultimately a pushover."
                                             }
                                         ]} />
-                                    <div class="content-heading">Walkthrough</div>
-                                    <img src="res/map-rfc.png" alt="instance map" class="content-insert-image" />
+                                    <ContentHeading heading="Walkthrough" />
+                                    <ContentImage src="/res/map-rfc.png" alt="RFC instance map" />
                                     <p>
                                         Head south along the red path until you reach a large room filled with troggs. Be careful when clearing this area; there are a few patrolling mobs. Pull mobs with a ranged attack and use the walls to break line of sight with casters to force them to come to you. Don't do any damage or healing until the tank has grouped up the mobs being pulled or you will pull aggro.
                                     </p>
