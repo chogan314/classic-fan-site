@@ -10,7 +10,7 @@ class HeaderSection extends Component {
                 </div>
                 <div className="content-details-container">
                     <div className="content-author">{this.props.author}</div>
-                    <div className="content-date">{this.props.date}</div>
+                    <div className="content-date">{this.props.postedDate}</div>
                 </div>
             </div>
         );
