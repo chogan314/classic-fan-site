@@ -1,4 +1,5 @@
 import React from 'react';
+import SiteContainer from '../site-container/SiteContainer';
 
 function ContentHeading(props) {
     return(
@@ -22,4 +23,28 @@ function ContentImage(props) {
     );
 }
 
-export { ContentHeading, ContentQuote, ContentImage };
+function ContentContainer(props) {
+    return(
+        <SiteContainer>
+            <div id="main-content">
+                <div id="content-section">
+                    <div className="section-wrapper">
+                        <div className="content-container">
+                            {props.children}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </SiteContainer>
+    );
+}
+
+function ContentBody(props) {
+    return(
+        <div className="content-body">
+            {props.children}
+        </div>
+    );
+}
+
+export { ContentHeading, ContentQuote, ContentImage, ContentContainer, ContentBody };

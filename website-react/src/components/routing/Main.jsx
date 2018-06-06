@@ -7,7 +7,7 @@ import Articles from '../Articles';
 import News from '../News';
 import ClassGuides from '../guides/ClassGuides';
 import ProfessionGuides from '../guides/ProfessionGuides';
-import Content from '../content/Content.jsx';
+import RagefireChasmGuide from '../content/RagefireChasmGuide';
 
 class Main extends Component {
     componentDidUpdate() {
@@ -17,7 +17,7 @@ class Main extends Component {
     render() {
         return(
             <Switch>
-                <Route exact path='/' component={Content} />
+                <Route exact path='/' component={RagefireChasmGuide} />
                 <Route path='/home' component={Home} />
                 <Route path='/news' component={News} />
                 <Route path='/articles' component={Articles} />                
