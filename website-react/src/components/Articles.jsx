@@ -48,7 +48,7 @@ class Articles extends Component {
                             entry_type_class="entry-type-article"
                             entry_type_name="Article"
                             entry_type_icon_path="res/writing-blue.png"
-                            link_to="/"
+                            link_to={data.link_to}
                             thumbnail_path={data.thumbnail_path}
                             author={data.author}
                             posted_at={data.posted_at}

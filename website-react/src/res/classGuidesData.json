@@ -6,7 +6,8 @@
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "11": {
         "id": 107,
@@ -15,7 +16,8 @@
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "111": {
         "id": 108,
@@ -24,7 +26,8 @@
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "1111": {
         "id": 109,
@@ -33,7 +36,8 @@
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "1": {
         "id": 101,
@@ -42,7 +46,8 @@
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "2": {
         "id": 102,
@@ -51,7 +56,8 @@
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "3": {
         "id": 103,
@@ -60,7 +66,8 @@
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "4": {
         "id": 104,
@@ -69,7 +76,8 @@
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "5": {
         "id": 105,
@@ -78,6 +86,7 @@
         "author": "Author Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
-        "posted_at": "May 10, 2018"
+        "posted_at": "May 10, 2018",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     }
 }

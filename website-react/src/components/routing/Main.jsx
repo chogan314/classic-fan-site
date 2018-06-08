@@ -6,7 +6,8 @@ import Guides from '../Guides';
 import Articles from '../Articles';
 import News from '../News';
 import ClassGuides from '../guide-indexes/ClassGuides';
-import ProfessionGuides from '../guides/ProfessionGuides';
+import ProfessionGuides from '../guide-indexes/ProfessionGuides';
+
 import RagefireChasmGuide from '../content/guides/dungeons/RagefireChasmGuide';
 
 class Main extends Component {
@@ -17,13 +18,15 @@ class Main extends Component {
     render() {
         return(
             <Switch>
-                <Route exact path='/' component={RagefireChasmGuide} />
-                <Route path='/home' component={Home} />
-                <Route path='/news' component={News} />
-                <Route path='/articles' component={Articles} />                
+                <Route exact path='/' component={Home} />
+                <Route exact path='/home' component={Home} />
+                <Route exact path='/news' component={News} />
+                <Route exact path='/articles' component={Articles} />                
                 <Route exact path='/guides' component={Guides} />
-                <Route path='/guides/classes' component={ClassGuides} />
-                <Route path='/guides/professions' component={ProfessionGuides} />
+                <Route exact path='/guides/classes' component={ClassGuides} />
+                <Route exact path='/guides/professions' component={ProfessionGuides} />
+
+                <Route exact path='/guides/dungeons/ragefire_chasm' component={RagefireChasmGuide} />
             </Switch>
         );
     }

@@ -25,7 +25,7 @@ function ContentImage(props) {
 
 function ContentContainer(props) {
     return(
-        <SiteContainer>
+        <SiteContainer active={props.active}>
             <div id="main-content">
                 <div id="content-section">
                     <div className="section-wrapper">

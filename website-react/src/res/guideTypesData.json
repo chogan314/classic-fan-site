@@ -3,36 +3,42 @@
         "id": 100,
         "type": "Class",
         "description": "Handy guides for your favorite class.",
-        "thumbnail_path": "res/classic.jpg"
+        "thumbnail_path": "res/classic.jpg",
+        "link_to": "/guides/classes"
     },
     "1": {
         "id": 93,
         "type": "Dungeon",
         "description": "Every explorer needs a compass.",
-        "thumbnail_path": "res/classic.jpg"
+        "thumbnail_path": "res/classic.jpg",
+        "link_to": "/guides/dungeons"
     },
     "2": {
         "id": 62,
         "type": "Leveling",
         "description": "For the alt-aholics",
-        "thumbnail_path": "res/classic.jpg"
+        "thumbnail_path": "res/classic.jpg",
+        "link_to": "/guides/leveling"        
     },
     "3": {
         "id": 1001,
         "type": "Farming",
         "description": "Money in the bank.",
-        "thumbnail_path": "res/classic.jpg"
+        "thumbnail_path": "res/classic.jpg",
+        "link_to": "/guides/farming"
     },
     "4": {
         "id": 3,
         "type": "Raid",
         "description": "Like herding cats.",
-        "thumbnail_path": "res/classic.jpg"
+        "thumbnail_path": "res/classic.jpg",
+        "link_to": "/guides/raids"
     },
     "5": {
         "id": 9999,
         "type": "Profession",
         "description": "Get a job, hippie.",
-        "thumbnail_path": "res/classic.jpg"
+        "thumbnail_path": "res/classic.jpg",
+        "link_to": "/guides/professions"
     }
 }

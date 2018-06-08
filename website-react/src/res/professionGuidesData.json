@@ -7,7 +7,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "GATHERING"
+        "profession_type": "GATHERING",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "11": {
         "id": 107,
@@ -17,7 +18,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "GATHERING"
+        "profession_type": "GATHERING",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "111": {
         "id": 108,
@@ -27,7 +29,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "GATHERING"
+        "profession_type": "GATHERING",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "1111": {
         "id": 109,
@@ -37,7 +40,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "CRAFTING"
+        "profession_type": "CRAFTING",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "1": {
         "id": 101,
@@ -47,7 +51,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "CRAFTING"
+        "profession_type": "CRAFTING",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "2": {
         "id": 102,
@@ -57,7 +62,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "CRAFTING"
+        "profession_type": "CRAFTING",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "3": {
         "id": 103,
@@ -67,7 +73,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "CRAFTING"
+        "profession_type": "CRAFTING",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "4": {
         "id": 104,
@@ -77,7 +84,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "CRAFTING"
+        "profession_type": "CRAFTING",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "5": {
         "id": 105,
@@ -87,7 +95,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "CRAFTING"
+        "profession_type": "CRAFTING",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "6": {
         "id": 105,
@@ -97,7 +106,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "SECONDARY"
+        "profession_type": "SECONDARY",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "7": {
         "id": 105,
@@ -107,7 +117,8 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "SECONDARY"
+        "profession_type": "SECONDARY",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     },
     "8": {
         "id": 105,
@@ -117,6 +128,7 @@
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
         "posted_at": "May 10, 2018",
-        "profession_type": "SECONDARY"
+        "profession_type": "SECONDARY",
+        "link_to": "/guides/dungeons/ragefire_chasm"
     }
 }

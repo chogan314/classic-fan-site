@@ -51,11 +51,11 @@ function onScroll(event) {
     var wnc = document.getElementById("wide-nonscrolling-container");
 
     if (wnc.getBoundingClientRect().top <= 0) {
-        wsc.style.display = "block";
+        wsc.style.visibility = "visible";
         wsc.style.top = "" + (-wnc.offsetHeight - 40 - 56 + (window.pageYOffset || document.documentElement.scrollTop)) + "px"; // ???
         wnc.style.visibility = "hidden";
     } else {
-        wsc.style.display = "none";
+        wsc.style.visibility = "hidden";
         wnc.style.visibility = "visible";
     }
 }

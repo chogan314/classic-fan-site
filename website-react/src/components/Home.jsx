@@ -56,7 +56,7 @@ class Home extends Component {
                             entry_type_class={this.typeDataMap[data.type].typeClass}
                             entry_type_name={this.typeDataMap[data.type].typeName}
                             entry_type_icon_path={this.typeDataMap[data.type].typeIconPath}
-                            link_to="/"
+                            link_to={data.link_to}
                             thumbnail_path={data.thumbnail_path}
                             author={data.author}
                             posted_at={data.posted_at}

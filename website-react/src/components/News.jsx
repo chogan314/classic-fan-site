@@ -48,7 +48,7 @@ class News extends Component {
                             entry_type_class="entry-type-news"
                             entry_type_name="News"
                             entry_type_icon_path="res/folded-newspaper-dark-green.png"
-                            link_to="/"
+                            link_to={data.link_to}
                             thumbnail_path={data.thumbnail_path}
                             author={data.author}
                             posted_at={data.posted_at}

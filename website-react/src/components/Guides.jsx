@@ -51,7 +51,7 @@ class Guides extends Component {
                         {self.state.data.map(data =>
                         <GridEntry
                             key={data.id}
-                            link_to="/guides/professions"
+                            link_to={data.link_to}
                             thumbnail_path={data.thumbnail_path}
                             title={data.type + " Guides"}
                             description={data.description} />)}
