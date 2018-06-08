@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 function UnorderedList(props) {
     return(
-        <ul class={props.spacing === "wide" ? "wide-spaced-list" : ""}>
+        <ul className={props.spacing === "wide" ? "wide-spaced-list" : ""}>
             {props.items.map(item =>
-                <li>{item}</li>
+                <li key={item}>{item}</li>
             )}
         </ul>
     );
@@ -12,9 +12,9 @@ function UnorderedList(props) {
 
 function OrderedList(props) {
     return(
-        <ol class={props.spacing === "wide" ? "wide-spaced-list" : ""}>
+        <ol className={props.spacing === "wide" ? "wide-spaced-list" : ""}>
             {props.items.map(item =>
-                <li><div>{item}</div></li>
+                <li><div key={item}>{item}</div></li>
             )}
         </ol>
     );

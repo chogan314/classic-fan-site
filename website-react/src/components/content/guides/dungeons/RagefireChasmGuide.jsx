@@ -2,7 +2,7 @@ import React from 'react';
 import Content from '../../content-components/Content';
 import HeaderSection from '../../content-components/HeaderSection';
 import ClassicDBLink from '../../content-components/ClassicDBLink';
-import { ContentHeading, ContentQuote, ContentImage, ContentContainer, ContentBody } from '../../content-components/ContentUtils';
+import { ContentHeading, ContentImage, ContentContainer, ContentBody } from '../../content-components/ContentUtils';
 import ListSection from '../../content-components/ListSection';
 import { QuestSection, QuestChain, Quest, QuestChainRewards } from '../../content-components/QuestSection';
 import { BossSection, Boss, BossNotes, BossDrops } from '../../content-components/BossSection';
@@ -22,48 +22,6 @@ class RagefireChasmGuide extends Content {
                     postedDate={this.state.postedDate}
                     editedDate={this.state.editedDate} />
                 <ContentBody>
-                    <ContentHeading>Example Heading</ContentHeading>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet purus interdum ligula elementum, non aliquet libero porta. Maecenas tempor turpis eu purus cursus, nec semper nisl suscipit. Quisque lacinia turpis dolor, in consequat eros vestibulum eget. Fusce a ex eu neque facilisis scelerisque. In lobortis est ac consequat egestas. Donec tempor mollis dictum. Sed diam urna, vestibulum ac purus at, fringilla bibendum augue. Sed condimentum sem sapien, euismod blandit est sodales nec. Etiam consectetur est non orci vulputate placerat. Nam molestie elit nec ante pulvinar, non blandit nunc iaculis.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet purus interdum ligula elementum, non aliquet libero porta. Maecenas tempor turpis eu purus cursus, nec semper nisl suscipit. Quisque lacinia turpis dolor, in consequat eros eget. Fusce a ex eu neque facilisis scelerisque. In lobortis est ac consequat egestas. Donec tempor mollis dictum. Sed diam urna, vestibulum ac purus at, fringilla bibendum augue. Sed condimentum sem sapien, euismod blandit est sodales nec. Etiam consectetur est non orci vulputate placerat. Nam molestie elit nec ante pulvinar, non blandit nunc iaculis.
-                    </p>
-                    <ContentQuote>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet purus interdum ligula elementum, non aliquet libero porta. Maecenas tempor turpis eu purus cursus, nec semper nisl suscipit. Quisque lacinia turpis dolor, in consequat eros vestibulum eget
-                    </ContentQuote>
-                    <ContentHeading>Another Example Heading</ContentHeading>
-                    <ListSection
-                        type="unordered"
-                        items={[
-                            "First element",
-                            "Second element",
-                            "Third element",
-                            "Fourth element",
-                            "Fifth element"
-                        ]} />
-                    <ListSection
-                        type="ordered"
-                        items={[
-                            "First element",
-                            "Second element",
-                            "Third element",
-                            "Fourth element",
-                            "Fifth element"
-                        ]} />
-                    <p>
-                        <ClassicDBLink type="item" id={17065} rarity="epic">Medallion of Steadfast Might</ClassicDBLink><br />
-                        <ClassicDBLink type="item" id={4251} rarity="uncommon">Hillman's Shoulders</ClassicDBLink><br />
-                        <ClassicDBLink type="item" id={16706} rarity="rare">Wildheart Vest</ClassicDBLink><br />
-                        <ClassicDBLink type="item" id={1212} rarity="junk">Gnoll Spittle</ClassicDBLink><br />
-                        <ClassicDBLink type="item" id={19019} rarity="legendary">Thunderfury, Blessed Blade of the Windseeker</ClassicDBLink><br />
-                        <ClassicDBLink type="npc" id={10990} rarity="misc" isNPC={true}>Alterac Ram</ClassicDBLink><br />
-                        <ClassicDBLink type="quest" id={762} rarity="misc">An Ambassador of Evil</ClassicDBLink><br />
-                        <ClassicDBLink type="spell" id={8925} rarity="misc">Moonfire (Rank 3)</ClassicDBLink><br />
-                        <ClassicDBLink type="object" id={179548} rarity="misc">A Dusty Tome</ClassicDBLink><br />
-                        <ClassicDBLink type="zone" id={10} rarity="misc">Duskwood</ClassicDBLink><br />
-                        <ClassicDBLink type="faction" id={369} rarity="misc">Gadgetzan</ClassicDBLink>
-                    </p>
                     <ContentHeading>Introduction</ContentHeading>
                     <p>
                         Ragefire Chasm is a level 13 to 18 instance located in the Cleft of Shadow within Orgrimmar city. This dungeon requires 30 to 50 minutes to complete.
