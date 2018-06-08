@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import Getter from '../../scripts/getter.js';
-import DateUtils from '../../scripts/dateUtils.js';
-import '../../style/content.css';
+import Getter from '../../../scripts/getter.js';
+import DateUtils from '../../../scripts/dateUtils.js';
+import '../../../style/content.css';
 
 class Content extends Component {
     constructor(props, link) {

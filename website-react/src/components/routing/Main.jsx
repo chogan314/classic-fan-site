@@ -5,9 +5,9 @@ import Home from '../Home';
 import Guides from '../Guides';
 import Articles from '../Articles';
 import News from '../News';
-import ClassGuides from '../guides/ClassGuides';
+import ClassGuides from '../guide-indexes/ClassGuides';
 import ProfessionGuides from '../guides/ProfessionGuides';
-import RagefireChasmGuide from '../content/RagefireChasmGuide';
+import RagefireChasmGuide from '../content/guides/dungeons/RagefireChasmGuide';
 
 class Main extends Component {
     componentDidUpdate() {

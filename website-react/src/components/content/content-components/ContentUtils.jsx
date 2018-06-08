@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteContainer from '../site-container/SiteContainer';
+import SiteContainer from '../../site-container/SiteContainer';
 
 function ContentHeading(props) {
     return(

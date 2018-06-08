@@ -1,11 +1,11 @@
 import React from 'react';
-import Content from './Content';
-import HeaderSection from './HeaderSection';
-import ClassicDBLink from './ClassicDBLink';
-import { ContentHeading, ContentQuote, ContentImage, ContentContainer, ContentBody } from './ContentUtils';
-import ListSection from './ListSection';
-import { QuestSection, QuestChain, Quest, QuestChainRewards } from './QuestSection';
-import { BossSection, Boss, BossNotes, BossDrops } from './BossSection';
+import Content from '../../content-components/Content';
+import HeaderSection from '../../content-components/HeaderSection';
+import ClassicDBLink from '../../content-components/ClassicDBLink';
+import { ContentHeading, ContentQuote, ContentImage, ContentContainer, ContentBody } from '../../content-components/ContentUtils';
+import ListSection from '../../content-components/ListSection';
+import { QuestSection, QuestChain, Quest, QuestChainRewards } from '../../content-components/QuestSection';
+import { BossSection, Boss, BossNotes, BossDrops } from '../../content-components/BossSection';
 
 class RagefireChasmGuide extends Content {
     constructor(props, link) {
