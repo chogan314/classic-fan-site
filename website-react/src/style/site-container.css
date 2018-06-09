@@ -308,7 +308,7 @@
 
 #wide-scrolling-container {
     will-change: transform;
-    visibility: hidden;
+    display: none;
     position: relative;
     left: 0;
     right: 0;

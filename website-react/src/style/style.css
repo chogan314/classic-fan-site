@@ -48,12 +48,19 @@ a {
     align-items: stretch;
 }
 
+.main-content-subcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button {
     background-color: #3f4146;
     padding: 10px;
     font-weight: 700;
     font-size: 12px;
     cursor: pointer;
+    width: auto;
 }
 
 .button:hover {

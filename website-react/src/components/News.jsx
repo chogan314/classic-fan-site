@@ -55,7 +55,9 @@ class News extends Component {
                             title={data.title}
                             description={data.description} />)}
                     </Grid>
-                    <div id="get-more" className="button noselect" onClick={() => this.test()}>Get More</div>
+                    <div class="main-content-subcontainer">
+                        <div id="get-more" className="button noselect" onClick={() => this.test()}>Get More</div>
+                    </div>
                 </div>
             </SiteContainer>
         );
