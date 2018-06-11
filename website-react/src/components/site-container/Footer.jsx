@@ -6,7 +6,7 @@ class Footer extends Component {
             <div id="footer-section">
                 <div className="section-wrapper">
                     <div id="footer-container">
-                        <div>ClassicCraft © 2018. All rights reserved.</div>
+                        <div>ClassicCraft 2018.</div>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ import raidGuidesData from '../../res/raidGuidesData.json';
 class ClassGuides extends Component {
     constructor(props) {
         super(props);
-        this.getter = new Getter("php/get_dungeon_guides.php");
+        this.getter = new Getter("php/get_raid_guides.php");
 
         this.typeDataMap = {
             "Onyxia's Lair": new TypeData("entry-type-news", "Onyxia's Lair", "/res/folded-newspaper-dark-green.png"),

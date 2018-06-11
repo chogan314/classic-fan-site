@@ -9,6 +9,8 @@ import ClassGuides from '../guide-indexes/ClassGuides';
 import ProfessionGuides from '../guide-indexes/ProfessionGuides';
 import DungeonGuides from '../guide-indexes/DungeonGuides';
 import RaidGuides from '../guide-indexes/RaidGuides';
+import FarmingGuides from '../guide-indexes/FarmingGuides';
+import LevelingGuides from '../guide-indexes/LevelingGuides';
 
 import RagefireChasmGuide from '../content/guides/dungeons/RagefireChasmGuide';
 
@@ -29,6 +31,8 @@ class Main extends Component {
                 <Route exact path='/guides/professions' component={ProfessionGuides} />
                 <Route exact path='/guides/dungeons' component={DungeonGuides} />
                 <Route exact path='/guides/raids' component={RaidGuides} />
+                <Route exact path='/guides/farming' component={FarmingGuides} />
+                <Route exact path='/guides/leveling' component={LevelingGuides} />
 
                 <Route exact path='/guides/dungeons/ragefire_chasm' component={RagefireChasmGuide} />
             </Switch>
