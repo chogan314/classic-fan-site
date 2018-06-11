@@ -16,7 +16,7 @@ class GridEntry extends Component {
     constructor(props) {
         super(props);
         this.palContainer = new PolygonAnimationListenerContainer();
-        this.initialOverlayPoints = "100,0 100,38 62,0 62,0";
+        this.initialOverlayPoints = "100,0 100,27 73,0 73,0";
     }
 
     animateOverlay(polygon, targetPointsString, initialPointsString, time, onStart, onFinish, onInterrupt) {
@@ -28,7 +28,7 @@ class GridEntry extends Component {
     }
 
     w(typeOverlayWidth) {
-        return 0.0002 * Math.pow(typeOverlayWidth, 2) - 0.677 * typeOverlayWidth + 100.5; // seriously
+        return 0.0000393673 * Math.pow(typeOverlayWidth, 2) - 0.422272 * typeOverlayWidth + 98.4193; // seriously
     }
 
     mouseEnter(event) {
@@ -44,7 +44,7 @@ class GridEntry extends Component {
 
         var typeOverlayWidth = event.currentTarget.getElementsByClassName("entry-type-overlay")[0].clientWidth;
         var expandedWidth = this.w(typeOverlayWidth);
-        var expandedPoints = "100,0 100,21.5, " + expandedWidth + ",21.5 " + expandedWidth + ",0";
+        var expandedPoints = "100,0 100,15 " + expandedWidth + ",15 " + expandedWidth + ",0";
 
         this.animateOverlay(polygon, expandedPoints, this.initialOverlayPoints, 60, null, () => typeName.style.visibility = "visible");
     }
@@ -62,7 +62,7 @@ class GridEntry extends Component {
 
         var typeOverlayWidth = event.currentTarget.getElementsByClassName("entry-type-overlay")[0].clientWidth;
         var expandedWidth = this.w(typeOverlayWidth);
-        var expandedPoints = "100,0 100,21.5, " + expandedWidth + ",21.5 " + expandedWidth + ",0";
+        var expandedPoints = "100,0 100,15 " + expandedWidth + ",15 " + expandedWidth + ",0";
 
         this.animateOverlay(polygon, this.initialOverlayPoints, expandedPoints, 40, () => typeName.style.visibility = "hidden");
     }
@@ -81,7 +81,7 @@ class GridEntry extends Component {
 
                         {this.hasProp(this.props.entry_type_name) ?
                         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMin slice" className="entry-image-polygon-overlay">
-                            <polygon points="100,0 100,38 62,0 62,0" />
+                            <polygon points="100,0 100,27 73,0 73,0" />
                         </svg> : null}
 
                         {this.hasProp(this.props.entry_type_name) ?

@@ -71,9 +71,9 @@ class ProfessionGuides extends Component {
                         {this.state.data.map(data =>
                         <GridEntry
                             key={data.id}
-                            entry_type_class={this.typeDataMap[data.type].typeClass}
-                            entry_type_name={this.typeDataMap[data.type].typeName}
-                            entry_type_icon_path={this.typeDataMap[data.type].typeIconPath}
+                            entry_type_class={this.typeDataMap[data.type] ? this.typeDataMap[data.type].typeClass : null}
+                            entry_type_name={this.typeDataMap[data.type] ? this.typeDataMap[data.type].typeName : null}
+                            entry_type_icon_path={this.typeDataMap[data.type] ? this.typeDataMap[data.type].typeIconPath : null}
                             link_to={data.link_to}
                             thumbnail_path={data.thumbnail_path}
                             author={data.author}
