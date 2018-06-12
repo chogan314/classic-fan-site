@@ -8,7 +8,7 @@ import farmingGuidesData from '../../res/farmingGuidesData.json';
 class ClassGuides extends Component {
     constructor(props) {
         super(props);
-        this.getter = new Getter("php/get_farming_guides.php");
+        this.getter = new Getter("/php/get_farming_guides.php");
 
         this.typeDataMap = {};
 

@@ -8,7 +8,7 @@ import levelingGuidesData from '../../res/levelingGuidesData.json';
 class ClassGuides extends Component {
     constructor(props) {
         super(props);
-        this.getter = new Getter("php/get_leveling_guides.php");
+        this.getter = new Getter("/php/get_leveling_guides.php");
 
         this.typeDataMap = {};
 

@@ -40,7 +40,7 @@ EOT;
             'type'              => $row['name'],
             'author'            => $row['author'],
             'posted_at'         => $row['posted_at'],
-            'link'              => $row['link']
+            'link_to'           => $row['link']
         ];
     }
 

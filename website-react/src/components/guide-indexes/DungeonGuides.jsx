@@ -9,7 +9,7 @@ import dungeonGuidesData from '../../res/dungeonGuidesData.json';
 class ClassGuides extends Component {
     constructor(props) {
         super(props);
-        this.getter = new Getter("php/get_dungeon_guides.php");
+        this.getter = new Getter("/php/get_dungeon_guides.php");
 
         this.typeDataMap = {
             "Ragefire Chasm": new TypeData("entry-type-news", "Ragefire Chasm", "/res/folded-newspaper-dark-green.png"),

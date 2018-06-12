@@ -9,7 +9,7 @@ import professionGuidesData from '../../res/professionGuidesData.json';
 class ProfessionGuides extends Component {
     constructor(props) {
         super(props);
-        this.getter = new Getter("php/get_profession_guides.php");
+        this.getter = new Getter("/php/get_profession_guides.php");
 
         this.typeDataMap = {
             "Herbalism": new TypeData("entry-type-news", "Herbalism", "/res/folded-newspaper-dark-green.png"),

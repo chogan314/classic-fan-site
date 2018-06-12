@@ -31,7 +31,7 @@ EOT;
             'thumbnail_path'    => $row['thumbnail_path'],
             'description'       => $row['description'],
             'type'              => $row['type'],
-            'link'              => $row['link']
+            'link_to'           => $row['link']
         ];
     }
 

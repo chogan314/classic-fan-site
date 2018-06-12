@@ -9,7 +9,7 @@ import classGuidesData from '../../res/classGuidesData.json';
 class ClassGuides extends Component {
     constructor(props) {
         super(props);
-        this.getter = new Getter("php/get_class_guides.php");
+        this.getter = new Getter("/php/get_class_guides.php");
 
         this.typeDataMap = {
             "Druid": new TypeData("entry-type-news", "Druid", "/res/folded-newspaper-dark-green.png"),

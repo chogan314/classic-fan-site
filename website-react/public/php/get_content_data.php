@@ -9,14 +9,14 @@ function sanitizeInput($input, $dbc) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $link = sanitizeInput($_GET(["link"]), $dbc);
+    $link = sanitizeInput($_GET["link"], $dbc);
 
     $query = <<<EOT
         SELECT
             posted_at,
             edited_at
         FROM content
-        WHERE link = {$link}
+        LIMIT 1;
 EOT;
 
     $result = mysqli_query($dbc, $query);

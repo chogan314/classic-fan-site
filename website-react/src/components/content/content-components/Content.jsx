@@ -7,7 +7,7 @@ class Content extends Component {
     constructor(props, link) {
         super(props);
         this.link = link;
-        this.getter = new Getter("/php/get_content_data");
+        this.getter = new Getter("/php/get_content_data.php");
         this.dateUtils = new DateUtils();
         this.state = {
             postedDate: "January 1, 1970",
@@ -20,9 +20,11 @@ class Content extends Component {
         var self = this;
 
         function onComplete(dbData) {
+            var posted_at = self.dateUtils.dateToString(self.dateUtils.dateFromMySQL(dbData[0].posted_at));
+            var edited_at = dbData[0].edited_at ? self.dateUtils.dateToString(self.dateUtils.dateFromMySQL(dbData[0].edited_at)) : null;
             self.setState({
-                postedDate: self.dateUtils.dateToString(self.dateUtils.dateFromMySQL(dbData.posted_at)),
-                editedDate: self.dateUtils.dateToString(self.dateUtils.dateFromMySQL(dbData.edited_at))
+                postedDate: posted_at,
+                editedDate: edited_at
             });
         }
     }
