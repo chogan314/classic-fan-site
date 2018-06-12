@@ -19,7 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             author,
             thumbnail_path,
             description,
-            posted_at
+            posted_at,
+            link
         FROM content
         WHERE type = 'ARTICLE'
         ORDER BY posted_at
@@ -38,7 +39,8 @@ EOT;
             'thumbnail_path'    => $row['thumbnail_path'],
             'description'       => $row['description'],
             'author'            => $row['author'],
-            'posted_at'         => $row['posted_at']
+            'posted_at'         => $row['posted_at'],
+            'link'              => $row['link']
         ];
     }
 

@@ -39,7 +39,7 @@ class Guides extends Component {
     }
 
     componentDidMount() {
-        this.test();
+        this.getPage();
     }
 
     render() {

@@ -18,12 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             content.thumbnail_path,
             content.description,
             content.posted_at,
+            content.link,
             dungeons.name
         FROM content
             INNER JOIN content_dungeons ON content.id = content_dungeons.content_id
             INNER JOIN dungeons on content_dungeons.dungeon_id = dungeons.id
         WHERE content.type = 'GUIDE'
-        ORDER BY dungeons.name ASC, content.posted_at DESC;
+        ORDER BY dungeons.suggested_min_level ASC, content.posted_at DESC;
 EOT;
 
     $result = mysqli_query($dbc, $query);
@@ -38,7 +39,8 @@ EOT;
             'description'       => $row['description'],
             'type'              => $row['name'],
             'author'            => $row['author'],
-            'posted_at'         => $row['posted_at']
+            'posted_at'         => $row['posted_at'],
+            'link'              => $row['link']
         ];
     }
 

@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             content.thumbnail_path,
             content.description,
             content.posted_at,
+            content.link,
             classes.name
         FROM content
             INNER JOIN content_classes ON content.id = content_classes.content_id
@@ -38,7 +39,8 @@ EOT;
             'description'       => $row['description'],
             'type'              => $row['name'],
             'author'            => $row['author'],
-            'posted_at'         => $row['posted_at']
+            'posted_at'         => $row['posted_at'],
+            'link'              => $row['link']
         ];
     }
 

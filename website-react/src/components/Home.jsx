@@ -42,7 +42,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        this.test();
+        this.getPage();
     }
 
     render() {
@@ -64,7 +64,7 @@ class Home extends Component {
                             description={data.description} />)}
                     </Grid>
                     <div className="main-content-subcontainer">
-                        <div id="get-more" className="button noselect" onClick={() => this.test()}>Get More</div>
+                        <div id="get-more" className="button noselect" onClick={() => this.getPage()}>Get More</div>
                     </div>
                 </div>
             </SiteContainer>

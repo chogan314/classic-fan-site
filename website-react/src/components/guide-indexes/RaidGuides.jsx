@@ -43,7 +43,7 @@ class ClassGuides extends Component {
     }
 
     componentDidMount() {
-        this.test();
+        this.getPage();
     }
 
     render() {

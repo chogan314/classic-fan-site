@@ -18,12 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             content.thumbnail_path,
             content.description,
             content.posted_at,
+            content.link,
             raids.name
         FROM content
             INNER JOIN content_raids ON content.id = content_raids.content_id
             INNER JOIN raids on content_raids.raid_id = raids.id
         WHERE content.type = 'GUIDE'
-        ORDER BY raids.name ASC, content.posted_at DESC;
+        ORDER BY raids.tier ASC, content.posted_at DESC;
 EOT;
 
     $result = mysqli_query($dbc, $query);
@@ -38,7 +39,8 @@ EOT;
             'description'       => $row['description'],
             'type'              => $row['name'],
             'author'            => $row['author'],
-            'posted_at'         => $row['posted_at']
+            'posted_at'         => $row['posted_at'],
+            'link'              => $row['link']
         ];
     }
 

@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             author,
             thumbnail_path,
             description,
-            posted_at
+            posted_at,
+            link
         FROM content
         ORDER BY posted_at
         LIMIT {$pageSize}
@@ -39,7 +40,8 @@ EOT;
             'description'       => $row['description'],
             'type'              => $row['type'],
             'author'            => $row['author'],
-            'posted_at'         => $row['posted_at']
+            'posted_at'         => $row['posted_at'],
+            'link'              => $row['link']
         ];
     }
 

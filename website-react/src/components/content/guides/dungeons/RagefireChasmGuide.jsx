@@ -9,7 +9,7 @@ import { BossSection, Boss, BossNotes, BossDrops } from '../../content-component
 
 class RagefireChasmGuide extends Content {
     constructor(props, link) {
-        super(props, "guides/dungeons/ragefire_chasm");
+        super(props, "/guides/dungeons/ragefire_chasm");
     }
 
     render() {

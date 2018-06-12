@@ -28,7 +28,7 @@ class Content extends Component {
     }
 
     componentDidMount() {
-        // this.get();
+        this.get();
 
         var hordeIcon = document.createElement("img");
         hordeIcon.setAttribute("src", "/res/horde-logo.png");

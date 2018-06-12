@@ -9,23 +9,22 @@ function sanitizeInput($input, $dbc) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $pageSize = sanitizeInput($_GET["pageSize"], $dbc);
-    $offset = $pageSize * sanitizeInput($_GET["page"], $dbc);
 
     $query = <<<EOT
         SELECT
-            id,
-            title,
-            author,
-            thumbnail_path,
-            description,
-            posted_at,
-            link 
+            content.id,
+            content.title,
+            content.author,
+            content.thumbnail_path,
+            content.description,
+            content.posted_at,
+            content.link
         FROM content
-        WHERE type = 'NEWS'
-        ORDER BY posted_at
-        LIMIT {$pageSize}
-        OFFSET {$offset};
+            INNER JOIN content_tags ON content.id = content_tags.content_id
+            INNER JOIN tags on content_tags.raid_id = tags.id
+        WHERE content.type = 'GUIDE'
+        AND tags.name = 'LEVELING'
+        ORDER BY content.posted_at DESC;
 EOT;
 
     $result = mysqli_query($dbc, $query);
@@ -38,7 +37,7 @@ EOT;
             'title'             => $row['title'],
             'thumbnail_path'    => $row['thumbnail_path'],
             'description'       => $row['description'],
-            'author'            => $row['author'],            
+            'author'            => $row['author'],
             'posted_at'         => $row['posted_at'],
             'link'              => $row['link']
         ];

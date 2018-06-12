@@ -14,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             id,
             type,
             description,
-            thumbnail_path
+            thumbnail_path,
+            link
         FROM guide_types
         ORDER BY type;
 EOT;
@@ -29,7 +30,8 @@ EOT;
             'title'             => $row['type'],
             'thumbnail_path'    => $row['thumbnail_path'],
             'description'       => $row['description'],
-            'type'              => $row['type']
+            'type'              => $row['type'],
+            'link'              => $row['link']
         ];
     }
 
