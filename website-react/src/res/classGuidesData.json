@@ -11,8 +11,8 @@
     },
     "11": {
         "id": 107,
-        "type": "Druid",
-        "title": "Test Druid Guide",
+        "type": "Warrior",
+        "title": "Test Warrior Guide",
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
@@ -21,8 +21,8 @@
     },
     "111": {
         "id": 108,
-        "type": "Druid",
-        "title": "Test Druid Guide",
+        "type": "Warlock",
+        "title": "Test Warlock Guide",
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",
@@ -31,8 +31,8 @@
     },
     "1111": {
         "id": 109,
-        "type": "Druid",
-        "title": "Test Druid Guide",
+        "type": "Rogue",
+        "title": "Test Rogue Guide",
         "author": "Author HereAuthor Here",
         "thumbnail_path": "/res/classic.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla velit quis leo lobortis porta. In ac velit eget eros sodales commodo. Sed consequat accumsan dui quis blandit. Nullam nunc nibh, facilisis at neque nec, sagittis interdum mi. Morbi cursus felis nec ante rutrum porttitor.",

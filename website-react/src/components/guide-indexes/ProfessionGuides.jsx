@@ -12,18 +12,18 @@ class ProfessionGuides extends Component {
         this.getter = new Getter("/php/get_profession_guides.php");
 
         this.typeDataMap = {
-            "Herbalism": new TypeData("entry-type-news", "Herbalism", "/res/folded-newspaper-dark-green.png"),
-            "Mining": new TypeData("entry-type-article", "Mining", "/res/writing-blue.png"),
-            "Skinning": new TypeData("entry-type-guide", "Skinning", "/res/tower-purple.png"),
-            "Alchemy": new TypeData("entry-type-news", "Alchemy", "/res/folded-newspaper-dark-green.png"),
-            "Blacksmithing": new TypeData("entry-type-article", "Blacksmithing", "/res/writing-blue.png"),
-            "Enchanting": new TypeData("entry-type-guide", "Enchanting", "/res/tower-purple.png"),
-            "Engineering": new TypeData("entry-type-news", "Engineering", "/res/folded-newspaper-dark-green.png"),
-            "Leatherworking": new TypeData("entry-type-article", "Leatherworking", "/res/writing-blue.png"),
-            "Tailoring": new TypeData("entry-type-guide", "Tailoring", "/res/tower-purple.png"),
-            "Cooking": new TypeData("entry-type-news", "Cooking", "/res/folded-newspaper-dark-green.png"),
-            "First Aid": new TypeData("entry-type-article", "First Aid", "/res/writing-blue.png"),
-            "Fishing": new TypeData("entry-type-guide", "Fishing", "/res/tower-purple.png")
+            "Herbalism": new TypeData("entry-type-herbalism", "Herbalism", "/res/profession_icon_herbalism.png"),
+            "Mining": new TypeData("entry-type-mining", "Mining", "/res/profession_icon_mining.png"),
+            "Skinning": new TypeData("entry-type-skinning", "Skinning", "/res/profession_icon_skinning.png"),
+            "Alchemy": new TypeData("entry-type-alchemy", "Alchemy", "/res/profession_icon_alchemy.png"),
+            "Blacksmithing": new TypeData("entry-type-blacksmithing", "Blacksmithing", "/res/profession_icon_blacksmithing.png"),
+            "Enchanting": new TypeData("entry-type-enchanting", "Enchanting", "/res/profession_icon_enchanting.png"),
+            "Engineering": new TypeData("entry-type-engineering", "Engineering", "/res/profession_icon_engineering.png"),
+            "Leatherworking": new TypeData("entry-type-leatherworking", "Leatherworking", "/res/profession_icon_leatherworking.png"),
+            "Tailoring": new TypeData("entry-type-tailoring", "Tailoring", "/res/profession_icon_tailoring.png"),
+            "Cooking": new TypeData("entry-type-cooking", "Cooking", "/res/profession_icon_cooking.png"),
+            "First Aid": new TypeData("entry-type-first-aid", "First Aid", "/res/profession_icon_first_aid.png"),
+            "Fishing": new TypeData("entry-type-fishing", "Fishing", "/res/profession_icon_fishing.png")
         };
 
         this.state = { data: [] };
@@ -60,7 +60,7 @@ class ProfessionGuides extends Component {
     }
 
     componentDidMount() {
-        this.getPage();
+        this.test();
     }
 
     render() {

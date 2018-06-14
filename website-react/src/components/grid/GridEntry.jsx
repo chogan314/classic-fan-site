@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Mesh2 from '../../scripts/mesh2d.js';
 import PolygonAnimationListener, { PolygonAnimationListenerContainer } from '../../scripts/polygonAnimationListener.js';
+import DateUtils from '../../scripts/dateUtils.js';
 
 function EntryTypeOverlay(props) {
     return(
@@ -16,6 +17,7 @@ class GridEntry extends Component {
     constructor(props) {
         super(props);
         this.palContainer = new PolygonAnimationListenerContainer();
+        this.dateUtils = new DateUtils();
         this.initialOverlayPoints = "100,0 100,27 73,0 73,0";
     }
 
@@ -91,7 +93,7 @@ class GridEntry extends Component {
 
                 <div className="entry-details-row">
                     {this.hasProp(this.props.author) ? <div className="entry-details-author">{this.props.author}</div> : null}
-                    {this.hasProp(this.props.posted_at) ? <div className="entry-details-date">{this.props.posted_at}</div> : null}
+                    {this.hasProp(this.props.posted_at) ? <div className="entry-details-date">{this.dateUtils.dateToString(this.dateUtils.dateFromMySQL(this.props.posted_at))}</div> : null}
                 </div>
 
                 <div className="entry-title heading">{this.props.title}</div>

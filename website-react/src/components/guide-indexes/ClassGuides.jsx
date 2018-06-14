@@ -12,15 +12,15 @@ class ClassGuides extends Component {
         this.getter = new Getter("/php/get_class_guides.php");
 
         this.typeDataMap = {
-            "Druid": new TypeData("entry-type-news", "Druid", "/res/folded-newspaper-dark-green.png"),
-            "Hunter": new TypeData("entry-type-article", "Hunter", "/res/writing-blue.png"),
-            "Mage": new TypeData("entry-type-guide", "Mage", "/res/tower-purple.png"),
-            "Paladin": new TypeData("entry-type-news", "Paladin", "/res/folded-newspaper-dark-green.png"),
-            "Priest": new TypeData("entry-type-article", "Priest", "/res/writing-blue.png"),
-            "Rogue": new TypeData("entry-type-guide", "Rogue", "/res/tower-purple.png"),
-            "Shaman": new TypeData("entry-type-news", "Shaman", "/res/folded-newspaper-dark-green.png"),
-            "Warlock": new TypeData("entry-type-article", "Warlock", "/res/writing-blue.png"),
-            "Warrior": new TypeData("entry-type-guide", "Warrior", "/res/tower-purple.png")
+            "Druid": new TypeData("entry-type-druid", "Druid", "/res/class_icon_druid.png"),
+            "Hunter": new TypeData("entry-type-hunter", "Hunter", "/res/class_icon_hunter.png"),
+            "Mage": new TypeData("entry-type-mage", "Mage", "/res/class_icon_mage.png"),
+            "Paladin": new TypeData("entry-type-paladin", "Paladin", "/res/class_icon_paladin.png"),
+            "Priest": new TypeData("entry-type-priest", "Priest", "/res/class_icon_priest.png"),
+            "Rogue": new TypeData("entry-type-rogue", "Rogue", "/res/class_icon_rogue.png"),
+            "Shaman": new TypeData("entry-type-shaman", "Shaman", "/res/class_icon_shaman.png"),
+            "Warlock": new TypeData("entry-type-warlock", "Warlock", "/res/class_icon_warlock.png"),
+            "Warrior": new TypeData("entry-type-warrior", "Warrior", "/res/class_icon_warrior.png")
         };
 
         this.state = { data: [] };

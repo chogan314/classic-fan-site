@@ -92,7 +92,7 @@
 }
 
 #wide-layout-filler {
-    flex: 0 999 260px;
+    flex: 0 999 240px;
 }
 
 @media only screen and (max-width: 1439px) {

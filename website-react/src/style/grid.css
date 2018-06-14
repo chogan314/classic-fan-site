@@ -185,32 +185,191 @@
     color: #a335ee;
 }
 
-#grid .entry-type-class-guides {
-    border-top: 3px solid #e76f4a;
-    border-right: 3px solid #e76f4a;
+#grid .entry-type-druid {
+    border-top: 3px solid #FF7D0A;
+    border-right: 3px solid #FF7D0A;
 }
 
-#grid .entry-type-dungeon-guides {
-    border-top: 3px solid #64ac35;
-    border-right: 3px solid #64ac35;
+#grid .entry-type-druid .entry-type-name {
+    color: #FF7D0A;
 }
 
-#grid .entry-type-farming-guides {
-    border-top: 3px solid #c430b7;
-    border-right: 3px solid #c430b7;
+#grid .entry-type-hunter {
+    border-top: 3px solid #ABD473;
+    border-right: 3px solid #ABD473;
 }
 
-#grid .entry-type-leveling-guides {
-    border-top: 3px solid #3bb3c9;
-    border-right: 3px solid #3bb3c9;
+#grid .entry-type-hunter .entry-type-name {
+    color: #ABD473;
 }
 
-#grid .entry-type-profession-guides {
-    border-top: 3px solid #c0d641;
-    border-right: 3px solid #c0d641;
+#grid .entry-type-mage {
+    border-top: 3px solid #69CCF0;
+    border-right: 3px solid #69CCF0;
 }
 
-#grid .entry-type-raid-guides {
-    border-top: 3px solid #614ae7;
-    border-right: 3px solid #614ae7;
+#grid .entry-type-mage .entry-type-name {
+    color: #69CCF0;
+}
+
+#grid .entry-type-paladin {
+    border-top: 3px solid #F58CBA;
+    border-right: 3px solid #F58CBA;
+}
+
+#grid .entry-type-paladin .entry-type-name {
+    color: #F58CBA;
+}
+
+#grid .entry-type-priest {
+    border-top: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+}
+
+#grid .entry-type-priest .entry-type-name {
+    color: #FFFFFF;
+}
+
+#grid .entry-type-rogue {
+    border-top: 3px solid #FFF569;
+    border-right: 3px solid #FFF569;
+}
+
+#grid .entry-type-rogue .entry-type-name {
+    color: #FFF569;
+}
+
+#grid .entry-type-shaman {
+    border-top: 3px solid #0070DE;
+    border-right: 3px solid #0070DE;
+}
+
+#grid .entry-type-shaman .entry-type-name {
+    color: #0070DE;
+}
+
+#grid .entry-type-warlock {
+    border-top: 3px solid #9482C9;
+    border-right: 3px solid #9482C9;
+}
+
+#grid .entry-type-warlock .entry-type-name {
+    color: #9482C9;
+}
+
+#grid .entry-type-warrior {
+    border-top: 3px solid #C79C6E;
+    border-right: 3px solid #C79C6E;
+}
+
+#grid .entry-type-warrior .entry-type-name {
+    color: #C79C6E;
+}
+
+#grid .entry-type-herbalism {
+    border-top: 3px solid #87be6d;
+    border-right: 3px solid #87be6d;
+}
+
+#grid .entry-type-herbalism .entry-type-name {
+    color: #87be6d;
+}
+
+#grid .entry-type-mining {
+    border-top: 3px solid #cbcbcb;
+    border-right: 3px solid #cbcbcb;
+}
+
+#grid .entry-type-mining .entry-type-name {
+    color: #cbcbcb;
+}
+
+#grid .entry-type-skinning {
+    border-top: 3px solid #7d9385;
+    border-right: 3px solid #7d9385;
+}
+
+#grid .entry-type-skinning .entry-type-name {
+    color: #7d9385;
+}
+
+#grid .entry-type-alchemy {
+    border-top: 3px solid #20dcc0;
+    border-right: 3px solid #20dcc0;
+}
+
+#grid .entry-type-alchemy .entry-type-name {
+    color: #20dcc0;
+}
+
+#grid .entry-type-blacksmithing {
+    border-top: 3px solid #b0a898;
+    border-right: 3px solid #b0a898;
+}
+
+#grid .entry-type-blacksmithing .entry-type-name {
+    color: #b0a898;
+}
+
+#grid .entry-type-enchanting {
+    border-top: 3px solid #e8542a;
+    border-right: 3px solid #e8542a;
+}
+
+#grid .entry-type-enchanting .entry-type-name {
+    color: #e8542a;
+}
+
+#grid .entry-type-engineering {
+    border-top: 3px solid #edd85a;
+    border-right: 3px solid #edd85a;
+}
+
+#grid .entry-type-engineering .entry-type-name {
+    color: #edd85a;
+}
+
+#grid .entry-type-leatherworking {
+    border-top: 3px solid #906038;
+    border-right: 3px solid #906038;
+}
+
+#grid .entry-type-leatherworking .entry-type-name {
+    color: #906038;
+}
+
+#grid .entry-type-tailoring {
+    border-top: 3px solid #e8dabd;
+    border-right: 3px solid #e8dabd;
+}
+
+#grid .entry-type-tailoring .entry-type-name {
+    color: #e8dabd;
+}
+
+#grid .entry-type-cooking {
+    border-top: 3px solid #e88010;
+    border-right: 3px solid #e88010;
+}
+
+#grid .entry-type-cooking .entry-type-name {
+    color: #e88010;
+}
+
+#grid .entry-type-first-aid {
+    border-top: 3px solid #c81818;
+    border-right: 3px solid #c81818;
+}
+
+#grid .entry-type-first-aid .entry-type-name {
+    color: #c81818;
+}
+
+#grid .entry-type-fishing {
+    border-top: 3px solid #a05060;
+    border-right: 3px solid #a05060;
+}
+
+#grid .entry-type-fishing .entry-type-name {
+    color: #a05060;
 }

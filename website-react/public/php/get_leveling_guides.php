@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             content.link
         FROM content
             INNER JOIN content_tags ON content.id = content_tags.content_id
-            INNER JOIN tags on content_tags.raid_id = tags.id
+            INNER JOIN tags on content_tags.id = tags.id
         WHERE content.type = 'GUIDE'
         AND tags.name = 'LEVELING'
         ORDER BY content.posted_at DESC;
